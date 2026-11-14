@@ -1,0 +1,26 @@
+# Runtime dependencies for the low-light image enhancement project.
+# CUDA builds for torch/torchvision are installed from
+# https://download.pytorch.org/whl/cu130 (see README).
+torch==2.13.0+cu130
+torchvision==0.28.0+cu130
+
+numpy
+scipy
+scikit-image
+opencv-python-headless
+Pillow
+matplotlib
+pandas
+tqdm
+PyYAML
+huggingface_hub
+
+lpips
+bm3d
+bm4d
+pyiqa
+
+pytest
+ruff
+mypy
+streamlit

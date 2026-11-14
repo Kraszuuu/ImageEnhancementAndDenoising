@@ -1,0 +1,39 @@
+{
+  "counts": {
+    "lol": {
+      "test": 15,
+      "train": 398,
+      "val": 87
+    },
+    "lolv2-real": {
+      "test": 100,
+      "train": 562,
+      "val": 127
+    }
+  },
+  "created_at_utc": "2026-11-14T09:47:26+00:00",
+  "files_sha256": {
+    "lol_test.csv": "1cb294b3800aa095988afc6d590f05651ca738d8a8f9249572b5c5c345fad864",
+    "lol_train.csv": "14ea1e4bafa300e138b3b49361981d82a831773a99845b16c7c5eab25008cce3",
+    "lol_val.csv": "8130059f89e9784263723973773b6dfde6f5260f9b48f513b6da155136173e10",
+    "lolv2_test.csv": "6ba0fa5157c01d1cd3858bc7cde4f11608ab9016cb26df37e1715bb2930835c1",
+    "lolv2_train.csv": "f6c4142ca041ca17171641893f8cee68629a47b8b0cd6f40ae8c0005eed42af1",
+    "lolv2_val.csv": "2a9287e53b4c7e2ae0147f449dc19e17fe34972cd6119e37efc1dbfd914e92c9"
+  },
+  "grouping": "GT SHA256 + GT pHash Hamming <= 4",
+  "min_val_pairs": 30,
+  "scene_overlap": {
+    "lol": {
+      "shared_scenes": 13,
+      "test_scenes": 14,
+      "train_val_scenes": 251
+    },
+    "lolv2-real": {
+      "shared_scenes": 0,
+      "test_scenes": 43,
+      "train_val_scenes": 279
+    }
+  },
+  "seed": 0,
+  "val_fraction": 0.18
+}

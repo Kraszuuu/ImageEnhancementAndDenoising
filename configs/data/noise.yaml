@@ -1,0 +1,32 @@
+# Controlled Gaussian-Poisson noise configuration (skeleton).
+# alpha and sigma for low/medium/high are calibrated and frozen in Stage 02.
+# Do not treat these placeholder values as final.
+
+color_space: sRGB
+range: [0.0, 1.0]
+apply_in: linear_light
+seed_policy: fixed_per_image_and_level
+formula: "y = clip(alpha * Poisson(x / alpha) + N(0, sigma^2), 0, 1)"
+
+levels:
+  clean:
+    enabled: true
+    alpha: 0.0
+    sigma: 0.0
+  low:
+    enabled: true
+    alpha: null  # to calibrate and freeze in Stage 02
+    sigma: null
+  medium:
+    enabled: true
+    alpha: null
+    sigma: null
+  high:
+    enabled: true
+    alpha: null
+    sigma: null
+
+notes:
+  - "Values are calibrated so levels are distinguishable for 8-bit images."
+  - "The same noise realization is used by every method for a given image and level."
+  - "Freeze this file before the single test evaluation."

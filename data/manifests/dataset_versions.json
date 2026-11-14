@@ -1,0 +1,38 @@
+{
+  "lol": {
+    "dataset": "lol",
+    "downloaded_at_utc": "2026-11-14T09:31:24+00:00",
+    "duration_seconds": 0.283,
+    "extra": {
+      "archive": "lol_dataset.zip",
+      "archive_sha256": "419fddc48958cd0f5599939ee0248852a37ceb8bb738c9b9525e95b25a89de9a"
+    },
+    "license": "unknown",
+    "path": "data/raw/lol/extracted",
+    "repo_id": "geekyrakshit/LoL-Dataset",
+    "revision": "bdef22d0f5803da8775114496a6689333265e157",
+    "sha256": "419fddc48958cd0f5599939ee0248852a37ceb8bb738c9b9525e95b25a89de9a",
+    "size_bytes": 347171015,
+    "status": "primary"
+  },
+  "lolv2-real": {
+    "dataset": "lolv2-real",
+    "downloaded_at_utc": "2026-11-14T09:31:25+00:00",
+    "duration_seconds": 0.07,
+    "extra": {
+      "allow_patterns": [
+        "Train/**",
+        "Test/**",
+        "LICENSE",
+        "README.md"
+      ]
+    },
+    "license": "apache-2.0",
+    "path": "data/raw/lolv2-real",
+    "repo_id": "okhater/lolv2-real",
+    "revision": "db2979107f7c22d372c6e4f1b06fd6203069af0a",
+    "sha256": null,
+    "size_bytes": 588809192,
+    "status": "primary"
+  }
+}

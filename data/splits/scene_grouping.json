@@ -1,0 +1,2457 @@
+{
+  "lol": {
+    "basis": "GT SHA256 + GT pHash Hamming",
+    "groups": {
+      "lol_s0001": [
+        "test/1",
+        "train/2"
+      ],
+      "lol_s0002": [
+        "test/111",
+        "train/112",
+        "train/113",
+        "train/114"
+      ],
+      "lol_s0003": [
+        "test/146",
+        "train/143",
+        "train/144",
+        "train/145"
+      ],
+      "lol_s0004": [
+        "test/179"
+      ],
+      "lol_s0005": [
+        "test/22",
+        "test/23",
+        "train/21",
+        "train/24"
+      ],
+      "lol_s0006": [
+        "test/493",
+        "train/494"
+      ],
+      "lol_s0007": [
+        "test/547",
+        "train/546"
+      ],
+      "lol_s0008": [
+        "test/55",
+        "train/53",
+        "train/54",
+        "train/56"
+      ],
+      "lol_s0009": [
+        "test/665",
+        "train/664"
+      ],
+      "lol_s0010": [
+        "test/669",
+        "train/668"
+      ],
+      "lol_s0011": [
+        "test/748",
+        "train/747"
+      ],
+      "lol_s0012": [
+        "test/778",
+        "train/775",
+        "train/776",
+        "train/777"
+      ],
+      "lol_s0013": [
+        "test/780",
+        "train/779"
+      ],
+      "lol_s0014": [
+        "test/79",
+        "train/80",
+        "train/81",
+        "train/82"
+      ],
+      "lol_s0015": [
+        "train/10",
+        "train/9"
+      ],
+      "lol_s0016": [
+        "train/100",
+        "train/99"
+      ],
+      "lol_s0017": [
+        "train/101",
+        "train/103",
+        "train/104"
+      ],
+      "lol_s0018": [
+        "train/102"
+      ],
+      "lol_s0019": [
+        "train/105",
+        "train/106",
+        "train/107"
+      ],
+      "lol_s0020": [
+        "train/109"
+      ],
+      "lol_s0021": [
+        "train/110"
+      ],
+      "lol_s0022": [
+        "train/115",
+        "train/116"
+      ],
+      "lol_s0023": [
+        "train/117",
+        "train/118",
+        "train/119",
+        "train/120"
+      ],
+      "lol_s0024": [
+        "train/12"
+      ],
+      "lol_s0025": [
+        "train/121",
+        "train/122",
+        "train/123",
+        "train/124"
+      ],
+      "lol_s0026": [
+        "train/125",
+        "train/126"
+      ],
+      "lol_s0027": [
+        "train/127",
+        "train/128",
+        "train/129",
+        "train/130"
+      ],
+      "lol_s0028": [
+        "train/13",
+        "train/14",
+        "train/15",
+        "train/16"
+      ],
+      "lol_s0029": [
+        "train/131",
+        "train/132",
+        "train/135",
+        "train/136"
+      ],
+      "lol_s0030": [
+        "train/137",
+        "train/138"
+      ],
+      "lol_s0031": [
+        "train/139",
+        "train/140"
+      ],
+      "lol_s0032": [
+        "train/141",
+        "train/142"
+      ],
+      "lol_s0033": [
+        "train/147",
+        "train/149",
+        "train/150"
+      ],
+      "lol_s0034": [
+        "train/151"
+      ],
+      "lol_s0035": [
+        "train/152"
+      ],
+      "lol_s0036": [
+        "train/154"
+      ],
+      "lol_s0037": [
+        "train/157"
+      ],
+      "lol_s0038": [
+        "train/159",
+        "train/160"
+      ],
+      "lol_s0039": [
+        "train/162"
+      ],
+      "lol_s0040": [
+        "train/167"
+      ],
+      "lol_s0041": [
+        "train/169"
+      ],
+      "lol_s0042": [
+        "train/17",
+        "train/18"
+      ],
+      "lol_s0043": [
+        "train/171",
+        "train/172",
+        "train/173"
+      ],
+      "lol_s0044": [
+        "train/174",
+        "train/175",
+        "train/176"
+      ],
+      "lol_s0045": [
+        "train/180"
+      ],
+      "lol_s0046": [
+        "train/183",
+        "train/184",
+        "train/185",
+        "train/186",
+        "train/187"
+      ],
+      "lol_s0047": [
+        "train/188",
+        "train/189"
+      ],
+      "lol_s0048": [
+        "train/191"
+      ],
+      "lol_s0049": [
+        "train/193",
+        "train/194",
+        "train/195"
+      ],
+      "lol_s0050": [
+        "train/196",
+        "train/198"
+      ],
+      "lol_s0051": [
+        "train/199",
+        "train/200",
+        "train/201"
+      ],
+      "lol_s0052": [
+        "train/202",
+        "train/203"
+      ],
+      "lol_s0053": [
+        "train/204",
+        "train/206"
+      ],
+      "lol_s0054": [
+        "train/207",
+        "train/209"
+      ],
+      "lol_s0055": [
+        "train/210",
+        "train/211",
+        "train/212"
+      ],
+      "lol_s0056": [
+        "train/213",
+        "train/215"
+      ],
+      "lol_s0057": [
+        "train/216"
+      ],
+      "lol_s0058": [
+        "train/219",
+        "train/220",
+        "train/221"
+      ],
+      "lol_s0059": [
+        "train/222"
+      ],
+      "lol_s0060": [
+        "train/225"
+      ],
+      "lol_s0061": [
+        "train/227",
+        "train/228",
+        "train/229"
+      ],
+      "lol_s0062": [
+        "train/230",
+        "train/231"
+      ],
+      "lol_s0063": [
+        "train/232"
+      ],
+      "lol_s0064": [
+        "train/233",
+        "train/235"
+      ],
+      "lol_s0065": [
+        "train/236",
+        "train/237",
+        "train/238"
+      ],
+      "lol_s0066": [
+        "train/239"
+      ],
+      "lol_s0067": [
+        "train/240"
+      ],
+      "lol_s0068": [
+        "train/241",
+        "train/242",
+        "train/243"
+      ],
+      "lol_s0069": [
+        "train/244",
+        "train/246",
+        "train/247"
+      ],
+      "lol_s0070": [
+        "train/248",
+        "train/249",
+        "train/250"
+      ],
+      "lol_s0071": [
+        "train/25",
+        "train/26",
+        "train/27",
+        "train/28"
+      ],
+      "lol_s0072": [
+        "train/251",
+        "train/253"
+      ],
+      "lol_s0073": [
+        "train/252"
+      ],
+      "lol_s0074": [
+        "train/254"
+      ],
+      "lol_s0075": [
+        "train/257",
+        "train/258"
+      ],
+      "lol_s0076": [
+        "train/259",
+        "train/260",
+        "train/261",
+        "train/262"
+      ],
+      "lol_s0077": [
+        "train/263"
+      ],
+      "lol_s0078": [
+        "train/264"
+      ],
+      "lol_s0079": [
+        "train/265",
+        "train/267"
+      ],
+      "lol_s0080": [
+        "train/328",
+        "train/330"
+      ],
+      "lol_s0081": [
+        "train/33"
+      ],
+      "lol_s0082": [
+        "train/342"
+      ],
+      "lol_s0083": [
+        "train/344"
+      ],
+      "lol_s0084": [
+        "train/35",
+        "train/36",
+        "train/38"
+      ],
+      "lol_s0085": [
+        "train/39",
+        "train/42"
+      ],
+      "lol_s0086": [
+        "train/40"
+      ],
+      "lol_s0087": [
+        "train/43",
+        "train/44",
+        "train/45",
+        "train/46"
+      ],
+      "lol_s0088": [
+        "train/450"
+      ],
+      "lol_s0089": [
+        "train/460"
+      ],
+      "lol_s0090": [
+        "train/464"
+      ],
+      "lol_s0091": [
+        "train/468"
+      ],
+      "lol_s0092": [
+        "train/469"
+      ],
+      "lol_s0093": [
+        "train/47",
+        "train/48"
+      ],
+      "lol_s0094": [
+        "train/470"
+      ],
+      "lol_s0095": [
+        "train/471"
+      ],
+      "lol_s0096": [
+        "train/472"
+      ],
+      "lol_s0097": [
+        "train/473"
+      ],
+      "lol_s0098": [
+        "train/474"
+      ],
+      "lol_s0099": [
+        "train/475"
+      ],
+      "lol_s0100": [
+        "train/476"
+      ],
+      "lol_s0101": [
+        "train/477"
+      ],
+      "lol_s0102": [
+        "train/478"
+      ],
+      "lol_s0103": [
+        "train/479"
+      ],
+      "lol_s0104": [
+        "train/480"
+      ],
+      "lol_s0105": [
+        "train/481",
+        "train/482"
+      ],
+      "lol_s0106": [
+        "train/483"
+      ],
+      "lol_s0107": [
+        "train/484"
+      ],
+      "lol_s0108": [
+        "train/485",
+        "train/486"
+      ],
+      "lol_s0109": [
+        "train/487"
+      ],
+      "lol_s0110": [
+        "train/488"
+      ],
+      "lol_s0111": [
+        "train/489"
+      ],
+      "lol_s0112": [
+        "train/490"
+      ],
+      "lol_s0113": [
+        "train/491"
+      ],
+      "lol_s0114": [
+        "train/492"
+      ],
+      "lol_s0115": [
+        "train/495"
+      ],
+      "lol_s0116": [
+        "train/496"
+      ],
+      "lol_s0117": [
+        "train/497"
+      ],
+      "lol_s0118": [
+        "train/498"
+      ],
+      "lol_s0119": [
+        "train/499"
+      ],
+      "lol_s0120": [
+        "train/5",
+        "train/6"
+      ],
+      "lol_s0121": [
+        "train/50",
+        "train/51",
+        "train/52"
+      ],
+      "lol_s0122": [
+        "train/500"
+      ],
+      "lol_s0123": [
+        "train/501"
+      ],
+      "lol_s0124": [
+        "train/502"
+      ],
+      "lol_s0125": [
+        "train/504"
+      ],
+      "lol_s0126": [
+        "train/505"
+      ],
+      "lol_s0127": [
+        "train/506"
+      ],
+      "lol_s0128": [
+        "train/507",
+        "train/508"
+      ],
+      "lol_s0129": [
+        "train/511"
+      ],
+      "lol_s0130": [
+        "train/512"
+      ],
+      "lol_s0131": [
+        "train/514"
+      ],
+      "lol_s0132": [
+        "train/515"
+      ],
+      "lol_s0133": [
+        "train/517"
+      ],
+      "lol_s0134": [
+        "train/522"
+      ],
+      "lol_s0135": [
+        "train/523"
+      ],
+      "lol_s0136": [
+        "train/524",
+        "train/525"
+      ],
+      "lol_s0137": [
+        "train/526",
+        "train/527"
+      ],
+      "lol_s0138": [
+        "train/528",
+        "train/529",
+        "train/530",
+        "train/531"
+      ],
+      "lol_s0139": [
+        "train/532",
+        "train/533"
+      ],
+      "lol_s0140": [
+        "train/534",
+        "train/535"
+      ],
+      "lol_s0141": [
+        "train/537"
+      ],
+      "lol_s0142": [
+        "train/538",
+        "train/539"
+      ],
+      "lol_s0143": [
+        "train/540",
+        "train/541"
+      ],
+      "lol_s0144": [
+        "train/542",
+        "train/543"
+      ],
+      "lol_s0145": [
+        "train/544",
+        "train/545"
+      ],
+      "lol_s0146": [
+        "train/548",
+        "train/549"
+      ],
+      "lol_s0147": [
+        "train/550"
+      ],
+      "lol_s0148": [
+        "train/551"
+      ],
+      "lol_s0149": [
+        "train/552"
+      ],
+      "lol_s0150": [
+        "train/553"
+      ],
+      "lol_s0151": [
+        "train/554",
+        "train/555",
+        "train/556",
+        "train/557"
+      ],
+      "lol_s0152": [
+        "train/558",
+        "train/559"
+      ],
+      "lol_s0153": [
+        "train/560"
+      ],
+      "lol_s0154": [
+        "train/561"
+      ],
+      "lol_s0155": [
+        "train/562",
+        "train/563"
+      ],
+      "lol_s0156": [
+        "train/564",
+        "train/565"
+      ],
+      "lol_s0157": [
+        "train/566",
+        "train/567"
+      ],
+      "lol_s0158": [
+        "train/568",
+        "train/569"
+      ],
+      "lol_s0159": [
+        "train/57",
+        "train/58"
+      ],
+      "lol_s0160": [
+        "train/570",
+        "train/571",
+        "train/572"
+      ],
+      "lol_s0161": [
+        "train/573",
+        "train/574"
+      ],
+      "lol_s0162": [
+        "train/575",
+        "train/576"
+      ],
+      "lol_s0163": [
+        "train/578"
+      ],
+      "lol_s0164": [
+        "train/579",
+        "train/580",
+        "train/583"
+      ],
+      "lol_s0165": [
+        "train/585",
+        "train/586",
+        "train/587",
+        "train/588",
+        "train/590",
+        "train/591"
+      ],
+      "lol_s0166": [
+        "train/59",
+        "train/60",
+        "train/61",
+        "train/62"
+      ],
+      "lol_s0167": [
+        "train/592",
+        "train/593"
+      ],
+      "lol_s0168": [
+        "train/594",
+        "train/595",
+        "train/596",
+        "train/597"
+      ],
+      "lol_s0169": [
+        "train/598"
+      ],
+      "lol_s0170": [
+        "train/600",
+        "train/601"
+      ],
+      "lol_s0171": [
+        "train/604",
+        "train/605"
+      ],
+      "lol_s0172": [
+        "train/606",
+        "train/607"
+      ],
+      "lol_s0173": [
+        "train/608",
+        "train/609"
+      ],
+      "lol_s0174": [
+        "train/610",
+        "train/611"
+      ],
+      "lol_s0175": [
+        "train/612",
+        "train/613"
+      ],
+      "lol_s0176": [
+        "train/614",
+        "train/615"
+      ],
+      "lol_s0177": [
+        "train/616",
+        "train/617"
+      ],
+      "lol_s0178": [
+        "train/620",
+        "train/621"
+      ],
+      "lol_s0179": [
+        "train/622",
+        "train/623"
+      ],
+      "lol_s0180": [
+        "train/624",
+        "train/625",
+        "train/626"
+      ],
+      "lol_s0181": [
+        "train/627"
+      ],
+      "lol_s0182": [
+        "train/628"
+      ],
+      "lol_s0183": [
+        "train/629",
+        "train/630"
+      ],
+      "lol_s0184": [
+        "train/63",
+        "train/64"
+      ],
+      "lol_s0185": [
+        "train/633",
+        "train/634"
+      ],
+      "lol_s0186": [
+        "train/637",
+        "train/638"
+      ],
+      "lol_s0187": [
+        "train/639",
+        "train/640",
+        "train/641",
+        "train/642",
+        "train/643",
+        "train/644"
+      ],
+      "lol_s0188": [
+        "train/645",
+        "train/646"
+      ],
+      "lol_s0189": [
+        "train/647",
+        "train/648"
+      ],
+      "lol_s0190": [
+        "train/649"
+      ],
+      "lol_s0191": [
+        "train/650",
+        "train/651",
+        "train/653"
+      ],
+      "lol_s0192": [
+        "train/654",
+        "train/655"
+      ],
+      "lol_s0193": [
+        "train/658",
+        "train/659"
+      ],
+      "lol_s0194": [
+        "train/660",
+        "train/661"
+      ],
+      "lol_s0195": [
+        "train/662",
+        "train/663"
+      ],
+      "lol_s0196": [
+        "train/666",
+        "train/667"
+      ],
+      "lol_s0197": [
+        "train/67",
+        "train/68"
+      ],
+      "lol_s0198": [
+        "train/670",
+        "train/671"
+      ],
+      "lol_s0199": [
+        "train/674",
+        "train/675"
+      ],
+      "lol_s0200": [
+        "train/676",
+        "train/677"
+      ],
+      "lol_s0201": [
+        "train/678",
+        "train/679"
+      ],
+      "lol_s0202": [
+        "train/680",
+        "train/681"
+      ],
+      "lol_s0203": [
+        "train/682",
+        "train/683"
+      ],
+      "lol_s0204": [
+        "train/684",
+        "train/685"
+      ],
+      "lol_s0205": [
+        "train/686",
+        "train/687"
+      ],
+      "lol_s0206": [
+        "train/688",
+        "train/689"
+      ],
+      "lol_s0207": [
+        "train/69",
+        "train/70",
+        "train/73",
+        "train/74"
+      ],
+      "lol_s0208": [
+        "train/690",
+        "train/691"
+      ],
+      "lol_s0209": [
+        "train/692",
+        "train/693"
+      ],
+      "lol_s0210": [
+        "train/694",
+        "train/695"
+      ],
+      "lol_s0211": [
+        "train/696",
+        "train/697"
+      ],
+      "lol_s0212": [
+        "train/698",
+        "train/699",
+        "train/700",
+        "train/701"
+      ],
+      "lol_s0213": [
+        "train/702",
+        "train/703",
+        "train/704"
+      ],
+      "lol_s0214": [
+        "train/708",
+        "train/709"
+      ],
+      "lol_s0215": [
+        "train/710",
+        "train/711"
+      ],
+      "lol_s0216": [
+        "train/712",
+        "train/713"
+      ],
+      "lol_s0217": [
+        "train/714",
+        "train/715"
+      ],
+      "lol_s0218": [
+        "train/716",
+        "train/717"
+      ],
+      "lol_s0219": [
+        "train/718",
+        "train/719"
+      ],
+      "lol_s0220": [
+        "train/720",
+        "train/721"
+      ],
+      "lol_s0221": [
+        "train/722",
+        "train/723"
+      ],
+      "lol_s0222": [
+        "train/724",
+        "train/725"
+      ],
+      "lol_s0223": [
+        "train/726",
+        "train/727",
+        "train/728"
+      ],
+      "lol_s0224": [
+        "train/729",
+        "train/730"
+      ],
+      "lol_s0225": [
+        "train/731",
+        "train/732"
+      ],
+      "lol_s0226": [
+        "train/733",
+        "train/734"
+      ],
+      "lol_s0227": [
+        "train/735",
+        "train/736"
+      ],
+      "lol_s0228": [
+        "train/737",
+        "train/738"
+      ],
+      "lol_s0229": [
+        "train/739",
+        "train/740"
+      ],
+      "lol_s0230": [
+        "train/741"
+      ],
+      "lol_s0231": [
+        "train/743",
+        "train/744"
+      ],
+      "lol_s0232": [
+        "train/745",
+        "train/746"
+      ],
+      "lol_s0233": [
+        "train/75",
+        "train/76"
+      ],
+      "lol_s0234": [
+        "train/750"
+      ],
+      "lol_s0235": [
+        "train/751",
+        "train/752"
+      ],
+      "lol_s0236": [
+        "train/757",
+        "train/758"
+      ],
+      "lol_s0237": [
+        "train/759",
+        "train/760"
+      ],
+      "lol_s0238": [
+        "train/761",
+        "train/762"
+      ],
+      "lol_s0239": [
+        "train/763",
+        "train/764"
+      ],
+      "lol_s0240": [
+        "train/765",
+        "train/766"
+      ],
+      "lol_s0241": [
+        "train/769",
+        "train/770"
+      ],
+      "lol_s0242": [
+        "train/77",
+        "train/78"
+      ],
+      "lol_s0243": [
+        "train/771",
+        "train/772"
+      ],
+      "lol_s0244": [
+        "train/773",
+        "train/774"
+      ],
+      "lol_s0245": [
+        "train/781",
+        "train/782",
+        "train/783",
+        "train/784",
+        "train/785",
+        "train/786"
+      ],
+      "lol_s0246": [
+        "train/787",
+        "train/788",
+        "train/789"
+      ],
+      "lol_s0247": [
+        "train/83",
+        "train/84",
+        "train/86"
+      ],
+      "lol_s0248": [
+        "train/87",
+        "train/88",
+        "train/89"
+      ],
+      "lol_s0249": [
+        "train/91",
+        "train/93",
+        "train/94"
+      ],
+      "lol_s0250": [
+        "train/92"
+      ],
+      "lol_s0251": [
+        "train/95",
+        "train/96"
+      ],
+      "lol_s0252": [
+        "train/97",
+        "train/98"
+      ]
+    },
+    "largest_group": 6,
+    "n_groups": 252,
+    "n_pairs": 500,
+    "threshold": 4
+  },
+  "lolv2-real": {
+    "basis": "GT SHA256 + GT pHash Hamming",
+    "groups": {
+      "lolv2-real_s0001": [
+        "test/00690",
+        "test/00691"
+      ],
+      "lolv2-real_s0002": [
+        "test/00692",
+        "test/00693"
+      ],
+      "lolv2-real_s0003": [
+        "test/00694",
+        "test/00695"
+      ],
+      "lolv2-real_s0004": [
+        "test/00696",
+        "test/00697"
+      ],
+      "lolv2-real_s0005": [
+        "test/00698",
+        "test/00699",
+        "test/00700",
+        "test/00701"
+      ],
+      "lolv2-real_s0006": [
+        "test/00702",
+        "test/00703",
+        "test/00704"
+      ],
+      "lolv2-real_s0007": [
+        "test/00705",
+        "test/00706",
+        "test/00707"
+      ],
+      "lolv2-real_s0008": [
+        "test/00708",
+        "test/00709"
+      ],
+      "lolv2-real_s0009": [
+        "test/00710",
+        "test/00711"
+      ],
+      "lolv2-real_s0010": [
+        "test/00712",
+        "test/00713"
+      ],
+      "lolv2-real_s0011": [
+        "test/00714",
+        "test/00715"
+      ],
+      "lolv2-real_s0012": [
+        "test/00716",
+        "test/00717"
+      ],
+      "lolv2-real_s0013": [
+        "test/00718",
+        "test/00719"
+      ],
+      "lolv2-real_s0014": [
+        "test/00720",
+        "test/00721"
+      ],
+      "lolv2-real_s0015": [
+        "test/00722",
+        "test/00723"
+      ],
+      "lolv2-real_s0016": [
+        "test/00724",
+        "test/00725"
+      ],
+      "lolv2-real_s0017": [
+        "test/00726",
+        "test/00727",
+        "test/00728"
+      ],
+      "lolv2-real_s0018": [
+        "test/00729",
+        "test/00730"
+      ],
+      "lolv2-real_s0019": [
+        "test/00731",
+        "test/00732"
+      ],
+      "lolv2-real_s0020": [
+        "test/00733",
+        "test/00734"
+      ],
+      "lolv2-real_s0021": [
+        "test/00735",
+        "test/00736"
+      ],
+      "lolv2-real_s0022": [
+        "test/00737",
+        "test/00738"
+      ],
+      "lolv2-real_s0023": [
+        "test/00739",
+        "test/00740"
+      ],
+      "lolv2-real_s0024": [
+        "test/00741",
+        "test/00742"
+      ],
+      "lolv2-real_s0025": [
+        "test/00743",
+        "test/00744"
+      ],
+      "lolv2-real_s0026": [
+        "test/00745",
+        "test/00746"
+      ],
+      "lolv2-real_s0027": [
+        "test/00747",
+        "test/00748"
+      ],
+      "lolv2-real_s0028": [
+        "test/00749",
+        "test/00750"
+      ],
+      "lolv2-real_s0029": [
+        "test/00751",
+        "test/00752"
+      ],
+      "lolv2-real_s0030": [
+        "test/00753",
+        "test/00754",
+        "test/00755",
+        "test/00756"
+      ],
+      "lolv2-real_s0031": [
+        "test/00757",
+        "test/00758"
+      ],
+      "lolv2-real_s0032": [
+        "test/00759",
+        "test/00760"
+      ],
+      "lolv2-real_s0033": [
+        "test/00761",
+        "test/00762"
+      ],
+      "lolv2-real_s0034": [
+        "test/00763",
+        "test/00764"
+      ],
+      "lolv2-real_s0035": [
+        "test/00765",
+        "test/00766"
+      ],
+      "lolv2-real_s0036": [
+        "test/00767",
+        "test/00768"
+      ],
+      "lolv2-real_s0037": [
+        "test/00769",
+        "test/00770"
+      ],
+      "lolv2-real_s0038": [
+        "test/00771",
+        "test/00772"
+      ],
+      "lolv2-real_s0039": [
+        "test/00773",
+        "test/00774"
+      ],
+      "lolv2-real_s0040": [
+        "test/00775",
+        "test/00776",
+        "test/00777",
+        "test/00778"
+      ],
+      "lolv2-real_s0041": [
+        "test/00779",
+        "test/00780"
+      ],
+      "lolv2-real_s0042": [
+        "test/00781",
+        "test/00782",
+        "test/00783",
+        "test/00784",
+        "test/00785",
+        "test/00786"
+      ],
+      "lolv2-real_s0043": [
+        "test/00787",
+        "test/00788",
+        "test/00789"
+      ],
+      "lolv2-real_s0044": [
+        "train/00001",
+        "train/00002",
+        "train/00003",
+        "train/00004"
+      ],
+      "lolv2-real_s0045": [
+        "train/00005",
+        "train/00006",
+        "train/00007",
+        "train/00008"
+      ],
+      "lolv2-real_s0046": [
+        "train/00009",
+        "train/00010"
+      ],
+      "lolv2-real_s0047": [
+        "train/00011",
+        "train/00012"
+      ],
+      "lolv2-real_s0048": [
+        "train/00013",
+        "train/00014",
+        "train/00015",
+        "train/00016"
+      ],
+      "lolv2-real_s0049": [
+        "train/00017",
+        "train/00018",
+        "train/00019",
+        "train/00020"
+      ],
+      "lolv2-real_s0050": [
+        "train/00021",
+        "train/00022",
+        "train/00023",
+        "train/00024"
+      ],
+      "lolv2-real_s0051": [
+        "train/00025",
+        "train/00026",
+        "train/00027",
+        "train/00028"
+      ],
+      "lolv2-real_s0052": [
+        "train/00029",
+        "train/00030",
+        "train/00031",
+        "train/00032"
+      ],
+      "lolv2-real_s0053": [
+        "train/00033",
+        "train/00034"
+      ],
+      "lolv2-real_s0054": [
+        "train/00035",
+        "train/00036",
+        "train/00037",
+        "train/00038"
+      ],
+      "lolv2-real_s0055": [
+        "train/00039",
+        "train/00040",
+        "train/00041",
+        "train/00042"
+      ],
+      "lolv2-real_s0056": [
+        "train/00043",
+        "train/00044",
+        "train/00045",
+        "train/00046"
+      ],
+      "lolv2-real_s0057": [
+        "train/00047",
+        "train/00048"
+      ],
+      "lolv2-real_s0058": [
+        "train/00049",
+        "train/00050",
+        "train/00051",
+        "train/00052"
+      ],
+      "lolv2-real_s0059": [
+        "train/00053",
+        "train/00054",
+        "train/00055",
+        "train/00056"
+      ],
+      "lolv2-real_s0060": [
+        "train/00057",
+        "train/00058"
+      ],
+      "lolv2-real_s0061": [
+        "train/00059",
+        "train/00060",
+        "train/00061",
+        "train/00062"
+      ],
+      "lolv2-real_s0062": [
+        "train/00063",
+        "train/00064",
+        "train/00065",
+        "train/00066"
+      ],
+      "lolv2-real_s0063": [
+        "train/00067",
+        "train/00068"
+      ],
+      "lolv2-real_s0064": [
+        "train/00069",
+        "train/00070",
+        "train/00071",
+        "train/00072",
+        "train/00073",
+        "train/00074"
+      ],
+      "lolv2-real_s0065": [
+        "train/00075",
+        "train/00076"
+      ],
+      "lolv2-real_s0066": [
+        "train/00077",
+        "train/00078"
+      ],
+      "lolv2-real_s0067": [
+        "train/00079",
+        "train/00080",
+        "train/00081",
+        "train/00082"
+      ],
+      "lolv2-real_s0068": [
+        "train/00083",
+        "train/00084",
+        "train/00085",
+        "train/00086"
+      ],
+      "lolv2-real_s0069": [
+        "train/00087",
+        "train/00088",
+        "train/00089",
+        "train/00090"
+      ],
+      "lolv2-real_s0070": [
+        "train/00091",
+        "train/00093",
+        "train/00094"
+      ],
+      "lolv2-real_s0071": [
+        "train/00092"
+      ],
+      "lolv2-real_s0072": [
+        "train/00095",
+        "train/00096"
+      ],
+      "lolv2-real_s0073": [
+        "train/00097",
+        "train/00098"
+      ],
+      "lolv2-real_s0074": [
+        "train/00099",
+        "train/00100"
+      ],
+      "lolv2-real_s0075": [
+        "train/00101",
+        "train/00103",
+        "train/00104"
+      ],
+      "lolv2-real_s0076": [
+        "train/00102"
+      ],
+      "lolv2-real_s0077": [
+        "train/00105",
+        "train/00106",
+        "train/00107",
+        "train/00108"
+      ],
+      "lolv2-real_s0078": [
+        "train/00109"
+      ],
+      "lolv2-real_s0079": [
+        "train/00110"
+      ],
+      "lolv2-real_s0080": [
+        "train/00111",
+        "train/00112",
+        "train/00113",
+        "train/00114"
+      ],
+      "lolv2-real_s0081": [
+        "train/00115",
+        "train/00116"
+      ],
+      "lolv2-real_s0082": [
+        "train/00117",
+        "train/00118",
+        "train/00119",
+        "train/00120"
+      ],
+      "lolv2-real_s0083": [
+        "train/00121",
+        "train/00122",
+        "train/00123",
+        "train/00124"
+      ],
+      "lolv2-real_s0084": [
+        "train/00125",
+        "train/00126"
+      ],
+      "lolv2-real_s0085": [
+        "train/00127",
+        "train/00128",
+        "train/00129",
+        "train/00130"
+      ],
+      "lolv2-real_s0086": [
+        "train/00131",
+        "train/00132",
+        "train/00133",
+        "train/00134",
+        "train/00135",
+        "train/00136"
+      ],
+      "lolv2-real_s0087": [
+        "train/00137",
+        "train/00138"
+      ],
+      "lolv2-real_s0088": [
+        "train/00139",
+        "train/00140"
+      ],
+      "lolv2-real_s0089": [
+        "train/00141",
+        "train/00142"
+      ],
+      "lolv2-real_s0090": [
+        "train/00143",
+        "train/00144",
+        "train/00145",
+        "train/00146"
+      ],
+      "lolv2-real_s0091": [
+        "train/00147",
+        "train/00148",
+        "train/00149",
+        "train/00150"
+      ],
+      "lolv2-real_s0092": [
+        "train/00151"
+      ],
+      "lolv2-real_s0093": [
+        "train/00152"
+      ],
+      "lolv2-real_s0094": [
+        "train/00153",
+        "train/00154"
+      ],
+      "lolv2-real_s0095": [
+        "train/00155",
+        "train/00156"
+      ],
+      "lolv2-real_s0096": [
+        "train/00157"
+      ],
+      "lolv2-real_s0097": [
+        "train/00158"
+      ],
+      "lolv2-real_s0098": [
+        "train/00159",
+        "train/00160"
+      ],
+      "lolv2-real_s0099": [
+        "train/00161",
+        "train/00162"
+      ],
+      "lolv2-real_s0100": [
+        "train/00163",
+        "train/00164"
+      ],
+      "lolv2-real_s0101": [
+        "train/00165",
+        "train/00166",
+        "train/00167"
+      ],
+      "lolv2-real_s0102": [
+        "train/00168",
+        "train/00169",
+        "train/00170"
+      ],
+      "lolv2-real_s0103": [
+        "train/00171",
+        "train/00172",
+        "train/00173"
+      ],
+      "lolv2-real_s0104": [
+        "train/00174",
+        "train/00175",
+        "train/00176"
+      ],
+      "lolv2-real_s0105": [
+        "train/00177",
+        "train/00178",
+        "train/00179"
+      ],
+      "lolv2-real_s0106": [
+        "train/00180",
+        "train/00181"
+      ],
+      "lolv2-real_s0107": [
+        "train/00182",
+        "train/00183",
+        "train/00184",
+        "train/00185",
+        "train/00186",
+        "train/00187"
+      ],
+      "lolv2-real_s0108": [
+        "train/00188",
+        "train/00189"
+      ],
+      "lolv2-real_s0109": [
+        "train/00190",
+        "train/00191",
+        "train/00192"
+      ],
+      "lolv2-real_s0110": [
+        "train/00193",
+        "train/00194",
+        "train/00195"
+      ],
+      "lolv2-real_s0111": [
+        "train/00196",
+        "train/00197",
+        "train/00198"
+      ],
+      "lolv2-real_s0112": [
+        "train/00199",
+        "train/00200",
+        "train/00201"
+      ],
+      "lolv2-real_s0113": [
+        "train/00202",
+        "train/00203"
+      ],
+      "lolv2-real_s0114": [
+        "train/00204",
+        "train/00205",
+        "train/00206"
+      ],
+      "lolv2-real_s0115": [
+        "train/00207",
+        "train/00208",
+        "train/00209"
+      ],
+      "lolv2-real_s0116": [
+        "train/00210",
+        "train/00211",
+        "train/00212"
+      ],
+      "lolv2-real_s0117": [
+        "train/00213",
+        "train/00214",
+        "train/00215"
+      ],
+      "lolv2-real_s0118": [
+        "train/00216",
+        "train/00217"
+      ],
+      "lolv2-real_s0119": [
+        "train/00218"
+      ],
+      "lolv2-real_s0120": [
+        "train/00219",
+        "train/00220",
+        "train/00221"
+      ],
+      "lolv2-real_s0121": [
+        "train/00222",
+        "train/00223",
+        "train/00224"
+      ],
+      "lolv2-real_s0122": [
+        "train/00225",
+        "train/00226"
+      ],
+      "lolv2-real_s0123": [
+        "train/00227",
+        "train/00228",
+        "train/00229"
+      ],
+      "lolv2-real_s0124": [
+        "train/00230",
+        "train/00231"
+      ],
+      "lolv2-real_s0125": [
+        "train/00232"
+      ],
+      "lolv2-real_s0126": [
+        "train/00233",
+        "train/00235"
+      ],
+      "lolv2-real_s0127": [
+        "train/00234"
+      ],
+      "lolv2-real_s0128": [
+        "train/00236",
+        "train/00237",
+        "train/00238"
+      ],
+      "lolv2-real_s0129": [
+        "train/00239"
+      ],
+      "lolv2-real_s0130": [
+        "train/00240"
+      ],
+      "lolv2-real_s0131": [
+        "train/00241",
+        "train/00242",
+        "train/00243"
+      ],
+      "lolv2-real_s0132": [
+        "train/00244",
+        "train/00245",
+        "train/00246",
+        "train/00247"
+      ],
+      "lolv2-real_s0133": [
+        "train/00248",
+        "train/00249",
+        "train/00250"
+      ],
+      "lolv2-real_s0134": [
+        "train/00251",
+        "train/00253"
+      ],
+      "lolv2-real_s0135": [
+        "train/00252"
+      ],
+      "lolv2-real_s0136": [
+        "train/00254"
+      ],
+      "lolv2-real_s0137": [
+        "train/00255",
+        "train/00256",
+        "train/00257",
+        "train/00258"
+      ],
+      "lolv2-real_s0138": [
+        "train/00259",
+        "train/00260",
+        "train/00261",
+        "train/00262"
+      ],
+      "lolv2-real_s0139": [
+        "train/00263"
+      ],
+      "lolv2-real_s0140": [
+        "train/00264"
+      ],
+      "lolv2-real_s0141": [
+        "train/00265",
+        "train/00266",
+        "train/00267"
+      ],
+      "lolv2-real_s0142": [
+        "train/00268",
+        "train/00269",
+        "train/00270",
+        "train/00271"
+      ],
+      "lolv2-real_s0143": [
+        "train/00272",
+        "train/00273",
+        "train/00274",
+        "train/00275"
+      ],
+      "lolv2-real_s0144": [
+        "train/00276",
+        "train/00277",
+        "train/00279"
+      ],
+      "lolv2-real_s0145": [
+        "train/00278"
+      ],
+      "lolv2-real_s0146": [
+        "train/00280",
+        "train/00281",
+        "train/00282",
+        "train/00283"
+      ],
+      "lolv2-real_s0147": [
+        "train/00284",
+        "train/00285",
+        "train/00286",
+        "train/00287"
+      ],
+      "lolv2-real_s0148": [
+        "train/00288",
+        "train/00289",
+        "train/00290",
+        "train/00291"
+      ],
+      "lolv2-real_s0149": [
+        "train/00292",
+        "train/00293",
+        "train/00294",
+        "train/00295"
+      ],
+      "lolv2-real_s0150": [
+        "train/00296",
+        "train/00297",
+        "train/00298",
+        "train/00299",
+        "train/00300",
+        "train/00301",
+        "train/00302",
+        "train/00303",
+        "train/00304",
+        "train/00305"
+      ],
+      "lolv2-real_s0151": [
+        "train/00306",
+        "train/00307"
+      ],
+      "lolv2-real_s0152": [
+        "train/00308",
+        "train/00309",
+        "train/00310",
+        "train/00311",
+        "train/00312",
+        "train/00313",
+        "train/00314",
+        "train/00315"
+      ],
+      "lolv2-real_s0153": [
+        "train/00316",
+        "train/00318"
+      ],
+      "lolv2-real_s0154": [
+        "train/00317",
+        "train/00319"
+      ],
+      "lolv2-real_s0155": [
+        "train/00320",
+        "train/00321",
+        "train/00322",
+        "train/00323"
+      ],
+      "lolv2-real_s0156": [
+        "train/00324",
+        "train/00325",
+        "train/00326",
+        "train/00327",
+        "train/00328",
+        "train/00329",
+        "train/00330"
+      ],
+      "lolv2-real_s0157": [
+        "train/00331",
+        "train/00332",
+        "train/00333",
+        "train/00334"
+      ],
+      "lolv2-real_s0158": [
+        "train/00335",
+        "train/00336",
+        "train/00337",
+        "train/00338"
+      ],
+      "lolv2-real_s0159": [
+        "train/00339",
+        "train/00340",
+        "train/00342",
+        "train/00345",
+        "train/00348"
+      ],
+      "lolv2-real_s0160": [
+        "train/00341",
+        "train/00343",
+        "train/00344",
+        "train/00346",
+        "train/00347"
+      ],
+      "lolv2-real_s0161": [
+        "train/00349",
+        "train/00350",
+        "train/00351",
+        "train/00352"
+      ],
+      "lolv2-real_s0162": [
+        "train/00353",
+        "train/00354",
+        "train/00355",
+        "train/00356"
+      ],
+      "lolv2-real_s0163": [
+        "train/00357",
+        "train/00358",
+        "train/00359",
+        "train/00360",
+        "train/00361",
+        "train/00362",
+        "train/00363",
+        "train/00364"
+      ],
+      "lolv2-real_s0164": [
+        "train/00365",
+        "train/00366",
+        "train/00368"
+      ],
+      "lolv2-real_s0165": [
+        "train/00367"
+      ],
+      "lolv2-real_s0166": [
+        "train/00369",
+        "train/00371"
+      ],
+      "lolv2-real_s0167": [
+        "train/00370"
+      ],
+      "lolv2-real_s0168": [
+        "train/00372",
+        "train/00373",
+        "train/00374",
+        "train/00375"
+      ],
+      "lolv2-real_s0169": [
+        "train/00376",
+        "train/00378",
+        "train/00379"
+      ],
+      "lolv2-real_s0170": [
+        "train/00377"
+      ],
+      "lolv2-real_s0171": [
+        "train/00380",
+        "train/00383"
+      ],
+      "lolv2-real_s0172": [
+        "train/00381",
+        "train/00382"
+      ],
+      "lolv2-real_s0173": [
+        "train/00384",
+        "train/00385",
+        "train/00386",
+        "train/00387"
+      ],
+      "lolv2-real_s0174": [
+        "train/00388",
+        "train/00389",
+        "train/00390",
+        "train/00391"
+      ],
+      "lolv2-real_s0175": [
+        "train/00392",
+        "train/00393",
+        "train/00394",
+        "train/00395"
+      ],
+      "lolv2-real_s0176": [
+        "train/00396",
+        "train/00397",
+        "train/00398",
+        "train/00399"
+      ],
+      "lolv2-real_s0177": [
+        "train/00400",
+        "train/00401",
+        "train/00402",
+        "train/00403"
+      ],
+      "lolv2-real_s0178": [
+        "train/00404",
+        "train/00405",
+        "train/00406",
+        "train/00407"
+      ],
+      "lolv2-real_s0179": [
+        "train/00408",
+        "train/00409",
+        "train/00410",
+        "train/00411"
+      ],
+      "lolv2-real_s0180": [
+        "train/00412",
+        "train/00413",
+        "train/00414",
+        "train/00415",
+        "train/00416",
+        "train/00417",
+        "train/00418"
+      ],
+      "lolv2-real_s0181": [
+        "train/00419",
+        "train/00420",
+        "train/00421",
+        "train/00422"
+      ],
+      "lolv2-real_s0182": [
+        "train/00423",
+        "train/00424",
+        "train/00425",
+        "train/00426"
+      ],
+      "lolv2-real_s0183": [
+        "train/00427",
+        "train/00428",
+        "train/00429"
+      ],
+      "lolv2-real_s0184": [
+        "train/00430",
+        "train/00431"
+      ],
+      "lolv2-real_s0185": [
+        "train/00432",
+        "train/00433",
+        "train/00434"
+      ],
+      "lolv2-real_s0186": [
+        "train/00435",
+        "train/00436",
+        "train/00437"
+      ],
+      "lolv2-real_s0187": [
+        "train/00438",
+        "train/00439",
+        "train/00440"
+      ],
+      "lolv2-real_s0188": [
+        "train/00441",
+        "train/00442",
+        "train/00443"
+      ],
+      "lolv2-real_s0189": [
+        "train/00444",
+        "train/00445",
+        "train/00446"
+      ],
+      "lolv2-real_s0190": [
+        "train/00447",
+        "train/00448",
+        "train/00449",
+        "train/00450"
+      ],
+      "lolv2-real_s0191": [
+        "train/00451",
+        "train/00452",
+        "train/00453"
+      ],
+      "lolv2-real_s0192": [
+        "train/00454",
+        "train/00455",
+        "train/00456"
+      ],
+      "lolv2-real_s0193": [
+        "train/00457",
+        "train/00458",
+        "train/00459",
+        "train/00460"
+      ],
+      "lolv2-real_s0194": [
+        "train/00461",
+        "train/00462",
+        "train/00463",
+        "train/00464"
+      ],
+      "lolv2-real_s0195": [
+        "train/00465",
+        "train/00466",
+        "train/00467"
+      ],
+      "lolv2-real_s0196": [
+        "train/00468"
+      ],
+      "lolv2-real_s0197": [
+        "train/00469"
+      ],
+      "lolv2-real_s0198": [
+        "train/00470"
+      ],
+      "lolv2-real_s0199": [
+        "train/00471"
+      ],
+      "lolv2-real_s0200": [
+        "train/00472"
+      ],
+      "lolv2-real_s0201": [
+        "train/00473"
+      ],
+      "lolv2-real_s0202": [
+        "train/00474"
+      ],
+      "lolv2-real_s0203": [
+        "train/00475"
+      ],
+      "lolv2-real_s0204": [
+        "train/00476"
+      ],
+      "lolv2-real_s0205": [
+        "train/00477"
+      ],
+      "lolv2-real_s0206": [
+        "train/00478"
+      ],
+      "lolv2-real_s0207": [
+        "train/00479"
+      ],
+      "lolv2-real_s0208": [
+        "train/00480"
+      ],
+      "lolv2-real_s0209": [
+        "train/00481",
+        "train/00482"
+      ],
+      "lolv2-real_s0210": [
+        "train/00483"
+      ],
+      "lolv2-real_s0211": [
+        "train/00484"
+      ],
+      "lolv2-real_s0212": [
+        "train/00485",
+        "train/00486"
+      ],
+      "lolv2-real_s0213": [
+        "train/00487"
+      ],
+      "lolv2-real_s0214": [
+        "train/00488"
+      ],
+      "lolv2-real_s0215": [
+        "train/00489"
+      ],
+      "lolv2-real_s0216": [
+        "train/00490"
+      ],
+      "lolv2-real_s0217": [
+        "train/00491"
+      ],
+      "lolv2-real_s0218": [
+        "train/00492"
+      ],
+      "lolv2-real_s0219": [
+        "train/00493",
+        "train/00494"
+      ],
+      "lolv2-real_s0220": [
+        "train/00495"
+      ],
+      "lolv2-real_s0221": [
+        "train/00496"
+      ],
+      "lolv2-real_s0222": [
+        "train/00497"
+      ],
+      "lolv2-real_s0223": [
+        "train/00498"
+      ],
+      "lolv2-real_s0224": [
+        "train/00499"
+      ],
+      "lolv2-real_s0225": [
+        "train/00500"
+      ],
+      "lolv2-real_s0226": [
+        "train/00501"
+      ],
+      "lolv2-real_s0227": [
+        "train/00502"
+      ],
+      "lolv2-real_s0228": [
+        "train/00503"
+      ],
+      "lolv2-real_s0229": [
+        "train/00504"
+      ],
+      "lolv2-real_s0230": [
+        "train/00505"
+      ],
+      "lolv2-real_s0231": [
+        "train/00506"
+      ],
+      "lolv2-real_s0232": [
+        "train/00507",
+        "train/00508"
+      ],
+      "lolv2-real_s0233": [
+        "train/00509"
+      ],
+      "lolv2-real_s0234": [
+        "train/00510"
+      ],
+      "lolv2-real_s0235": [
+        "train/00511"
+      ],
+      "lolv2-real_s0236": [
+        "train/00512"
+      ],
+      "lolv2-real_s0237": [
+        "train/00513"
+      ],
+      "lolv2-real_s0238": [
+        "train/00514"
+      ],
+      "lolv2-real_s0239": [
+        "train/00515"
+      ],
+      "lolv2-real_s0240": [
+        "train/00516"
+      ],
+      "lolv2-real_s0241": [
+        "train/00517"
+      ],
+      "lolv2-real_s0242": [
+        "train/00518"
+      ],
+      "lolv2-real_s0243": [
+        "train/00519"
+      ],
+      "lolv2-real_s0244": [
+        "train/00520"
+      ],
+      "lolv2-real_s0245": [
+        "train/00521"
+      ],
+      "lolv2-real_s0246": [
+        "train/00522"
+      ],
+      "lolv2-real_s0247": [
+        "train/00523"
+      ],
+      "lolv2-real_s0248": [
+        "train/00524",
+        "train/00525"
+      ],
+      "lolv2-real_s0249": [
+        "train/00526",
+        "train/00527"
+      ],
+      "lolv2-real_s0250": [
+        "train/00528",
+        "train/00529",
+        "train/00530",
+        "train/00531"
+      ],
+      "lolv2-real_s0251": [
+        "train/00532",
+        "train/00533"
+      ],
+      "lolv2-real_s0252": [
+        "train/00534",
+        "train/00535"
+      ],
+      "lolv2-real_s0253": [
+        "train/00536",
+        "train/00537"
+      ],
+      "lolv2-real_s0254": [
+        "train/00538",
+        "train/00539"
+      ],
+      "lolv2-real_s0255": [
+        "train/00540",
+        "train/00541"
+      ],
+      "lolv2-real_s0256": [
+        "train/00542",
+        "train/00543"
+      ],
+      "lolv2-real_s0257": [
+        "train/00544",
+        "train/00545"
+      ],
+      "lolv2-real_s0258": [
+        "train/00546",
+        "train/00547"
+      ],
+      "lolv2-real_s0259": [
+        "train/00548",
+        "train/00549"
+      ],
+      "lolv2-real_s0260": [
+        "train/00550"
+      ],
+      "lolv2-real_s0261": [
+        "train/00551"
+      ],
+      "lolv2-real_s0262": [
+        "train/00552"
+      ],
+      "lolv2-real_s0263": [
+        "train/00553"
+      ],
+      "lolv2-real_s0264": [
+        "train/00554",
+        "train/00555",
+        "train/00556",
+        "train/00557"
+      ],
+      "lolv2-real_s0265": [
+        "train/00558",
+        "train/00559"
+      ],
+      "lolv2-real_s0266": [
+        "train/00560"
+      ],
+      "lolv2-real_s0267": [
+        "train/00561"
+      ],
+      "lolv2-real_s0268": [
+        "train/00562",
+        "train/00563"
+      ],
+      "lolv2-real_s0269": [
+        "train/00564",
+        "train/00565"
+      ],
+      "lolv2-real_s0270": [
+        "train/00566",
+        "train/00567"
+      ],
+      "lolv2-real_s0271": [
+        "train/00568",
+        "train/00569"
+      ],
+      "lolv2-real_s0272": [
+        "train/00570",
+        "train/00571",
+        "train/00572"
+      ],
+      "lolv2-real_s0273": [
+        "train/00573",
+        "train/00574"
+      ],
+      "lolv2-real_s0274": [
+        "train/00575",
+        "train/00576"
+      ],
+      "lolv2-real_s0275": [
+        "train/00577",
+        "train/00578"
+      ],
+      "lolv2-real_s0276": [
+        "train/00579",
+        "train/00580",
+        "train/00581",
+        "train/00582",
+        "train/00583",
+        "train/00584"
+      ],
+      "lolv2-real_s0277": [
+        "train/00585",
+        "train/00586",
+        "train/00587",
+        "train/00588",
+        "train/00589",
+        "train/00590",
+        "train/00591"
+      ],
+      "lolv2-real_s0278": [
+        "train/00592",
+        "train/00593"
+      ],
+      "lolv2-real_s0279": [
+        "train/00594",
+        "train/00595",
+        "train/00596",
+        "train/00597"
+      ],
+      "lolv2-real_s0280": [
+        "train/00598",
+        "train/00599"
+      ],
+      "lolv2-real_s0281": [
+        "train/00600",
+        "train/00601"
+      ],
+      "lolv2-real_s0282": [
+        "train/00602",
+        "train/00603"
+      ],
+      "lolv2-real_s0283": [
+        "train/00604",
+        "train/00605"
+      ],
+      "lolv2-real_s0284": [
+        "train/00606",
+        "train/00607"
+      ],
+      "lolv2-real_s0285": [
+        "train/00608",
+        "train/00609"
+      ],
+      "lolv2-real_s0286": [
+        "train/00610",
+        "train/00611"
+      ],
+      "lolv2-real_s0287": [
+        "train/00612",
+        "train/00613"
+      ],
+      "lolv2-real_s0288": [
+        "train/00614",
+        "train/00615"
+      ],
+      "lolv2-real_s0289": [
+        "train/00616",
+        "train/00617"
+      ],
+      "lolv2-real_s0290": [
+        "train/00618"
+      ],
+      "lolv2-real_s0291": [
+        "train/00619"
+      ],
+      "lolv2-real_s0292": [
+        "train/00620",
+        "train/00621"
+      ],
+      "lolv2-real_s0293": [
+        "train/00622",
+        "train/00623"
+      ],
+      "lolv2-real_s0294": [
+        "train/00624",
+        "train/00625",
+        "train/00626"
+      ],
+      "lolv2-real_s0295": [
+        "train/00627"
+      ],
+      "lolv2-real_s0296": [
+        "train/00628"
+      ],
+      "lolv2-real_s0297": [
+        "train/00629",
+        "train/00630",
+        "train/00631",
+        "train/00632"
+      ],
+      "lolv2-real_s0298": [
+        "train/00633",
+        "train/00634",
+        "train/00636"
+      ],
+      "lolv2-real_s0299": [
+        "train/00635"
+      ],
+      "lolv2-real_s0300": [
+        "train/00637",
+        "train/00638"
+      ],
+      "lolv2-real_s0301": [
+        "train/00639",
+        "train/00640",
+        "train/00641",
+        "train/00642",
+        "train/00643",
+        "train/00644"
+      ],
+      "lolv2-real_s0302": [
+        "train/00645",
+        "train/00646"
+      ],
+      "lolv2-real_s0303": [
+        "train/00647",
+        "train/00648"
+      ],
+      "lolv2-real_s0304": [
+        "train/00649"
+      ],
+      "lolv2-real_s0305": [
+        "train/00650",
+        "train/00651",
+        "train/00652",
+        "train/00653"
+      ],
+      "lolv2-real_s0306": [
+        "train/00654",
+        "train/00655"
+      ],
+      "lolv2-real_s0307": [
+        "train/00656",
+        "train/00657"
+      ],
+      "lolv2-real_s0308": [
+        "train/00658",
+        "train/00659"
+      ],
+      "lolv2-real_s0309": [
+        "train/00660",
+        "train/00661"
+      ],
+      "lolv2-real_s0310": [
+        "train/00662",
+        "train/00663"
+      ],
+      "lolv2-real_s0311": [
+        "train/00664",
+        "train/00665"
+      ],
+      "lolv2-real_s0312": [
+        "train/00666",
+        "train/00667"
+      ],
+      "lolv2-real_s0313": [
+        "train/00668",
+        "train/00669"
+      ],
+      "lolv2-real_s0314": [
+        "train/00670",
+        "train/00671"
+      ],
+      "lolv2-real_s0315": [
+        "train/00672",
+        "train/00673",
+        "train/00674",
+        "train/00675"
+      ],
+      "lolv2-real_s0316": [
+        "train/00676",
+        "train/00677"
+      ],
+      "lolv2-real_s0317": [
+        "train/00678",
+        "train/00679"
+      ],
+      "lolv2-real_s0318": [
+        "train/00680",
+        "train/00681"
+      ],
+      "lolv2-real_s0319": [
+        "train/00682",
+        "train/00683"
+      ],
+      "lolv2-real_s0320": [
+        "train/00684",
+        "train/00685"
+      ],
+      "lolv2-real_s0321": [
+        "train/00686",
+        "train/00687"
+      ],
+      "lolv2-real_s0322": [
+        "train/00688",
+        "train/00689"
+      ]
+    },
+    "largest_group": 10,
+    "n_groups": 322,
+    "n_pairs": 789,
+    "threshold": 4
+  }
+}
