@@ -1,0 +1,114 @@
+# Frozen evaluation protocol for Stages 01-07.
+# Change only through a documented decision before the single test evaluation.
+
+version: 1
+frozen: true
+frozen_at_utc: "2026-11-14T00:00:00+00:00"
+frozen_versions:
+  numpy: "2.5.4"
+  scipy: "1.18.1"
+  scikit-image: "0.26.0"
+  lpips: "0.1.4"
+  pyiqa: "0.1.16"
+  torch: "2.13.0+cu130"
+
+input:
+  range: [0.0, 1.0]
+  layout: HWC
+  color: RGB
+  reject_out_of_range: true
+  reject_nan_inf: true
+
+psnr:
+  primary_channel: rgb
+  extra_channel: luma
+  luma_weights: [0.2126, 0.7152, 0.0722]
+  data_range: 1.0
+  mse_zero: inf
+  tolerance_db: 1.0e-6
+
+ssim:
+  implementation: skimage.metrics.structural_similarity
+  channel_axis: 2
+  data_range: 1.0
+  gaussian_weights: true
+  sigma: 1.5
+  use_sample_covariance: false
+  tolerance: 1.0e-6
+
+lpips:
+  package: lpips
+  backbone: alex
+  weights_version: "0.1"
+  input_range: [0.0, 1.0]
+  scaled_range: [-1.0, 1.0]
+  lower_better: true
+  device: auto
+  deterministic: true
+  tolerance: 1.0e-6
+
+niqe:
+  package: pyiqa
+  metric: niqe
+  weights_version: original
+  test_y_channel: true
+  lower_better: true
+  min_side: 96
+  reference_required: false
+  tolerance: 1.0e-4
+
+timing:
+  batch_size: 1
+  warmup: 10
+  iterations: 50
+  synchronize: true
+  devices: [cpu, cuda]
+  report: [mean_ms, std_ms, median_ms]
+  exclude_io: true
+
+evaluation:
+  split_lock: data/splits/split_manifest.json
+  per_image_columns:
+    - run_id
+    - dataset
+    - split
+    - method
+    - seed
+    - noise_level
+    - image_id
+    - psnr
+    - ssim
+    - lpips
+    - niqe
+    - inference_ms
+    - width
+    - height
+  summary_columns:
+    - method
+    - dataset
+    - split
+    - noise_level
+    - seed
+    - metric
+    - mean
+    - std
+    - median
+    - ci95_low
+    - ci95_high
+    - n
+  bootstrap:
+    resamples: 1000
+    ci: 0.95
+    seed: 0
+  seeds:
+    learned_methods: 3
+    classical_methods: 1
+  paired_test:
+    normal: paired_t
+    non_normal: wilcoxon_signed_rank
+    correction: holm_bonferroni
+    effect_size: [cohens_d, rank_biserial]
+  reporting:
+    confidence_level: 0.95
+    main_dataset: lolv2-real
+    caveat_dataset: lol

@@ -1,0 +1,16 @@
+{
+  "created_at_utc": "2026-11-14T10:00:25+00:00",
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-image": "0.26.0",
+    "lpips": "0.1.4",
+    "pyiqa": "0.1.16",
+    "torch": "2.13.0+cu130"
+  },
+  "weights_sha256": {
+    "lpips": "df73285e35b22355a2df87cdb6b70b343713b667eddbda73e1977e0c860835c0",
+    "lpips_backbone": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02",
+    "niqe_params": "fa2aa4d12dd9595c3fb6bf8b4e1a15c79d5d1469238d0901c88dead195be578d"
+  }
+}

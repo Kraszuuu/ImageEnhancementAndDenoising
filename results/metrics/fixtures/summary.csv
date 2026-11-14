@@ -1,0 +1,5 @@
+method,dataset,split,noise_level,seed,metric,mean,std,median,ci95_low,ci95_high,n
+affine,fixture,val,clean,0,psnr,25.856296,5.910268,26.577649,21.011758,30.700834,4
+affine,fixture,val,clean,0,ssim,0.937260,0.028798,0.947205,0.911533,0.957511,4
+affine,fixture,val,clean,0,lpips,0.013676,0.008682,0.010765,0.007542,0.021463,4
+affine,fixture,val,clean,0,niqe,18.518908,0.112520,18.533843,18.419479,18.603401,4

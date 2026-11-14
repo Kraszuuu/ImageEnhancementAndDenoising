@@ -1,0 +1,5 @@
+run_id,dataset,split,method,seed,noise_level,image_id,psnr,ssim,lpips,niqe,inference_ms,width,height
+stage01-fixture,fixture,val,affine,0,clean,fixture0,18.804285,0.896435,0.025950,18.371226,,128,128
+stage01-fixture,fixture,val,affine,0,clean,fixture1,23.219230,0.937582,0.013671,18.564236,,128,128
+stage01-fixture,fixture,val,affine,0,clean,fixture2,31.465600,0.956828,0.007224,18.636718,,128,128
+stage01-fixture,fixture,val,affine,0,clean,fixture3,29.936069,0.958194,0.007859,18.503450,,128,128
