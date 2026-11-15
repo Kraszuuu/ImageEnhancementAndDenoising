@@ -1,0 +1,23 @@
+# Validation grid for classical denoising (Stage 02).
+# Selection: PSNR, then SSIM, then inference time. Never selected on test.
+
+levels: [clean, low, medium, high]
+
+methods:
+  gaussian:
+    sigma: [0.5, 0.8, 1.2, 1.8, 2.5]
+  median:
+    kernel_size: [3, 5, 7]
+  bilateral:
+    d: [5, 7, 9]
+    sigma_color: [0.05, 0.1, 0.2]
+    sigma_space: [2.0, 5.0]
+  nlm:
+    h: [0.2, 0.3, 0.4, 0.8, 1.2]
+    patch_size: [5, 7]
+    patch_distance: [5, 11]
+    fast_mode: [true]
+  bm3d:
+    sigma_psd: [0.01, 0.02, 0.04, 0.08, 0.12, 0.16]
+    profile: [np]
+    num_threads: [0]

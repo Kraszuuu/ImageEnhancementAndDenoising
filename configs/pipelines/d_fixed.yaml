@@ -1,0 +1,20 @@
+name: bm3d
+params:
+  num_threads: 0
+  profile: np
+  sigma_psd: 0.12
+selected_on:
+- lol_val
+- lolv2_val
+criterion: mean PSNR on low+medium+high; ties by SSIM then time
+validation:
+  level: noisy
+  mean_psnr: 33.439362288945695
+  std_psnr: 5.492071705501418
+  mean_ssim: 0.7004667785639836
+  std_ssim: 0.21202321041292857
+  median_ms: 4582.909649999692
+  n: 36
+noise_config: configs\data\noise.yaml
+noise_config_sha256: 259cac050af69b6451aa56cea6f2287cef6e6ca67d953fe08a4324d0c0f1800a
+frozen_at_utc: '2026-11-15T10:44:44+00:00'

@@ -1,0 +1,227 @@
+frozen: true
+frozen_at_utc: '2026-11-15T10:44:44+00:00'
+selected_on:
+- lol_val
+- lolv2_val
+criterion: psnr > ssim > inference time
+tuning_levels:
+- clean
+- low
+- medium
+- high
+noise_config: configs\data\noise.yaml
+noise_config_sha256: 259cac050af69b6451aa56cea6f2287cef6e6ca67d953fe08a4324d0c0f1800a
+methods:
+  gaussian:
+    clean:
+      params:
+        sigma: 0.5
+      mean_psnr: 49.06350679408762
+      std_psnr: 5.800385414341621
+      mean_ssim: 0.9860267270614741
+      std_ssim: 0.02546356124198119
+      median_ms: 7.786300000134361
+      n: 12
+    low:
+      params:
+        sigma: 1.2
+      mean_psnr: 37.729868980644284
+      std_psnr: 3.933361370753947
+      mean_ssim: 0.8219025293810823
+      std_ssim: 0.14184399142015502
+      median_ms: 9.382449999748133
+      n: 12
+    medium:
+      params:
+        sigma: 1.8
+      mean_psnr: 33.298605339464956
+      std_psnr: 2.6841788060258276
+      mean_ssim: 0.69593131882738
+      std_ssim: 0.1724018143813222
+      median_ms: 10.392899999715155
+      n: 12
+    high:
+      params:
+        sigma: 2.5
+      mean_psnr: 27.258153252074507
+      std_psnr: 1.8048088077244935
+      mean_ssim: 0.5483520887887064
+      std_ssim: 0.20127766272518116
+      median_ms: 11.594500000228436
+      n: 12
+  median:
+    clean:
+      params:
+        kernel_size: 3
+      mean_psnr: 41.92853571237371
+      std_psnr: 5.7671576052528515
+      mean_ssim: 0.9156170309706395
+      std_ssim: 0.15946028304213142
+      median_ms: 64.39235000016197
+      n: 12
+    low:
+      params:
+        kernel_size: 7
+      mean_psnr: 37.99868352091209
+      std_psnr: 4.954981055781122
+      mean_ssim: 0.855845932261129
+      std_ssim: 0.17335812095613723
+      median_ms: 363.9341499999773
+      n: 12
+    medium:
+      params:
+        kernel_size: 7
+      mean_psnr: 33.98750236919522
+      std_psnr: 3.617051222829773
+      mean_ssim: 0.7424060963968455
+      std_ssim: 0.14240038278350084
+      median_ms: 353.12754999995377
+      n: 12
+    high:
+      params:
+        kernel_size: 7
+      mean_psnr: 27.931244130549373
+      std_psnr: 2.2756652881361186
+      mean_ssim: 0.4761738004313853
+      std_ssim: 0.0817174367551367
+      median_ms: 323.89510000029986
+      n: 12
+  bilateral:
+    clean:
+      params:
+        d: 5
+        sigma_color: 0.05
+        sigma_space: 2.0
+      mean_psnr: 46.01317370787083
+      std_psnr: 2.3327943500945647
+      mean_ssim: 0.9776641765047165
+      std_ssim: 0.009131378697603163
+      median_ms: 5.852449999792952
+      n: 12
+    low:
+      params:
+        d: 9
+        sigma_color: 0.1
+        sigma_space: 5.0
+      mean_psnr: 39.467741056779545
+      std_psnr: 2.839613347421711
+      mean_ssim: 0.8705866185449719
+      std_ssim: 0.06866849638456943
+      median_ms: 7.647799999858762
+      n: 12
+    medium:
+      params:
+        d: 9
+        sigma_color: 0.2
+        sigma_space: 5.0
+      mean_psnr: 33.31469457543094
+      std_psnr: 2.1807548243601382
+      mean_ssim: 0.6887410845164849
+      std_ssim: 0.10877430798665849
+      median_ms: 7.41199999993114
+      n: 12
+    high:
+      params:
+        d: 9
+        sigma_color: 0.2
+        sigma_space: 5.0
+      mean_psnr: 24.826743937510454
+      std_psnr: 1.524260062082003
+      mean_ssim: 0.2862249042806898
+      std_ssim: 0.05773399677883682
+      median_ms: 7.329949999757446
+      n: 12
+  nlm:
+    clean:
+      params:
+        fast_mode: true
+        h: 0.2
+        patch_distance: 5
+        patch_size: 5
+      mean_psnr: 37.575758480462774
+      std_psnr: 5.7055976619788975
+      mean_ssim: 0.8568031917274112
+      std_ssim: 0.1832465596828424
+      median_ms: 138.95505000027697
+      n: 12
+    low:
+      params:
+        fast_mode: true
+        h: 0.2
+        patch_distance: 5
+        patch_size: 5
+      mean_psnr: 36.173433578919784
+      std_psnr: 4.530403344668369
+      mean_ssim: 0.7836564429388874
+      std_ssim: 0.16466864332872677
+      median_ms: 140.1005499999428
+      n: 12
+    medium:
+      params:
+        fast_mode: true
+        h: 0.2
+        patch_distance: 5
+        patch_size: 5
+      mean_psnr: 33.026248223801865
+      std_psnr: 2.897011353354395
+      mean_ssim: 0.685789620972605
+      std_ssim: 0.17672250492265854
+      median_ms: 141.60500000002685
+      n: 12
+    high:
+      params:
+        fast_mode: true
+        h: 0.2
+        patch_distance: 5
+        patch_size: 5
+      mean_psnr: 27.26883784949604
+      std_psnr: 1.8012724524306358
+      mean_ssim: 0.5467577699637567
+      std_ssim: 0.19976827022323507
+      median_ms: 140.69575000007717
+      n: 12
+  bm3d:
+    clean:
+      params:
+        num_threads: 0
+        profile: np
+        sigma_psd: 0.01
+      mean_psnr: 47.03301472039672
+      std_psnr: 4.832395072653264
+      mean_ssim: 0.9745144447261384
+      std_ssim: 0.013249166231459874
+      median_ms: 4217.04805000013
+      n: 12
+    low:
+      params:
+        num_threads: 0
+        profile: np
+        sigma_psd: 0.02
+      mean_psnr: 39.95886407937672
+      std_psnr: 2.3281327327757833
+      mean_ssim: 0.8774828524867032
+      std_ssim: 0.07156404495719937
+      median_ms: 4563.134749999335
+      n: 12
+    medium:
+      params:
+        num_threads: 0
+        profile: np
+        sigma_psd: 0.08
+      mean_psnr: 34.4087093986868
+      std_psnr: 2.9847152301536286
+      mean_ssim: 0.7197600058341805
+      std_ssim: 0.18722869260261113
+      median_ms: 4615.2838499997415
+      n: 12
+    high:
+      params:
+        num_threads: 0
+        profile: np
+        sigma_psd: 0.12
+      mean_psnr: 27.687530069337
+      std_psnr: 2.0086414693045294
+      mean_ssim: 0.5644736589302196
+      std_ssim: 0.20740048163126412
+      median_ms: 4614.484349999657
+      n: 12

@@ -1,6 +1,6 @@
-# Controlled Gaussian-Poisson noise configuration (skeleton).
-# alpha and sigma for low/medium/high are calibrated and frozen in Stage 02.
-# Do not treat these placeholder values as final.
+# Controlled Gaussian-Poisson noise configuration, frozen in Stage 02.
+# Calibration: scripts/calibrateNoise.py on 20 validation images (10 per dataset),
+# targets 32/26/20 dB in sRGB. Report: results/classical_denoising/noise_calibration.json.
 
 color_space: sRGB
 range: [0.0, 1.0]
@@ -15,18 +15,22 @@ levels:
     sigma: 0.0
   low:
     enabled: true
-    alpha: null  # to calibrate and freeze in Stage 02
-    sigma: null
+    alpha: 0.001
+    sigma: 0.002
+    measured_psnr_db: 32.397
   medium:
     enabled: true
-    alpha: null
-    sigma: null
+    alpha: 0.01
+    sigma: 0.005
+    measured_psnr_db: 25.573
   high:
     enabled: true
-    alpha: null
-    sigma: null
+    alpha: 0.05
+    sigma: 0.02
+    measured_psnr_db: 20.105
 
 notes:
   - "Values are calibrated so levels are distinguishable for 8-bit images."
   - "The same noise realization is used by every method for a given image and level."
-  - "Freeze this file before the single test evaluation."
+  - "Frozen before the single test evaluation; do not retune after seeing test results."
+  - "Expected mean PSNR in sRGB: low ~32.4 dB, medium ~25.6 dB, high ~20.1 dB."
