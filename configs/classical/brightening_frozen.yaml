@@ -1,0 +1,117 @@
+frozen: true
+frozen_at_utc: '2026-11-16T14:15:20+00:00'
+selected_on:
+- lol_val
+- lolv2_val
+criterion: mean PSNR > mean SSIM > mean LPIPS > median time
+tuning_images_per_dataset: 24
+n_tuning_images: 48
+grid: configs\classical\brightening_grid.yaml
+grid_sha256: 9ec2c6d32148a3da157c7ecea87ce86cf4852a6a91c98721202abd683cd7410b
+d_fixed:
+  path: configs\pipelines\d_fixed.yaml
+  sha256: 84ef8ee86717dbaec97576bd279d8032a33aaac2d9265b7c270e7fb8e84db5eb
+  name: bm3d
+  params:
+    num_threads: 0
+    profile: np
+    sigma_psd: 0.12
+  median_ms: 4603.967400005786
+tracks:
+  d_fixed:
+    label: D_fixed(L)
+    methods:
+      gamma:
+        params:
+          gamma: 0.25
+        validation:
+          mean_psnr: 16.811291894309615
+          std_psnr: 3.257063540980214
+          mean_ssim: 0.6809813890966242
+          std_ssim: 0.12989657894592851
+          mean_lpips: 0.5109957388291756
+          std_lpips: 0.10997702725175022
+          median_ms: 10.586500000499655
+          n: 48
+      clahe:
+        params:
+          clip_limit: 0.04
+          tile_grid_size: 16
+        validation:
+          mean_psnr: 13.695501516986496
+          std_psnr: 3.14427957652742
+          mean_ssim: 0.5116942065836265
+          std_ssim: 0.10312696752611167
+          mean_lpips: 0.6011315851161877
+          std_lpips: 0.08583820028979859
+          median_ms: 91.90609999495791
+          n: 48
+      msrcr:
+        params:
+          color_restoration: true
+          gain: 0.75
+          normalize: true
+          offset: 0.0
+          scales:
+          - 15.0
+          - 80.0
+          - 250.0
+          - 400.0
+        validation:
+          mean_psnr: 15.59779382905201
+          std_psnr: 3.0232391117982718
+          mean_ssim: 0.6649940484766103
+          std_ssim: 0.14089794217165422
+          mean_lpips: 0.5613284421463808
+          std_lpips: 0.09280959676113416
+          median_ms: 86.50404999934835
+          n: 48
+    best_method: gamma
+  raw:
+    label: L
+    methods:
+      gamma:
+        params:
+          gamma: 0.25
+        validation:
+          mean_psnr: 16.611732051050847
+          std_psnr: 3.2629502828325414
+          mean_ssim: 0.555247928706466
+          std_ssim: 0.18854297545857768
+          mean_lpips: 0.5226271639888486
+          std_lpips: 0.2648425823206653
+          median_ms: 10.687850008253008
+          n: 48
+      clahe:
+        params:
+          clip_limit: 0.04
+          tile_grid_size: 16
+        validation:
+          mean_psnr: 12.790614702674128
+          std_psnr: 2.519367427106815
+          mean_ssim: 0.26321656557898504
+          std_ssim: 0.12120676372800125
+          mean_lpips: 0.8216668603320917
+          std_lpips: 0.21818935684859153
+          median_ms: 93.68125000764849
+          n: 48
+      msrcr:
+        params:
+          color_restoration: true
+          gain: 0.5
+          normalize: true
+          offset: 0.2
+          scales:
+          - 30.0
+          - 120.0
+          - 300.0
+        validation:
+          mean_psnr: 13.957640555818136
+          std_psnr: 2.2904944482543947
+          mean_ssim: 0.5806373078563135
+          std_ssim: 0.15626083628670537
+          mean_lpips: 0.5858737137168646
+          std_lpips: 0.15602687466923734
+          median_ms: 38.31180000270251
+          n: 48
+    best_method: gamma

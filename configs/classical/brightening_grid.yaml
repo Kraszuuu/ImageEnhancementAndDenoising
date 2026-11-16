@@ -1,0 +1,21 @@
+# Validation grid for classical brightening (Stage 04).
+# Selection per track: PSNR, then SSIM, then LPIPS, then inference time.
+# Never selected on test.
+
+tracks: [d_fixed, raw]
+
+methods:
+  gamma:
+    gamma: [0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.6, 0.7, 0.8, 1.0]
+  clahe:
+    clip_limit: [0.005, 0.01, 0.02, 0.04]
+    tile_grid_size: [4, 8, 16]
+  msrcr:
+    scales:
+      - [15.0, 80.0, 250.0]
+      - [30.0, 120.0, 300.0]
+      - [15.0, 80.0, 250.0, 400.0]
+    gain: [0.5, 0.75, 1.0]
+    offset: [0.0, 0.1, 0.2]
+    color_restoration: [true]
+    normalize: [true]

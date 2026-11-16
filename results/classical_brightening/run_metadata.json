@@ -1,0 +1,154 @@
+{
+  "run_id": "stage04-classical-brightening",
+  "created_at_utc": "2026-11-16T14:28:28+00:00",
+  "command": "scripts\\evaluateClassicalBrightening.py",
+  "device": "cuda",
+  "test_used": true,
+  "splits": [
+    "lol_test.csv",
+    "lolv2_test.csv"
+  ],
+  "limit": 0,
+  "n_images": 115,
+  "n_rows": 920,
+  "frozen_config": "configs\\classical\\brightening_frozen.yaml",
+  "frozen_config_sha256": "428628c7cba2d2ac330d2f1f3f8741cf229a6acd9cc6993426ae418a0615eac5",
+  "d_fixed_config": "configs\\pipelines\\d_fixed.yaml",
+  "d_fixed_config_sha256": "84ef8ee86717dbaec97576bd279d8032a33aaac2d9265b7c270e7fb8e84db5eb",
+  "d_fixed": {
+    "name": "bm3d",
+    "params": {
+      "num_threads": 0,
+      "profile": "np",
+      "sigma_psd": 0.12
+    },
+    "selected_on": [
+      "lol_val",
+      "lolv2_val"
+    ],
+    "criterion": "mean PSNR on low+medium+high; ties by SSIM then time",
+    "validation": {
+      "level": "noisy",
+      "mean_psnr": 33.439362288945695,
+      "std_psnr": 5.492071705501418,
+      "mean_ssim": 0.7004667785639836,
+      "std_ssim": 0.21202321041292857,
+      "median_ms": 4582.909649999692,
+      "n": 36
+    },
+    "noise_config": "configs\\data\\noise.yaml",
+    "noise_config_sha256": "259cac050af69b6451aa56cea6f2287cef6e6ca67d953fe08a4324d0c0f1800a",
+    "frozen_at_utc": "2026-11-15T10:44:44+00:00"
+  },
+  "split_hashes": {
+    "lol_test.csv": "1cb294b3800aa095988afc6d590f05651ca738d8a8f9249572b5c5c345fad864",
+    "lol_train.csv": "14ea1e4bafa300e138b3b49361981d82a831773a99845b16c7c5eab25008cce3",
+    "lol_val.csv": "8130059f89e9784263723973773b6dfde6f5260f9b48f513b6da155136173e10",
+    "lolv2_test.csv": "6ba0fa5157c01d1cd3858bc7cde4f11608ab9016cb26df37e1715bb2930835c1",
+    "lolv2_train.csv": "f6c4142ca041ca17171641893f8cee68629a47b8b0cd6f40ae8c0005eed42af1",
+    "lolv2_val.csv": "2a9287e53b4c7e2ae0147f449dc19e17fe34972cd6119e37efc1dbfd914e92c9"
+  },
+  "tracks": {
+    "d_fixed": {
+      "best_method": "gamma",
+      "methods": {
+        "gamma": {
+          "gamma": 0.25
+        },
+        "clahe": {
+          "clip_limit": 0.04,
+          "tile_grid_size": 16
+        },
+        "msrcr": {
+          "color_restoration": true,
+          "gain": 0.75,
+          "normalize": true,
+          "offset": 0.0,
+          "scales": [
+            15.0,
+            80.0,
+            250.0,
+            400.0
+          ]
+        }
+      },
+      "baseline": "none"
+    },
+    "raw": {
+      "best_method": "gamma",
+      "methods": {
+        "gamma": {
+          "gamma": 0.25
+        },
+        "clahe": {
+          "clip_limit": 0.04,
+          "tile_grid_size": 16
+        },
+        "msrcr": {
+          "color_restoration": true,
+          "gain": 0.5,
+          "normalize": true,
+          "offset": 0.2,
+          "scales": [
+            30.0,
+            120.0,
+            300.0
+          ]
+        }
+      },
+      "baseline": "none"
+    }
+  },
+  "metrics": [
+    {
+      "name": "psnr",
+      "lower_better": false,
+      "channel": "rgb",
+      "luma_weights": [
+        0.2126,
+        0.7152,
+        0.0722
+      ],
+      "mse_zero": "inf"
+    },
+    {
+      "name": "ssim",
+      "lower_better": false,
+      "implementation": "skimage.metrics.structural_similarity",
+      "data_range": 1.0,
+      "gaussian_weights": true,
+      "sigma": 1.5,
+      "use_sample_covariance": false,
+      "channel_axis": 2
+    },
+    {
+      "name": "lpips",
+      "lower_better": true,
+      "package": "lpips",
+      "package_version": "0.1.4",
+      "backbone": "alex",
+      "weights_version": "0.1",
+      "weights_sha256": "df73285e35b22355a2df87cdb6b70b343713b667eddbda73e1977e0c860835c0",
+      "backbone_weights_sha256": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02",
+      "device": "cuda",
+      "scaled_range": [
+        -1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "niqe",
+      "lower_better": true,
+      "package": "pyiqa",
+      "package_version": "0.1.16",
+      "metric": "niqe",
+      "weights_version": "original",
+      "params_sha256": "fa2aa4d12dd9595c3fb6bf8b4e1a15c79d5d1469238d0901c88dead195be578d",
+      "device": "cuda",
+      "min_side": 96,
+      "test_y_channel": true,
+      "reference_required": false
+    }
+  ],
+  "aggregation": "bootstrap 1000, ci 0.95, seed 0; non-finite excluded"
+}

@@ -1,0 +1,17 @@
+track,method,dataset,device,mean_ms,std_ms,median_ms,n
+d_fixed,none,lol,cuda,4286.026640,138.830568,4247.112300,15
+d_fixed,none,lolv2-real,cuda,4373.207830,76.900448,4375.581850,100
+d_fixed,gamma,lol,cuda,10.526647,0.408718,10.559400,15
+d_fixed,gamma,lolv2-real,cuda,10.675821,0.560768,10.620150,100
+d_fixed,clahe,lol,cuda,92.568380,4.305550,93.459100,15
+d_fixed,clahe,lolv2-real,cuda,91.246876,4.409382,90.971700,100
+d_fixed,msrcr,lol,cuda,85.450947,2.066106,85.688300,15
+d_fixed,msrcr,lolv2-real,cuda,84.719135,2.416972,85.069000,100
+raw,none,lol,cuda,0.000000,0.000000,0.000000,15
+raw,none,lolv2-real,cuda,0.000000,0.000000,0.000000,100
+raw,gamma,lol,cuda,10.510660,0.378221,10.504900,15
+raw,gamma,lolv2-real,cuda,10.635501,0.905541,10.511350,100
+raw,clahe,lol,cuda,95.036707,3.062170,95.667500,15
+raw,clahe,lolv2-real,cuda,94.384997,3.990303,94.151300,100
+raw,msrcr,lol,cuda,37.809067,0.681402,37.824300,15
+raw,msrcr,lolv2-real,cuda,38.115522,1.546444,37.918500,100
