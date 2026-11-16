@@ -1,0 +1,9 @@
+{
+  "tag": "seed0",
+  "seed": 0,
+  "best_epoch": 28,
+  "best_score": 33.59919177161323,
+  "epochs_ran": 30,
+  "duration_seconds": 578.4224548999991,
+  "checkpoint": "checkpoints\\denoising_cnn\\seed0\\best.pt"
+}

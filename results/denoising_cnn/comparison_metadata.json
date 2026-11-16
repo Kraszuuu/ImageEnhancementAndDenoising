@@ -1,0 +1,21 @@
+{
+  "candidate": "cnn_unet",
+  "n_images": 115,
+  "n_seeds": 3,
+  "best_classical": {
+    "lol|clean": "gaussian",
+    "lol|low": "bm3d",
+    "lol|medium": "bm3d",
+    "lol|high": "bm3d",
+    "lolv2-real|clean": "gaussian",
+    "lolv2-real|low": "bm3d",
+    "lolv2-real|medium": "bm3d",
+    "lolv2-real|high": "bm3d"
+  },
+  "statistics": {
+    "paired_test": "Shapiro normality; paired t-test if p>0.05 else Wilcoxon",
+    "multiple_comparison": "Holm-Bonferroni across all dataset/level/reference/metric rows",
+    "bootstrap_resamples": 1000,
+    "effect_size": "Cohen's dz for t-test; rank-biserial for Wilcoxon"
+  }
+}

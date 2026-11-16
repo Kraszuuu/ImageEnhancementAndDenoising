@@ -1,0 +1,9 @@
+{
+  "tag": "debug_residual_s2",
+  "seed": 2,
+  "best_epoch": 10,
+  "best_score": 31.742478503121273,
+  "epochs_ran": 10,
+  "duration_seconds": 194.11114050000106,
+  "checkpoint": "checkpoints\\denoising_cnn\\debug_residual_s2\\best.pt"
+}

@@ -1,0 +1,194 @@
+{
+  "run_id": "stage03-denoising-debug_res_lpips_s0",
+  "created_at_utc": "2026-11-15T14:51:38+00:00",
+  "command": "scripts\\trainDenoising.py --tag debug_res_lpips_s0 --seed 0 --epochs 10 --patience 10",
+  "seed": 0,
+  "git": {
+    "commit": "84bb9ae14a7ab48dabca2c7fa0bb90b03a6bbd5d",
+    "dirty": true
+  },
+  "environment": {
+    "python": "3.14.0",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "scikit-image": "0.26.0",
+      "lpips": "0.1.4",
+      "pyiqa": "0.1.16",
+      "torch": "2.13.0+cu130",
+      "torchvision": "0.28.0+cu130"
+    },
+    "torch": "2.13.0+cu130",
+    "cuda": "13.0",
+    "cudnn": 92000,
+    "device": "cuda",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 3060",
+    "vram_total_mib": 12287.5
+  },
+  "deterministic": true,
+  "amp": true,
+  "model": {
+    "name": "compact_unet",
+    "config": {
+      "name": "compact_unet",
+      "in_channels": 3,
+      "out_channels": 3,
+      "base_channels": 32,
+      "depth": 4,
+      "groups": 8,
+      "activation": "silu",
+      "output_activation": "clamp",
+      "residual": true
+    },
+    "parameters": 7763107
+  },
+  "config": {
+    "config_path": "configs\\training\\denoising.yaml",
+    "config_sha256": "a59d623694fb37044ecc10b336ac8958e12b8489f86044c9b8286b3d045bc8e2",
+    "overrides": {
+      "seed": 0,
+      "tag": "debug_res_lpips_s0",
+      "epochs": 10,
+      "patience": 10,
+      "lr": 0.0001,
+      "loss_name": "l1_perceptual",
+      "lambda_lpips": 0.05,
+      "limit_train": 0,
+      "limit_val": 0,
+      "num_workers": 4,
+      "overfit": false
+    },
+    "data": {
+      "train_splits": [
+        "data/splits/lol_train.csv",
+        "data/splits/lolv2_train.csv"
+      ],
+      "val_splits": [
+        "data/splits/lol_val.csv",
+        "data/splits/lolv2_val.csv"
+      ],
+      "noise_config": "configs/data/noise.yaml",
+      "train_levels": [
+        "clean",
+        "low",
+        "medium",
+        "high"
+      ],
+      "val_levels": [
+        "clean",
+        "low",
+        "medium",
+        "high"
+      ],
+      "val_max_images_per_dataset": 24
+    },
+    "loss": {
+      "name": "l1_perceptual",
+      "lambda_lpips": 0.05
+    },
+    "training": {
+      "epochs": 10,
+      "batch_size": 4,
+      "num_workers": 4,
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "warmup_epochs": 2,
+      "scheduler": "cosine",
+      "eta_min_factor": 0.01,
+      "grad_clip": 1.0,
+      "grad_accum_steps": 1,
+      "amp": true,
+      "patience": 10,
+      "min_delta": 0.0001,
+      "monitor": "val_psnr",
+      "seeds": [
+        0,
+        1,
+        2
+      ]
+    },
+    "model": {
+      "name": "compact_unet",
+      "in_channels": 3,
+      "out_channels": 3,
+      "base_channels": 32,
+      "depth": 4,
+      "groups": 8,
+      "activation": "silu",
+      "output_activation": "clamp",
+      "residual": true
+    },
+    "gpu_defaults": {
+      "device": "cuda",
+      "amp": true,
+      "patch_size": 256,
+      "batch_size": 4,
+      "num_workers": 4,
+      "grad_accum_steps": 1,
+      "deterministic": true,
+      "benchmark": {
+        "source": "results/environment/unet_benchmark.csv",
+        "base_channels": 32,
+        "depth": 4,
+        "repeats": 5,
+        "median_step_ms": 47.8,
+        "peak_vram_mib": 965.7,
+        "note": "chosen for Stage 03; measured on RTX 3060 12 GB"
+      }
+    }
+  },
+  "config_sha256": "87e9883d2c49b0b82b382b705e96d4e1f3b1b670374dfd741028c0d705b11c9b",
+  "noise_config_sha256": "259cac050af69b6451aa56cea6f2287cef6e6ca67d953fe08a4324d0c0f1800a",
+  "split_hashes": {
+    "lol_test.csv": "1cb294b3800aa095988afc6d590f05651ca738d8a8f9249572b5c5c345fad864",
+    "lol_train.csv": "14ea1e4bafa300e138b3b49361981d82a831773a99845b16c7c5eab25008cce3",
+    "lol_val.csv": "8130059f89e9784263723973773b6dfde6f5260f9b48f513b6da155136173e10",
+    "lolv2_test.csv": "6ba0fa5157c01d1cd3858bc7cde4f11608ab9016cb26df37e1715bb2930835c1",
+    "lolv2_train.csv": "f6c4142ca041ca17171641893f8cee68629a47b8b0cd6f40ae8c0005eed42af1",
+    "lolv2_val.csv": "2a9287e53b4c7e2ae0147f449dc19e17fe34972cd6119e37efc1dbfd914e92c9"
+  },
+  "n_train_images": 960,
+  "n_val_images": 24,
+  "train_levels": [
+    "clean",
+    "low",
+    "medium",
+    "high"
+  ],
+  "val_levels": [
+    "clean",
+    "low",
+    "medium",
+    "high"
+  ],
+  "finished_at_utc": "2026-11-15T14:54:52+00:00",
+  "duration_seconds": 193.71074579999913,
+  "best": {
+    "epoch": 10,
+    "val_psnr": 31.695698632134327,
+    "validation": {
+      "psnr_lol_clean": 45.62370681762695,
+      "psnr_lolv2-real_clean": 44.65114402770996,
+      "psnr_lol_low": 36.03317896525065,
+      "psnr_lolv2-real_low": 35.06077035268148,
+      "psnr_lol_medium": 32.36692635218302,
+      "psnr_lolv2-real_medium": 30.58139181137085,
+      "psnr_lol_high": 28.973511854807537,
+      "psnr_lolv2-real_high": 27.15841245651245,
+      "psnr_clean": 45.13742542266846,
+      "psnr_low": 35.546974658966064,
+      "psnr_medium": 31.474159081776936,
+      "psnr_high": 28.065962155659992,
+      "val_psnr": 31.695698632134327
+    },
+    "train_loss": 0.028413643439610798
+  },
+  "best_epoch": 10,
+  "best_score": 31.695698632134327,
+  "epochs_ran": 10,
+  "checkpoint": "checkpoints\\denoising_cnn\\debug_res_lpips_s0\\best.pt",
+  "history": "results\\denoising_cnn\\debug_res_lpips_s0\\history.csv",
+  "peak_vram_mib": 1096.2
+}

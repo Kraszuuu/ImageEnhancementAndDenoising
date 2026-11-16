@@ -1,0 +1,9 @@
+{
+  "tag": "debug_lpips_s1_lr1e4",
+  "seed": 1,
+  "best_epoch": 14,
+  "best_score": 31.06150807274712,
+  "epochs_ran": 15,
+  "duration_seconds": 289.9035593000008,
+  "checkpoint": "checkpoints\\denoising_cnn\\debug_lpips_s1_lr1e4\\best.pt"
+}

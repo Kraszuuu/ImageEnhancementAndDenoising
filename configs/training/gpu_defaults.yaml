@@ -1,0 +1,16 @@
+# Frozen GPU defaults derived from results/environment/unet_benchmark.csv.
+device: cuda
+amp: true
+patch_size: 256
+batch_size: 4
+num_workers: 4
+grad_accum_steps: 1
+deterministic: true
+benchmark:
+  source: results/environment/unet_benchmark.csv
+  base_channels: 32
+  depth: 4
+  repeats: 5
+  median_step_ms: 47.8
+  peak_vram_mib: 965.7
+  note: chosen for Stage 03; measured on RTX 3060 12 GB

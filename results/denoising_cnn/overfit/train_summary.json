@@ -1,0 +1,9 @@
+{
+  "tag": "overfit",
+  "seed": 0,
+  "best_epoch": 150,
+  "best_score": 30.2752370039622,
+  "epochs_ran": 150,
+  "duration_seconds": 141.14762580000388,
+  "checkpoint": "checkpoints\\denoising_cnn\\overfit\\best.pt"
+}

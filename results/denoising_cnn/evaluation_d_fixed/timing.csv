@@ -1,0 +1,9 @@
+method,dataset,device,noise_level,mean_ms,std_ms,median_ms,n
+d_fixed,lol,cpu,clean,5051.037280,959.750430,4714.225800,15
+d_fixed,lol,cpu,low,4830.530513,441.463962,4750.654700,15
+d_fixed,lol,cpu,medium,4797.679700,296.799934,4748.365300,15
+d_fixed,lol,cpu,high,4836.705940,288.426225,4764.755400,15
+d_fixed,lolv2-real,cpu,clean,4471.366102,241.244572,4390.556950,100
+d_fixed,lolv2-real,cpu,low,4514.208372,299.020923,4410.893600,100
+d_fixed,lolv2-real,cpu,medium,4532.137192,296.381631,4432.603750,100
+d_fixed,lolv2-real,cpu,high,4536.664698,227.161754,4460.479800,100

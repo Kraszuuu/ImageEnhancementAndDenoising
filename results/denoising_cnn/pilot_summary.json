@@ -1,0 +1,50 @@
+{
+  "protocol": "seed 0 pilot, all training images, 192 fixed validation images, no test data",
+  "phase_1_non_residual": {
+    "epochs": 20,
+    "lr": 0.0002,
+    "candidates": [
+      {
+        "loss": "l1",
+        "lambda_lpips": 0.0,
+        "tag": "pilot_l1",
+        "best_epoch": 20,
+        "val_psnr_db": 31.00499473677741
+      },
+      {
+        "loss": "l1_perceptual",
+        "lambda_lpips": 0.05,
+        "tag": "pilot_lpips",
+        "best_epoch": 18,
+        "val_psnr_db": 31.634131722980076
+      }
+    ]
+  },
+  "phase_2_residual": {
+    "epochs": 10,
+    "lr": 0.0001,
+    "note": "residual output introduced after non-residual seeds 1/2 collapsed to identity",
+    "candidates": [
+      {
+        "loss": "l1",
+        "lambda_lpips": 0.0,
+        "tag": "debug_res_l1_s0",
+        "best_epoch": 8,
+        "val_psnr_db": 31.478
+      },
+      {
+        "loss": "l1_perceptual",
+        "lambda_lpips": 0.05,
+        "tag": "debug_res_lpips_s0",
+        "best_epoch": 10,
+        "val_psnr_db": 31.696
+      }
+    ]
+  },
+  "selected": {
+    "loss": "l1_perceptual",
+    "lambda_lpips": 0.05,
+    "residual": true,
+    "reason": "LPIPS variant had higher validation PSNR in both pilots; residual output removed seed-dependent identity collapse"
+  }
+}

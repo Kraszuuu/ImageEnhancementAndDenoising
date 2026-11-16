@@ -1,0 +1,9 @@
+{
+  "tag": "pilot_lpips",
+  "seed": 0,
+  "best_epoch": 18,
+  "best_score": 31.634131722980076,
+  "epochs_ran": 20,
+  "duration_seconds": 385.8414851999987,
+  "checkpoint": "checkpoints\\denoising_cnn\\pilot_lpips\\best.pt"
+}

@@ -1,0 +1,17 @@
+# Compact U-Net shared by Stage 03 (denoising) and Stage 05 (brightening).
+# Architecture frozen for Stage 03 after the Stage 00B benchmark.
+
+model:
+  name: compact_unet
+  in_channels: 3
+  out_channels: 3
+  base_channels: 32
+  depth: 4
+  groups: 8
+  activation: silu
+  output_activation: clamp
+  residual: true
+
+padding:
+  mode: reflect
+  multiple: 16

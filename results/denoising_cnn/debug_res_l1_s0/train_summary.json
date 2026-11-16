@@ -1,0 +1,9 @@
+{
+  "tag": "debug_res_l1_s0",
+  "seed": 0,
+  "best_epoch": 8,
+  "best_score": 31.477516810099285,
+  "epochs_ran": 10,
+  "duration_seconds": 176.22614709999834,
+  "checkpoint": "checkpoints\\denoising_cnn\\debug_res_l1_s0\\best.pt"
+}
