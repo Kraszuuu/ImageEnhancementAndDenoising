@@ -1,0 +1,10 @@
+{
+  "track": "d_fixed",
+  "tag": "seed0",
+  "seed": 0,
+  "best_epoch": 28,
+  "best_score": 21.472736095713678,
+  "epochs_ran": 30,
+  "duration_seconds": 1838.8362728000066,
+  "checkpoint": "checkpoints\\brightening_cnn\\d_fixed\\seed0\\best.pt"
+}

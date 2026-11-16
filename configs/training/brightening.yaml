@@ -1,0 +1,42 @@
+# Stage 05 CNN brightening configuration.
+# Parameters selected on validation; test is never used for selection.
+# Pilot (96 train / 24 val, 12 epochs, raw): l1_perceptual lambda 0.05, lr 2e-4
+# beat l1 1e-4 and l1_perceptual 1e-4 on validation PSNR.
+
+run_name: brightening_unet
+frozen: true
+
+data:
+  train_splits:
+    - data/splits/lol_train.csv
+    - data/splits/lolv2_train.csv
+  val_splits:
+    - data/splits/lol_val.csv
+    - data/splits/lolv2_val.csv
+  # 0 = all validation images; >0 caps images per dataset.
+  val_max_images_per_dataset: 0
+  d_fixed_config: configs/pipelines/d_fixed.yaml
+  d_fixed_cache: outputs/d_fixed_cache
+
+model_config: configs/models/unet_brightening.yaml
+
+loss:
+  name: l1_perceptual
+  lambda_lpips: 0.05
+
+training:
+  epochs: 30
+  batch_size: 4
+  num_workers: 4
+  lr: 0.0002
+  weight_decay: 0.0001
+  warmup_epochs: 2
+  scheduler: cosine
+  eta_min_factor: 0.01
+  grad_clip: 1.0
+  grad_accum_steps: 1
+  amp: true
+  patience: 8
+  min_delta: 0.0001
+  monitor: val_psnr
+  seeds: [0, 1, 2]

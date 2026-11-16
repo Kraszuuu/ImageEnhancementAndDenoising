@@ -1,0 +1,10 @@
+{
+  "track": "raw",
+  "tag": "pilot_l1",
+  "seed": 0,
+  "best_epoch": 9,
+  "best_score": 20.575394829114277,
+  "epochs_ran": 12,
+  "duration_seconds": 77.8015688000014,
+  "checkpoint": "checkpoints\\brightening_cnn\\raw\\pilot_l1\\best.pt"
+}

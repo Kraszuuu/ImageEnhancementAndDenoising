@@ -1,0 +1,13 @@
+track,method,dataset,device,seed,mean_ms,std_ms,median_ms,n,protocol,source_median_ms
+raw,cnn_unet,lol,cuda,0,20.482260,0.708036,20.499300,20,batch=1 warmup=5 iters=20,0.000000
+raw,cnn_unet,lolv2-real,cuda,0,20.603530,0.504417,20.699050,20,batch=1 warmup=5 iters=20,0.000000
+raw,cnn_unet,lol,cuda,1,20.478385,0.653887,20.594850,20,batch=1 warmup=5 iters=20,0.000000
+raw,cnn_unet,lolv2-real,cuda,1,20.579120,0.551299,20.697550,20,batch=1 warmup=5 iters=20,0.000000
+raw,cnn_unet,lol,cuda,2,20.563345,0.501214,20.730700,20,batch=1 warmup=5 iters=20,0.000000
+raw,cnn_unet,lolv2-real,cuda,2,20.548260,0.539448,20.634050,20,batch=1 warmup=5 iters=20,0.000000
+d_fixed,cnn_unet,lol,cuda,0,20.671335,0.490672,20.743850,20,batch=1 warmup=5 iters=20,4632.300300
+d_fixed,cnn_unet,lolv2-real,cuda,0,20.548120,0.545577,20.796900,20,batch=1 warmup=5 iters=20,4641.317400
+d_fixed,cnn_unet,lol,cuda,1,20.499335,0.499970,20.571300,20,batch=1 warmup=5 iters=20,4632.300300
+d_fixed,cnn_unet,lolv2-real,cuda,1,20.445475,0.661078,20.457400,20,batch=1 warmup=5 iters=20,4641.317400
+d_fixed,cnn_unet,lol,cuda,2,20.560580,0.577353,20.614200,20,batch=1 warmup=5 iters=20,4632.300300
+d_fixed,cnn_unet,lolv2-real,cuda,2,20.614950,0.493009,20.736350,20,batch=1 warmup=5 iters=20,4641.317400

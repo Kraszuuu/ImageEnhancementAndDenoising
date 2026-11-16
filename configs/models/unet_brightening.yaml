@@ -1,0 +1,17 @@
+# Compact U-Net shared by Stage 05 (brightening) and later CNN stages.
+# Direct RGB output; residual output is unsuitable for large exposure changes.
+
+model:
+  name: compact_unet
+  in_channels: 3
+  out_channels: 3
+  base_channels: 32
+  depth: 4
+  groups: 8
+  activation: silu
+  output_activation: clamp
+  residual: false
+
+padding:
+  mode: reflect
+  multiple: 16

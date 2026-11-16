@@ -1,0 +1,183 @@
+{
+  "run_id": "stage05-cnn-brightening",
+  "created_at_utc": "2026-11-16T19:32:30+00:00",
+  "command": "scripts\\evaluateBrightening.py",
+  "python": "3.14.0",
+  "device": "cuda",
+  "torch": "2.13.0+cu130",
+  "test_used": true,
+  "splits": [
+    "lol_test.csv",
+    "lolv2_test.csv"
+  ],
+  "limit": 0,
+  "n_images": 115,
+  "n_rows": 690,
+  "tracks": [
+    "raw",
+    "d_fixed"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "checkpoint_root": "checkpoints\\brightening_cnn",
+  "checkpoints": [
+    {
+      "path": "checkpoints\\brightening_cnn\\raw\\seed0\\best.pt",
+      "sha256": "a3740554bfabc51f50d0a0f71f1c2bf9e0234895f817289a5d51a63e6af9523a",
+      "track": "raw",
+      "seed": 0,
+      "epoch": 29,
+      "val_psnr": 21.93500664969471,
+      "parameters": 7763107
+    },
+    {
+      "path": "checkpoints\\brightening_cnn\\raw\\seed1\\best.pt",
+      "sha256": "dff79d029d7ef23c72b4fbf40d59c31679baff1358de9848835eb3047c866104",
+      "track": "raw",
+      "seed": 1,
+      "epoch": 29,
+      "val_psnr": 21.881549607927553,
+      "parameters": 7763107
+    },
+    {
+      "path": "checkpoints\\brightening_cnn\\raw\\seed2\\best.pt",
+      "sha256": "2a878ef4f05b8e4294fb691dd5ebe3857c6e9812c0791bc73ceb6882766fe907",
+      "track": "raw",
+      "seed": 2,
+      "epoch": 28,
+      "val_psnr": 21.799285518788846,
+      "parameters": 7763107
+    },
+    {
+      "path": "checkpoints\\brightening_cnn\\d_fixed\\seed0\\best.pt",
+      "sha256": "93562921d2bc5252f7d8487858a253f358a617ab6ee4d98c9e9beb943068d1f1",
+      "track": "d_fixed",
+      "seed": 0,
+      "epoch": 28,
+      "val_psnr": 21.472736095713678,
+      "parameters": 7763107
+    },
+    {
+      "path": "checkpoints\\brightening_cnn\\d_fixed\\seed1\\best.pt",
+      "sha256": "92f77c084c8b858d4bceb513fd63b5dd2a1f657444f48d6ca35ce25a07b75b04",
+      "track": "d_fixed",
+      "seed": 1,
+      "epoch": 29,
+      "val_psnr": 21.303260433339627,
+      "parameters": 7763107
+    },
+    {
+      "path": "checkpoints\\brightening_cnn\\d_fixed\\seed2\\best.pt",
+      "sha256": "f6abcc14af827c4325afcbe2bc538feab8b1b3b01b11471b77939f342a96d291",
+      "track": "d_fixed",
+      "seed": 2,
+      "epoch": 29,
+      "val_psnr": 21.422742879279305,
+      "parameters": 7763107
+    }
+  ],
+  "training_config": "configs\\training\\brightening.yaml",
+  "training_config_sha256": "c8d0a228c84ba9b787c66de8977bac40eb276aa35aefd3b5f138d58482a48c7e",
+  "model_config": "configs\\models\\unet_brightening.yaml",
+  "model_config_sha256": "9bfc223ec6938acd7e13ef21db543cafcb5bccbfceffdc34ea67c68bac2d2698",
+  "d_fixed_config": "configs\\pipelines\\d_fixed.yaml",
+  "d_fixed_config_sha256": "84ef8ee86717dbaec97576bd279d8032a33aaac2d9265b7c270e7fb8e84db5eb",
+  "d_fixed": {
+    "name": "bm3d",
+    "params": {
+      "num_threads": 0,
+      "profile": "np",
+      "sigma_psd": 0.12
+    },
+    "selected_on": [
+      "lol_val",
+      "lolv2_val"
+    ],
+    "criterion": "mean PSNR on low+medium+high; ties by SSIM then time",
+    "validation": {
+      "level": "noisy",
+      "mean_psnr": 33.439362288945695,
+      "std_psnr": 5.492071705501418,
+      "mean_ssim": 0.7004667785639836,
+      "std_ssim": 0.21202321041292857,
+      "median_ms": 4582.909649999692,
+      "n": 36
+    },
+    "noise_config": "configs\\data\\noise.yaml",
+    "noise_config_sha256": "259cac050af69b6451aa56cea6f2287cef6e6ca67d953fe08a4324d0c0f1800a",
+    "frozen_at_utc": "2026-11-15T10:44:44+00:00"
+  },
+  "classical_per_image": "results\\classical_brightening\\per_image.csv",
+  "classical_per_image_sha256": "e46960c0f52a77c89678cd3a014a89761d7d45a699fb6c1ce9750947c38e481c",
+  "frozen_classical_config": "configs\\classical\\brightening_frozen.yaml",
+  "frozen_classical_config_sha256": "428628c7cba2d2ac330d2f1f3f8741cf229a6acd9cc6993426ae418a0615eac5",
+  "classical_best_method": {
+    "raw": "gamma",
+    "d_fixed": "gamma"
+  },
+  "split_hashes": {
+    "lol_test.csv": "1cb294b3800aa095988afc6d590f05651ca738d8a8f9249572b5c5c345fad864",
+    "lol_train.csv": "14ea1e4bafa300e138b3b49361981d82a831773a99845b16c7c5eab25008cce3",
+    "lol_val.csv": "8130059f89e9784263723973773b6dfde6f5260f9b48f513b6da155136173e10",
+    "lolv2_test.csv": "6ba0fa5157c01d1cd3858bc7cde4f11608ab9016cb26df37e1715bb2930835c1",
+    "lolv2_train.csv": "f6c4142ca041ca17171641893f8cee68629a47b8b0cd6f40ae8c0005eed42af1",
+    "lolv2_val.csv": "2a9287e53b4c7e2ae0147f449dc19e17fe34972cd6119e37efc1dbfd914e92c9"
+  },
+  "metrics": [
+    {
+      "name": "psnr",
+      "lower_better": false,
+      "channel": "rgb",
+      "luma_weights": [
+        0.2126,
+        0.7152,
+        0.0722
+      ],
+      "mse_zero": "inf"
+    },
+    {
+      "name": "ssim",
+      "lower_better": false,
+      "implementation": "skimage.metrics.structural_similarity",
+      "data_range": 1.0,
+      "gaussian_weights": true,
+      "sigma": 1.5,
+      "use_sample_covariance": false,
+      "channel_axis": 2
+    },
+    {
+      "name": "lpips",
+      "lower_better": true,
+      "package": "lpips",
+      "package_version": "0.1.4",
+      "backbone": "alex",
+      "weights_version": "0.1",
+      "weights_sha256": "df73285e35b22355a2df87cdb6b70b343713b667eddbda73e1977e0c860835c0",
+      "backbone_weights_sha256": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02",
+      "device": "cuda",
+      "scaled_range": [
+        -1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "niqe",
+      "lower_better": true,
+      "package": "pyiqa",
+      "package_version": "0.1.16",
+      "metric": "niqe",
+      "weights_version": "original",
+      "params_sha256": "fa2aa4d12dd9595c3fb6bf8b4e1a15c79d5d1469238d0901c88dead195be578d",
+      "device": "cuda",
+      "min_side": 96,
+      "test_y_channel": true,
+      "reference_required": false
+    }
+  ],
+  "aggregation": "bootstrap 1000, ci 0.95, seed 0; non-finite excluded",
+  "statistics": "paired two-sided Wilcoxon signed-rank and paired t-test; CNN seed mean per image",
+  "timing_protocol": "batch=1 warmup=5 iters=20"
+}

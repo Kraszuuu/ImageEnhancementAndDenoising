@@ -1,0 +1,17 @@
+{
+  "used_at_utc": "2026-11-16T19:32:30+00:00",
+  "split_hashes": {
+    "lol_test.csv": "1cb294b3800aa095988afc6d590f05651ca738d8a8f9249572b5c5c345fad864",
+    "lol_train.csv": "14ea1e4bafa300e138b3b49361981d82a831773a99845b16c7c5eab25008cce3",
+    "lol_val.csv": "8130059f89e9784263723973773b6dfde6f5260f9b48f513b6da155136173e10",
+    "lolv2_test.csv": "6ba0fa5157c01d1cd3858bc7cde4f11608ab9016cb26df37e1715bb2930835c1",
+    "lolv2_train.csv": "f6c4142ca041ca17171641893f8cee68629a47b8b0cd6f40ae8c0005eed42af1",
+    "lolv2_val.csv": "2a9287e53b4c7e2ae0147f449dc19e17fe34972cd6119e37efc1dbfd914e92c9"
+  },
+  "per_image_sha256": "cba5f87a3745e2550c398566bb3f5ba6d3ea6627470d9ab60e28f4e09fcb46d7",
+  "summary_sha256": "e150df8f6e30c1c4788ba6c9a82c82a3d93bd36e5326052e2edbe9ef3dd33eb9",
+  "seed_summary_sha256": "24595d975169417c3b3d83c75ef8744630c6d59f56aea8f0427b2aa9bffc82e8",
+  "comparison_sha256": "2adacff93828791b4615d7ea7215455bde6034ddca40ae978baee1bf97d30486",
+  "comparison_tests_sha256": "8b7252344d39c0e3dd80f77e22e668b174e2279d155cd9933bbecb8c21fa9af2",
+  "timing_sha256": "61e68d8edcf3695f7b8f137f2c36a79cbc4b9596282273d7ea0233adf1b66ab0"
+}

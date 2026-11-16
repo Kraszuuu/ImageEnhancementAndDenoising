@@ -1,0 +1,10 @@
+{
+  "track": "raw",
+  "tag": "overfit",
+  "seed": 0,
+  "best_epoch": 76,
+  "best_score": 21.627907156944275,
+  "epochs_ran": 100,
+  "duration_seconds": 287.468140500001,
+  "checkpoint": "checkpoints\\brightening_cnn\\raw\\overfit\\best.pt"
+}

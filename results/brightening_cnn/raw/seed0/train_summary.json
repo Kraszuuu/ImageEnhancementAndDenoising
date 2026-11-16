@@ -1,0 +1,10 @@
+{
+  "track": "raw",
+  "tag": "seed0",
+  "seed": 0,
+  "best_epoch": 29,
+  "best_score": 21.93500664969471,
+  "epochs_ran": 30,
+  "duration_seconds": 1839.0888502000016,
+  "checkpoint": "checkpoints\\brightening_cnn\\raw\\seed0\\best.pt"
+}

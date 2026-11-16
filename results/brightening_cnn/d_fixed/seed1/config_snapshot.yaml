@@ -1,0 +1,73 @@
+config_path: configs\training\brightening.yaml
+config_sha256: c8d0a228c84ba9b787c66de8977bac40eb276aa35aefd3b5f138d58482a48c7e
+track: d_fixed
+overrides:
+  seed: 1
+  tag: seed1
+  epochs: 30
+  patience: 8
+  lr: 0.0002
+  loss_name: l1_perceptual
+  lambda_lpips: 0.05
+  limit_train: 0
+  limit_val: 0
+  num_workers: 4
+  overfit: false
+data:
+  train_splits:
+  - data/splits/lol_train.csv
+  - data/splits/lolv2_train.csv
+  val_splits:
+  - data/splits/lol_val.csv
+  - data/splits/lolv2_val.csv
+  val_max_images_per_dataset: 0
+  d_fixed_config: configs/pipelines/d_fixed.yaml
+  d_fixed_cache: outputs/d_fixed_cache
+loss:
+  name: l1_perceptual
+  lambda_lpips: 0.05
+training:
+  epochs: 30
+  batch_size: 4
+  num_workers: 4
+  lr: 0.0002
+  weight_decay: 0.0001
+  warmup_epochs: 2
+  scheduler: cosine
+  eta_min_factor: 0.01
+  grad_clip: 1.0
+  grad_accum_steps: 1
+  amp: true
+  patience: 8
+  min_delta: 0.0001
+  monitor: val_psnr
+  seeds:
+  - 0
+  - 1
+  - 2
+model:
+  name: compact_unet
+  in_channels: 3
+  out_channels: 3
+  base_channels: 32
+  depth: 4
+  groups: 8
+  activation: silu
+  output_activation: clamp
+  residual: false
+gpu_defaults:
+  device: cuda
+  amp: true
+  patch_size: 256
+  batch_size: 4
+  num_workers: 4
+  grad_accum_steps: 1
+  deterministic: true
+  benchmark:
+    source: results/environment/unet_benchmark.csv
+    base_channels: 32
+    depth: 4
+    repeats: 5
+    median_step_ms: 47.8
+    peak_vram_mib: 965.7
+    note: chosen for Stage 03; measured on RTX 3060 12 GB

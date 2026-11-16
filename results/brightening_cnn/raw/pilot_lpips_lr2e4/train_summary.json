@@ -1,0 +1,10 @@
+{
+  "track": "raw",
+  "tag": "pilot_lpips_lr2e4",
+  "seed": 0,
+  "best_epoch": 9,
+  "best_score": 20.93428134918213,
+  "epochs_ran": 12,
+  "duration_seconds": 62.854173300002,
+  "checkpoint": "checkpoints\\brightening_cnn\\raw\\pilot_lpips_lr2e4\\best.pt"
+}
