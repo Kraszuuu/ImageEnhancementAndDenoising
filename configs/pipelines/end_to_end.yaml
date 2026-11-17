@@ -1,0 +1,14 @@
+# Stage 06 direct end-to-end U-Net variants.
+frozen: true
+name: end_to_end
+order: end_to_end
+
+model:
+  kind: cnn
+  model_config: configs/models/unet_brightening.yaml
+
+variants:
+  real:
+    checkpoint_root: checkpoints/end_to_end/real
+  controlled:
+    checkpoint_root: checkpoints/end_to_end/controlled

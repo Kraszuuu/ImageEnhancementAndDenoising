@@ -1,0 +1,591 @@
+{
+  "run_id": "stage06-pipeline-evaluation",
+  "created_at_utc": "2026-11-17T16:51:44+00:00",
+  "command": "scripts\\evaluatePipelines.py",
+  "python": "3.14.0",
+  "device": "cuda",
+  "torch": "2.13.0+cu130",
+  "test_used": true,
+  "splits": [
+    "lol_test.csv",
+    "lolv2_test.csv"
+  ],
+  "limit": 0,
+  "n_images": 115,
+  "n_rows": 6440,
+  "pipelines": [
+    "classical_classical",
+    "brighten_then_denoise",
+    "classical_cnn",
+    "cnn_classical",
+    "cnn_cnn",
+    "end_to_end_real",
+    "end_to_end_controlled"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "noise_levels": [
+    "real",
+    "low",
+    "medium",
+    "high"
+  ],
+  "pipeline_configs": {
+    "classical_classical": {
+      "path": "configs/pipelines/classical_classical.yaml",
+      "sha256": "fa0f7c31dfe682d1cbb41778e4117644328ac3322d59a7653069109b654d88f5"
+    },
+    "brighten_then_denoise": {
+      "path": "configs/pipelines/brighten_then_denoise.yaml",
+      "sha256": "e3471a076b63ee1f38cd08dfca69da140ac6d1ce8d24dba284f00ae7af342d42"
+    },
+    "classical_cnn": {
+      "path": "configs/pipelines/classical_cnn.yaml",
+      "sha256": "1b1a620b6f17cfa778ea39c7292dd27f8ea40edcef81b9d3115e947b42275d71"
+    },
+    "cnn_classical": {
+      "path": "configs/pipelines/cnn_classical.yaml",
+      "sha256": "e8d893d41ba274433819ba8ba01d641a93b8c4833dab1f554f9e2186af6a04b8"
+    },
+    "cnn_cnn": {
+      "path": "configs/pipelines/cnn_cnn.yaml",
+      "sha256": "4ac18a345edb68f5a1158a02b84d99b9dd12f4c8a5e7afb5c4cee450f6688abc"
+    },
+    "end_to_end_real": {
+      "path": "configs/pipelines/end_to_end.yaml",
+      "sha256": "916acd00e2e9aef0d78a4512c4705e5d9842ed1fa7ba9718134f01665fb38a0e"
+    },
+    "end_to_end_controlled": {
+      "path": "configs/pipelines/end_to_end.yaml",
+      "sha256": "916acd00e2e9aef0d78a4512c4705e5d9842ed1fa7ba9718134f01665fb38a0e"
+    }
+  },
+  "pipeline_metadata": [
+    {
+      "name": "denoise_then_brighten",
+      "steps": [
+        {
+          "name": "denoise",
+          "component": {
+            "kind": "classical_denoiser",
+            "name": "bm3d",
+            "params": {
+              "sigma_psd": 0.12,
+              "profile": "np",
+              "num_threads": 0
+            }
+          }
+        },
+        {
+          "name": "brighten",
+          "component": {
+            "kind": "classical_brightener",
+            "name": "gamma",
+            "params": {
+              "gamma": 0.25
+            }
+          }
+        }
+      ],
+      "vram": {
+        "allocated_mib": 9.4,
+        "reserved_mib": 22.0,
+        "peak_mib": 9.4
+      }
+    },
+    {
+      "name": "brighten_then_denoise",
+      "steps": [
+        {
+          "name": "brighten",
+          "component": {
+            "kind": "classical_brightener",
+            "name": "gamma",
+            "params": {
+              "gamma": 0.25
+            }
+          }
+        },
+        {
+          "name": "denoise",
+          "component": {
+            "kind": "classical_denoiser",
+            "name": "bm3d",
+            "params": {
+              "sigma_psd": 0.12,
+              "profile": "np",
+              "num_threads": 0
+            }
+          }
+        }
+      ],
+      "vram": {
+        "allocated_mib": 17.6,
+        "reserved_mib": 672.0,
+        "peak_mib": 484.2
+      }
+    },
+    {
+      "name": "denoise_then_brighten",
+      "steps": [
+        {
+          "name": "denoise",
+          "component": {
+            "kind": "classical_denoiser",
+            "name": "bm3d",
+            "params": {
+              "sigma_psd": 0.12,
+              "profile": "np",
+              "num_threads": 0
+            }
+          }
+        },
+        {
+          "name": "brighten",
+          "component": {
+            "kind": "neural",
+            "name": "brightener",
+            "device": "cuda",
+            "checkpoint": "checkpoints\\pipeline_brighteners\\classical\\seed0\\best.pt",
+            "seed": 0,
+            "epoch": 28,
+            "parameters": 7763107
+          }
+        }
+      ],
+      "vram": {
+        "allocated_mib": 47.2,
+        "reserved_mib": 692.0,
+        "peak_mib": 484.2
+      }
+    },
+    {
+      "name": "denoise_then_brighten",
+      "steps": [
+        {
+          "name": "denoise",
+          "component": {
+            "kind": "classical_denoiser",
+            "name": "bm3d",
+            "params": {
+              "sigma_psd": 0.12,
+              "profile": "np",
+              "num_threads": 0
+            }
+          }
+        },
+        {
+          "name": "brighten",
+          "component": {
+            "kind": "neural",
+            "name": "brightener",
+            "device": "cuda",
+            "checkpoint": "checkpoints\\pipeline_brighteners\\classical\\seed1\\best.pt",
+            "seed": 1,
+            "epoch": 29,
+            "parameters": 7763107
+          }
+        }
+      ],
+      "vram": {
+        "allocated_mib": 77.7,
+        "reserved_mib": 694.0,
+        "peak_mib": 514.7
+      }
+    },
+    {
+      "name": "denoise_then_brighten",
+      "steps": [
+        {
+          "name": "denoise",
+          "component": {
+            "kind": "classical_denoiser",
+            "name": "bm3d",
+            "params": {
+              "sigma_psd": 0.12,
+              "profile": "np",
+              "num_threads": 0
+            }
+          }
+        },
+        {
+          "name": "brighten",
+          "component": {
+            "kind": "neural",
+            "name": "brightener",
+            "device": "cuda",
+            "checkpoint": "checkpoints\\pipeline_brighteners\\classical\\seed2\\best.pt",
+            "seed": 2,
+            "epoch": 29,
+            "parameters": 7763107
+          }
+        }
+      ],
+      "vram": {
+        "allocated_mib": 78.5,
+        "reserved_mib": 694.0,
+        "peak_mib": 514.7
+      }
+    },
+    {
+      "name": "denoise_then_brighten",
+      "steps": [
+        {
+          "name": "denoise",
+          "component": {
+            "kind": "neural",
+            "name": "denoiser",
+            "device": "cuda",
+            "checkpoint": "checkpoints\\denoising_cnn\\seed0\\best.pt",
+            "seed": 0,
+            "epoch": 28,
+            "parameters": 7763107
+          }
+        },
+        {
+          "name": "brighten",
+          "component": {
+            "kind": "classical_brightener",
+            "name": "gamma",
+            "params": {
+              "gamma": 0.25
+            }
+          }
+        }
+      ],
+      "vram": {
+        "allocated_mib": 78.5,
+        "reserved_mib": 694.0,
+        "peak_mib": 514.7
+      }
+    },
+    {
+      "name": "denoise_then_brighten",
+      "steps": [
+        {
+          "name": "denoise",
+          "component": {
+            "kind": "neural",
+            "name": "denoiser",
+            "device": "cuda",
+            "checkpoint": "checkpoints\\denoising_cnn\\seed1\\best.pt",
+            "seed": 1,
+            "epoch": 30,
+            "parameters": 7763107
+          }
+        },
+        {
+          "name": "brighten",
+          "component": {
+            "kind": "classical_brightener",
+            "name": "gamma",
+            "params": {
+              "gamma": 0.25
+            }
+          }
+        }
+      ],
+      "vram": {
+        "allocated_mib": 78.5,
+        "reserved_mib": 698.0,
+        "peak_mib": 545.2
+      }
+    },
+    {
+      "name": "denoise_then_brighten",
+      "steps": [
+        {
+          "name": "denoise",
+          "component": {
+            "kind": "neural",
+            "name": "denoiser",
+            "device": "cuda",
+            "checkpoint": "checkpoints\\denoising_cnn\\seed2\\best.pt",
+            "seed": 2,
+            "epoch": 29,
+            "parameters": 7763107
+          }
+        },
+        {
+          "name": "brighten",
+          "component": {
+            "kind": "classical_brightener",
+            "name": "gamma",
+            "params": {
+              "gamma": 0.25
+            }
+          }
+        }
+      ],
+      "vram": {
+        "allocated_mib": 78.3,
+        "reserved_mib": 698.0,
+        "peak_mib": 545.2
+      }
+    },
+    {
+      "name": "denoise_then_brighten",
+      "steps": [
+        {
+          "name": "denoise",
+          "component": {
+            "kind": "neural",
+            "name": "denoiser",
+            "device": "cuda",
+            "checkpoint": "checkpoints\\denoising_cnn\\seed0\\best.pt",
+            "seed": 0,
+            "epoch": 28,
+            "parameters": 7763107
+          }
+        },
+        {
+          "name": "brighten",
+          "component": {
+            "kind": "neural",
+            "name": "brightener",
+            "device": "cuda",
+            "checkpoint": "checkpoints\\pipeline_brighteners\\cnn\\seed0\\best.pt",
+            "seed": 0,
+            "epoch": 28,
+            "parameters": 7763107
+          }
+        }
+      ],
+      "vram": {
+        "allocated_mib": 109.3,
+        "reserved_mib": 700.0,
+        "peak_mib": 545.2
+      }
+    },
+    {
+      "name": "denoise_then_brighten",
+      "steps": [
+        {
+          "name": "denoise",
+          "component": {
+            "kind": "neural",
+            "name": "denoiser",
+            "device": "cuda",
+            "checkpoint": "checkpoints\\denoising_cnn\\seed1\\best.pt",
+            "seed": 1,
+            "epoch": 30,
+            "parameters": 7763107
+          }
+        },
+        {
+          "name": "brighten",
+          "component": {
+            "kind": "neural",
+            "name": "brightener",
+            "device": "cuda",
+            "checkpoint": "checkpoints\\pipeline_brighteners\\cnn\\seed1\\best.pt",
+            "seed": 1,
+            "epoch": 23,
+            "parameters": 7763107
+          }
+        }
+      ],
+      "vram": {
+        "allocated_mib": 107.8,
+        "reserved_mib": 702.0,
+        "peak_mib": 574.5
+      }
+    },
+    {
+      "name": "denoise_then_brighten",
+      "steps": [
+        {
+          "name": "denoise",
+          "component": {
+            "kind": "neural",
+            "name": "denoiser",
+            "device": "cuda",
+            "checkpoint": "checkpoints\\denoising_cnn\\seed2\\best.pt",
+            "seed": 2,
+            "epoch": 29,
+            "parameters": 7763107
+          }
+        },
+        {
+          "name": "brighten",
+          "component": {
+            "kind": "neural",
+            "name": "brightener",
+            "device": "cuda",
+            "checkpoint": "checkpoints\\pipeline_brighteners\\cnn\\seed2\\best.pt",
+            "seed": 2,
+            "epoch": 27,
+            "parameters": 7763107
+          }
+        }
+      ],
+      "vram": {
+        "allocated_mib": 108.7,
+        "reserved_mib": 702.0,
+        "peak_mib": 574.5
+      }
+    },
+    {
+      "name": "end_to_end",
+      "steps": [
+        {
+          "name": "end_to_end",
+          "component": {
+            "kind": "neural",
+            "name": "end_to_end",
+            "device": "cuda",
+            "checkpoint": "checkpoints\\end_to_end\\real\\seed0\\best.pt",
+            "seed": 0,
+            "epoch": 29,
+            "parameters": 7763107
+          }
+        }
+      ],
+      "vram": {
+        "allocated_mib": 77.7,
+        "reserved_mib": 702.0,
+        "peak_mib": 574.5
+      }
+    },
+    {
+      "name": "end_to_end",
+      "steps": [
+        {
+          "name": "end_to_end",
+          "component": {
+            "kind": "neural",
+            "name": "end_to_end",
+            "device": "cuda",
+            "checkpoint": "checkpoints\\end_to_end\\real\\seed1\\best.pt",
+            "seed": 1,
+            "epoch": 29,
+            "parameters": 7763107
+          }
+        }
+      ],
+      "vram": {
+        "allocated_mib": 78.8,
+        "reserved_mib": 702.0,
+        "peak_mib": 574.5
+      }
+    },
+    {
+      "name": "end_to_end",
+      "steps": [
+        {
+          "name": "end_to_end",
+          "component": {
+            "kind": "neural",
+            "name": "end_to_end",
+            "device": "cuda",
+            "checkpoint": "checkpoints\\end_to_end\\real\\seed2\\best.pt",
+            "seed": 2,
+            "epoch": 28,
+            "parameters": 7763107
+          }
+        }
+      ],
+      "vram": {
+        "allocated_mib": 78.3,
+        "reserved_mib": 702.0,
+        "peak_mib": 574.5
+      }
+    },
+    {
+      "name": "end_to_end",
+      "steps": [
+        {
+          "name": "end_to_end",
+          "component": {
+            "kind": "neural",
+            "name": "end_to_end",
+            "device": "cuda",
+            "checkpoint": "checkpoints\\end_to_end\\controlled\\seed0\\best.pt",
+            "seed": 0,
+            "epoch": 29,
+            "parameters": 7763107
+          }
+        }
+      ],
+      "vram": {
+        "allocated_mib": 78.8,
+        "reserved_mib": 702.0,
+        "peak_mib": 574.5
+      }
+    },
+    {
+      "name": "end_to_end",
+      "steps": [
+        {
+          "name": "end_to_end",
+          "component": {
+            "kind": "neural",
+            "name": "end_to_end",
+            "device": "cuda",
+            "checkpoint": "checkpoints\\end_to_end\\controlled\\seed1\\best.pt",
+            "seed": 1,
+            "epoch": 30,
+            "parameters": 7763107
+          }
+        }
+      ],
+      "vram": {
+        "allocated_mib": 78.8,
+        "reserved_mib": 702.0,
+        "peak_mib": 574.5
+      }
+    },
+    {
+      "name": "end_to_end",
+      "steps": [
+        {
+          "name": "end_to_end",
+          "component": {
+            "kind": "neural",
+            "name": "end_to_end",
+            "device": "cuda",
+            "checkpoint": "checkpoints\\end_to_end\\controlled\\seed2\\best.pt",
+            "seed": 2,
+            "epoch": 30,
+            "parameters": 7763107
+          }
+        }
+      ],
+      "vram": {
+        "allocated_mib": 78.5,
+        "reserved_mib": 702.0,
+        "peak_mib": 574.5
+      }
+    }
+  ],
+  "checkpoints": {
+    "checkpoints\\pipeline_brighteners\\classical\\seed0\\best.pt": "9d3307ce0cc057d043d61959acc57625b8db8adba775e3a37262183a53e74cac",
+    "checkpoints\\pipeline_brighteners\\classical\\seed1\\best.pt": "023847b262c935efe19d974700c8b1e8080f10b3ff21c2bb837ac01526fc0b9f",
+    "checkpoints\\pipeline_brighteners\\classical\\seed2\\best.pt": "01415baec72ad0c9848a42c0e1ada32cf99e8ccd6cb6bc5813791bc88951f26e",
+    "checkpoints\\denoising_cnn\\seed0\\best.pt": "468fb8fe65681729225d44764935efa87f9974fc8b5e8a0485bc31e8e7f95f7e",
+    "checkpoints\\denoising_cnn\\seed1\\best.pt": "b3034a7528f6255959df5c1dda8091fd88c820d451b7e161a0572f3861442fff",
+    "checkpoints\\denoising_cnn\\seed2\\best.pt": "2d3885f180094af04317f20540b00cc5e81185b600ef26d3b079af80be145850",
+    "checkpoints\\pipeline_brighteners\\cnn\\seed0\\best.pt": "373063b8e11ac686baaece802923dd4621ca67df9ed40d38972bd4da22d864cb",
+    "checkpoints\\pipeline_brighteners\\cnn\\seed1\\best.pt": "06a92afb595e3cef6bb7b759ce7c1ff4832f81f4901c640a97a3f0e5b6706f77",
+    "checkpoints\\pipeline_brighteners\\cnn\\seed2\\best.pt": "832d15e4320d3e7a30af8da4574d2b3c987a1c2323eb4bd25b9fd6e4dca6e49f",
+    "checkpoints\\end_to_end\\real\\seed0\\best.pt": "451df0f84b775340311165ee9022827824c9bdaea87d010234ea8b6dfcd52d81",
+    "checkpoints\\end_to_end\\real\\seed1\\best.pt": "4656f07413932724f71994f166de90f6413860594447de3c95c1a6f971021721",
+    "checkpoints\\end_to_end\\real\\seed2\\best.pt": "09d25ae37fa311755baacfc805fae9149a819ddc7b287a894d57a69980178b54",
+    "checkpoints\\end_to_end\\controlled\\seed0\\best.pt": "12755c17bd4d91fb5fcc77cd006280c7a565dde222e893e8b012371fbadb4a0c",
+    "checkpoints\\end_to_end\\controlled\\seed1\\best.pt": "c0e925b8c385dd4a6ff377e10532c3eded4dece0b9ec92d33f3f7f2ccf03ccea",
+    "checkpoints\\end_to_end\\controlled\\seed2\\best.pt": "722fc4291370a438f7063149a8f36b13f9d8ac960c779b6e29246ce38b223cd0"
+  },
+  "peak_vram_mib": 574.5,
+  "noise_config_sha256": "259cac050af69b6451aa56cea6f2287cef6e6ca67d953fe08a4324d0c0f1800a",
+  "split_hashes": {
+    "lol_test.csv": "1cb294b3800aa095988afc6d590f05651ca738d8a8f9249572b5c5c345fad864",
+    "lol_train.csv": "14ea1e4bafa300e138b3b49361981d82a831773a99845b16c7c5eab25008cce3",
+    "lol_val.csv": "8130059f89e9784263723973773b6dfde6f5260f9b48f513b6da155136173e10",
+    "lolv2_test.csv": "6ba0fa5157c01d1cd3858bc7cde4f11608ab9016cb26df37e1715bb2930835c1",
+    "lolv2_train.csv": "f6c4142ca041ca17171641893f8cee68629a47b8b0cd6f40ae8c0005eed42af1",
+    "lolv2_val.csv": "2a9287e53b4c7e2ae0147f449dc19e17fe34972cd6119e37efc1dbfd914e92c9"
+  }
+}

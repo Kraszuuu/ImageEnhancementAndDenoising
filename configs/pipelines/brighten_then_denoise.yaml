@@ -1,0 +1,14 @@
+# Stage 06 order ablation: classical brightening before D_fixed.
+frozen: true
+name: brighten_then_denoise
+order: brighten_then_denoise
+
+brightener:
+  kind: classical
+  config: configs/classical/brightening_frozen.yaml
+  track: raw
+  method: gamma
+
+denoiser:
+  kind: classical
+  config: configs/pipelines/d_fixed.yaml

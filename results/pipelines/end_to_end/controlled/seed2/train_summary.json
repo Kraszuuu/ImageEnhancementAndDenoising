@@ -1,0 +1,10 @@
+{
+  "input_mode": "controlled",
+  "tag": "seed2",
+  "seed": 2,
+  "best_epoch": 30,
+  "best_score": 19.645154525186413,
+  "epochs_ran": 30,
+  "duration_seconds": 2181.8731055999815,
+  "checkpoint": "checkpoints\\end_to_end\\controlled\\seed2\\best.pt"
+}

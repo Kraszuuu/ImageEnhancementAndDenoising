@@ -1,0 +1,10 @@
+{
+  "input_mode": "real",
+  "tag": "seed2",
+  "seed": 2,
+  "best_epoch": 28,
+  "best_score": 21.799285518788846,
+  "epochs_ran": 30,
+  "duration_seconds": 1517.2451086000074,
+  "checkpoint": "checkpoints\\end_to_end\\real\\seed2\\best.pt"
+}

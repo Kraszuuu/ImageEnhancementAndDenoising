@@ -1,0 +1,11 @@
+{
+  "denoiser": "cnn",
+  "denoiser_seed": 2,
+  "tag": "seed2",
+  "seed": 2,
+  "best_epoch": 27,
+  "best_score": 21.40445104046403,
+  "epochs_ran": 30,
+  "duration_seconds": 1807.4816369000182,
+  "checkpoint": "checkpoints\\pipeline_brighteners\\cnn\\seed2\\best.pt"
+}

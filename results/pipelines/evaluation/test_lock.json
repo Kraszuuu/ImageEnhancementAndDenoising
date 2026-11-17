@@ -1,0 +1,35 @@
+{
+  "used_at_utc": "2026-11-17T16:51:44+00:00",
+  "split_hashes": {
+    "lol_test.csv": "1cb294b3800aa095988afc6d590f05651ca738d8a8f9249572b5c5c345fad864",
+    "lol_train.csv": "14ea1e4bafa300e138b3b49361981d82a831773a99845b16c7c5eab25008cce3",
+    "lol_val.csv": "8130059f89e9784263723973773b6dfde6f5260f9b48f513b6da155136173e10",
+    "lolv2_test.csv": "6ba0fa5157c01d1cd3858bc7cde4f11608ab9016cb26df37e1715bb2930835c1",
+    "lolv2_train.csv": "f6c4142ca041ca17171641893f8cee68629a47b8b0cd6f40ae8c0005eed42af1",
+    "lolv2_val.csv": "2a9287e53b4c7e2ae0147f449dc19e17fe34972cd6119e37efc1dbfd914e92c9"
+  },
+  "checkpoints": {
+    "checkpoints\\pipeline_brighteners\\classical\\seed0\\best.pt": "9d3307ce0cc057d043d61959acc57625b8db8adba775e3a37262183a53e74cac",
+    "checkpoints\\pipeline_brighteners\\classical\\seed1\\best.pt": "023847b262c935efe19d974700c8b1e8080f10b3ff21c2bb837ac01526fc0b9f",
+    "checkpoints\\pipeline_brighteners\\classical\\seed2\\best.pt": "01415baec72ad0c9848a42c0e1ada32cf99e8ccd6cb6bc5813791bc88951f26e",
+    "checkpoints\\denoising_cnn\\seed0\\best.pt": "468fb8fe65681729225d44764935efa87f9974fc8b5e8a0485bc31e8e7f95f7e",
+    "checkpoints\\denoising_cnn\\seed1\\best.pt": "b3034a7528f6255959df5c1dda8091fd88c820d451b7e161a0572f3861442fff",
+    "checkpoints\\denoising_cnn\\seed2\\best.pt": "2d3885f180094af04317f20540b00cc5e81185b600ef26d3b079af80be145850",
+    "checkpoints\\pipeline_brighteners\\cnn\\seed0\\best.pt": "373063b8e11ac686baaece802923dd4621ca67df9ed40d38972bd4da22d864cb",
+    "checkpoints\\pipeline_brighteners\\cnn\\seed1\\best.pt": "06a92afb595e3cef6bb7b759ce7c1ff4832f81f4901c640a97a3f0e5b6706f77",
+    "checkpoints\\pipeline_brighteners\\cnn\\seed2\\best.pt": "832d15e4320d3e7a30af8da4574d2b3c987a1c2323eb4bd25b9fd6e4dca6e49f",
+    "checkpoints\\end_to_end\\real\\seed0\\best.pt": "451df0f84b775340311165ee9022827824c9bdaea87d010234ea8b6dfcd52d81",
+    "checkpoints\\end_to_end\\real\\seed1\\best.pt": "4656f07413932724f71994f166de90f6413860594447de3c95c1a6f971021721",
+    "checkpoints\\end_to_end\\real\\seed2\\best.pt": "09d25ae37fa311755baacfc805fae9149a819ddc7b287a894d57a69980178b54",
+    "checkpoints\\end_to_end\\controlled\\seed0\\best.pt": "12755c17bd4d91fb5fcc77cd006280c7a565dde222e893e8b012371fbadb4a0c",
+    "checkpoints\\end_to_end\\controlled\\seed1\\best.pt": "c0e925b8c385dd4a6ff377e10532c3eded4dece0b9ec92d33f3f7f2ccf03ccea",
+    "checkpoints\\end_to_end\\controlled\\seed2\\best.pt": "722fc4291370a438f7063149a8f36b13f9d8ac960c779b6e29246ce38b223cd0"
+  },
+  "outputs": {
+    "per_image.csv": "f6de32fec2393be177afba50190a1d216bebafd8d429dad9fa0c3b6a112d67c2",
+    "summary.csv": "1aa5c73f9181af7add09c78c1da0c5a6d9ac39d8502b30911925a2faa1573e0b",
+    "seed_summary.csv": "e902af628754e4606af3027801d7741d04b729651796c220b7b092121ffa8594",
+    "timing.csv": "20c35c235950e074137eb7685e56fd443bf8e7deee8953ddfab22072996f16d8",
+    "comparison_tests.csv": "ad51fc1a3a2871b6931dc83fa7fc028248d893a64ef2c4f3c9db0c4271d2202f"
+  }
+}

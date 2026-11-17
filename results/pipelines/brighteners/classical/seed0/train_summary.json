@@ -1,0 +1,11 @@
+{
+  "denoiser": "classical",
+  "denoiser_seed": 0,
+  "tag": "seed0",
+  "seed": 0,
+  "best_epoch": 28,
+  "best_score": 21.472736095713678,
+  "epochs_ran": 30,
+  "duration_seconds": 1830.126903700002,
+  "checkpoint": "checkpoints\\pipeline_brighteners\\classical\\seed0\\best.pt"
+}

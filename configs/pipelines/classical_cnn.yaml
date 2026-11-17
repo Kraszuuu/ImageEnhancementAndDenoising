@@ -1,0 +1,14 @@
+# Stage 06 2x2 pipeline: classical denoiser -> CNN brightener.
+# The brightener is retrained on D_fixed outputs; it is not the Stage 05 model.
+frozen: true
+name: classical_cnn
+order: denoise_then_brighten
+
+denoiser:
+  kind: classical
+  config: configs/pipelines/d_fixed.yaml
+
+brightener:
+  kind: cnn
+  checkpoint_root: checkpoints/pipeline_brighteners/classical
+  model_config: configs/models/unet_brightening.yaml

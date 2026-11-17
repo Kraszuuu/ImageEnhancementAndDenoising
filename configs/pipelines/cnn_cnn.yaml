@@ -1,0 +1,14 @@
+# Stage 06 2x2 pipeline: CNN denoiser -> CNN brightener trained on D_cnn.
+frozen: true
+name: cnn_cnn
+order: denoise_then_brighten
+
+denoiser:
+  kind: cnn
+  checkpoint_root: checkpoints/denoising_cnn
+  model_config: configs/models/unet_denoising.yaml
+
+brightener:
+  kind: cnn
+  checkpoint_root: checkpoints/pipeline_brighteners/cnn
+  model_config: configs/models/unet_brightening.yaml
