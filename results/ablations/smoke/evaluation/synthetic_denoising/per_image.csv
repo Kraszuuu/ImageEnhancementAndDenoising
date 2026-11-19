@@ -1,0 +1,7 @@
+run_id,group,arm,dataset,split,seed,noise_level,image_id,psnr,ssim,lpips,niqe,inference_ms,width,height
+stage07-ablation-evaluation,synthetic_denoising,synthetic_denoising,lol,val,0,low,data/raw/lol/extracted/lol_dataset/our485/low/112.png,36.103614,0.969762,0.055245,6.021212,20.892300,600,400
+stage07-ablation-evaluation,synthetic_denoising,synthetic_denoising,lol,val,0,low,data/raw/lol/extracted/lol_dataset/our485/low/113.png,28.280045,0.964961,0.039277,6.009405,21.992700,600,400
+stage07-ablation-evaluation,synthetic_denoising,synthetic_denoising,lol,val,0,medium,data/raw/lol/extracted/lol_dataset/our485/low/112.png,34.514420,0.945437,0.116892,5.778737,20.890400,600,400
+stage07-ablation-evaluation,synthetic_denoising,synthetic_denoising,lol,val,0,medium,data/raw/lol/extracted/lol_dataset/our485/low/113.png,30.520333,0.945243,0.101589,5.636637,20.956000,600,400
+stage07-ablation-evaluation,synthetic_denoising,synthetic_denoising,lol,val,0,high,data/raw/lol/extracted/lol_dataset/our485/low/112.png,34.688875,0.902057,0.249471,6.449777,21.889800,600,400
+stage07-ablation-evaluation,synthetic_denoising,synthetic_denoising,lol,val,0,high,data/raw/lol/extracted/lol_dataset/our485/low/113.png,34.839631,0.905437,0.211149,6.718185,22.076700,600,400

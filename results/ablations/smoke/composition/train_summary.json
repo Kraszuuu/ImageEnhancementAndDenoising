@@ -1,0 +1,10 @@
+{
+  "input_mode": "real",
+  "tag": "smoke-composition",
+  "seed": 0,
+  "best_epoch": 3,
+  "best_score": 12.217375040054321,
+  "epochs_ran": 3,
+  "duration_seconds": 9.64270090003265,
+  "checkpoint": "results\\ablations\\smoke\\composition-checkpoints\\best.pt"
+}

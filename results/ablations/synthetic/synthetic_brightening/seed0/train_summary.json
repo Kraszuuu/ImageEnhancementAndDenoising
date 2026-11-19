@@ -1,0 +1,10 @@
+{
+  "input_mode": "synthetic_brightening",
+  "tag": "stage07-synthetic_brightening-seed0",
+  "seed": 0,
+  "best_epoch": 25,
+  "best_score": 29.997970402797804,
+  "epochs_ran": 30,
+  "duration_seconds": 1027.5669193000067,
+  "checkpoint": "checkpoints\\ablations\\synthetic\\synthetic_brightening\\seed0\\best.pt"
+}

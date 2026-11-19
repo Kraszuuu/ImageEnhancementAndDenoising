@@ -1,0 +1,10 @@
+{
+  "input_mode": "real",
+  "tag": "stage07-pilot-l1-seed2",
+  "seed": 2,
+  "best_epoch": 27,
+  "best_score": 21.56340012149276,
+  "epochs_ran": 30,
+  "duration_seconds": 962.9015547999879,
+  "checkpoint": "checkpoints\\ablations\\pilot\\loss_l1\\real\\seed2\\best.pt"
+}

@@ -1,0 +1,109 @@
+﻿python.exe : D:\Studia\Sem9\ImageEnhancementAndDenoising\.venv\Lib\site-packages\torchvision\models\_utils.py:207: User
+Warning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' ins
+tead.
+At line:1 char:394
++ ... Dir 'train.log'; & .\.venv\Scripts\python.exe @arguments 2>&1 | Out-F ...
++                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\Studia\Sem9\...ights' instead.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  warnings.warn(
+D:\Studia\Sem9\ImageEnhancementAndDenoising\.venv\Lib\site-packages\torchvision\models\_utils.py:222: UserWarning: Argu
+ments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The 
+current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_We
+ights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+Loading model from: D:\Studia\Sem9\ImageEnhancementAndDenoising\.venv\Lib\site-packages\lpips\weights\v0.1\alex.pth
+mode=real tag=stage07-composition-lol_only-seed0 seed=0 device=cuda params=7763107 train=398 val_images=214 val_samples=214 loss=l1_perceptual
+  epoch 1 step 50/100 loss=0.09633
+  epoch 1 step 100/100 loss=0.17203
+epoch 01 loss=0.15099 val_psnr=19.084 val_ssim=0.5788 best=19.084 stale=0
+  epoch 2 step 50/100 loss=0.12068
+  epoch 2 step 100/100 loss=0.09851
+epoch 02 loss=0.11857 val_psnr=19.549 val_ssim=0.6291 best=19.549 stale=0
+  epoch 3 step 50/100 loss=0.06784
+  epoch 3 step 100/100 loss=0.04516
+epoch 03 loss=0.10852 val_psnr=19.707 val_ssim=0.6673 best=19.707 stale=0
+  epoch 4 step 50/100 loss=0.10658
+  epoch 4 step 100/100 loss=0.05459
+epoch 04 loss=0.10855 val_psnr=20.065 val_ssim=0.6722 best=20.065 stale=0
+  epoch 5 step 50/100 loss=0.12002
+  epoch 5 step 100/100 loss=0.16950
+epoch 05 loss=0.10290 val_psnr=19.912 val_ssim=0.6782 best=20.065 stale=1
+  epoch 6 step 50/100 loss=0.13243
+  epoch 6 step 100/100 loss=0.10809
+epoch 06 loss=0.10890 val_psnr=20.222 val_ssim=0.7068 best=20.222 stale=0
+  epoch 7 step 50/100 loss=0.10613
+  epoch 7 step 100/100 loss=0.07359
+epoch 07 loss=0.10553 val_psnr=20.082 val_ssim=0.7010 best=20.222 stale=1
+  epoch 8 step 50/100 loss=0.10269
+  epoch 8 step 100/100 loss=0.15675
+epoch 08 loss=0.10310 val_psnr=19.997 val_ssim=0.7004 best=20.222 stale=2
+  epoch 9 step 50/100 loss=0.09726
+  epoch 9 step 100/100 loss=0.14922
+epoch 09 loss=0.10352 val_psnr=20.214 val_ssim=0.7106 best=20.222 stale=3
+  epoch 10 step 50/100 loss=0.06683
+  epoch 10 step 100/100 loss=0.06393
+epoch 10 loss=0.09884 val_psnr=20.220 val_ssim=0.7066 best=20.222 stale=4
+  epoch 11 step 50/100 loss=0.10704
+  epoch 11 step 100/100 loss=0.06555
+epoch 11 loss=0.09851 val_psnr=19.950 val_ssim=0.7133 best=20.222 stale=5
+  epoch 12 step 50/100 loss=0.08163
+  epoch 12 step 100/100 loss=0.06545
+epoch 12 loss=0.09880 val_psnr=20.619 val_ssim=0.7268 best=20.619 stale=0
+  epoch 13 step 50/100 loss=0.15258
+  epoch 13 step 100/100 loss=0.06559
+epoch 13 loss=0.09881 val_psnr=20.237 val_ssim=0.7134 best=20.619 stale=1
+  epoch 14 step 50/100 loss=0.07542
+  epoch 14 step 100/100 loss=0.07389
+epoch 14 loss=0.09679 val_psnr=20.511 val_ssim=0.7259 best=20.619 stale=2
+  epoch 15 step 50/100 loss=0.11306
+  epoch 15 step 100/100 loss=0.05785
+epoch 15 loss=0.09711 val_psnr=20.609 val_ssim=0.7224 best=20.619 stale=3
+  epoch 16 step 50/100 loss=0.08255
+  epoch 16 step 100/100 loss=0.11052
+epoch 16 loss=0.09453 val_psnr=20.624 val_ssim=0.7298 best=20.624 stale=0
+  epoch 17 step 50/100 loss=0.08213
+  epoch 17 step 100/100 loss=0.13489
+epoch 17 loss=0.09373 val_psnr=20.660 val_ssim=0.7337 best=20.660 stale=0
+  epoch 18 step 50/100 loss=0.05959
+  epoch 18 step 100/100 loss=0.08081
+epoch 18 loss=0.09256 val_psnr=20.637 val_ssim=0.7331 best=20.660 stale=1
+  epoch 19 step 50/100 loss=0.09402
+  epoch 19 step 100/100 loss=0.06590
+epoch 19 loss=0.09017 val_psnr=20.521 val_ssim=0.7349 best=20.660 stale=2
+  epoch 20 step 50/100 loss=0.11853
+  epoch 20 step 100/100 loss=0.05828
+epoch 20 loss=0.09369 val_psnr=20.825 val_ssim=0.7351 best=20.825 stale=0
+  epoch 21 step 50/100 loss=0.10830
+  epoch 21 step 100/100 loss=0.07112
+epoch 21 loss=0.09350 val_psnr=20.650 val_ssim=0.7320 best=20.825 stale=1
+  epoch 22 step 50/100 loss=0.11030
+  epoch 22 step 100/100 loss=0.09529
+epoch 22 loss=0.08923 val_psnr=20.469 val_ssim=0.7341 best=20.825 stale=2
+  epoch 23 step 50/100 loss=0.07345
+  epoch 23 step 100/100 loss=0.05917
+epoch 23 loss=0.08873 val_psnr=20.539 val_ssim=0.7370 best=20.825 stale=3
+  epoch 24 step 50/100 loss=0.06581
+  epoch 24 step 100/100 loss=0.09309
+epoch 24 loss=0.08710 val_psnr=20.779 val_ssim=0.7371 best=20.825 stale=4
+  epoch 25 step 50/100 loss=0.10611
+  epoch 25 step 100/100 loss=0.13214
+epoch 25 loss=0.08548 val_psnr=20.812 val_ssim=0.7393 best=20.825 stale=5
+  epoch 26 step 50/100 loss=0.10441
+  epoch 26 step 100/100 loss=0.09771
+epoch 26 loss=0.08785 val_psnr=20.815 val_ssim=0.7359 best=20.825 stale=6
+  epoch 27 step 50/100 loss=0.08619
+  epoch 27 step 100/100 loss=0.04527
+epoch 27 loss=0.08706 val_psnr=20.779 val_ssim=0.7371 best=20.825 stale=7
+  epoch 28 step 50/100 loss=0.09107
+  epoch 28 step 100/100 loss=0.13504
+epoch 28 loss=0.08490 val_psnr=20.825 val_ssim=0.7386 best=20.825 stale=0
+  epoch 29 step 50/100 loss=0.11861
+  epoch 29 step 100/100 loss=0.12764
+epoch 29 loss=0.08451 val_psnr=20.854 val_ssim=0.7386 best=20.854 stale=0
+  epoch 30 step 50/100 loss=0.05076
+  epoch 30 step 100/100 loss=0.03597
+epoch 30 loss=0.08636 val_psnr=20.861 val_ssim=0.7376 best=20.861 stale=0
+best_epoch=30 best_val_psnr=20.861 duration=603.5s checkpoint=D:\Studia\Sem9\ImageEnhancementAndDenoising\checkpoints\ablations\composition\lol_only\real\seed0\best.pt

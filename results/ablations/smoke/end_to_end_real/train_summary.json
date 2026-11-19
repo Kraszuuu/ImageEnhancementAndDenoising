@@ -1,0 +1,10 @@
+{
+  "input_mode": "real",
+  "tag": "stage07-smoke",
+  "seed": 0,
+  "best_epoch": 3,
+  "best_score": 13.541439890861511,
+  "epochs_ran": 3,
+  "duration_seconds": 15.881172099965625,
+  "checkpoint": "results\\ablations\\smoke\\checkpoints\\best.pt"
+}

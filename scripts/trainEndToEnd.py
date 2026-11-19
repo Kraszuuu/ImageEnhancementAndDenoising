@@ -26,7 +26,9 @@ from lowlight.training.brightening_trainer import BrighteningTrainer  # noqa: E4
 from lowlight.training.checkpointing import CheckpointManager  # noqa: E402
 from lowlight.training.losses import build_loss  # noqa: E402
 from lowlight.training.pipeline_datasets import (  # noqa: E402
+    SYNTHETIC_MODES,
     EndToEndDataset,
+    SyntheticControlDataset,
     to_end_to_end_rows,
 )
 from lowlight.training.schedulers import build_scheduler  # noqa: E402
@@ -40,7 +42,7 @@ from lowlight.utils.metadata import (  # noqa: E402
 )
 from lowlight.utils.noise import load_noise_config  # noqa: E402
 
-INPUT_MODES = ("real", "controlled")
+INPUT_MODES = ("real", "controlled", *SYNTHETIC_MODES)
 
 
 def parse_args() -> argparse.Namespace:
@@ -61,6 +63,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--lambda-lpips", type=float, default=None)
     parser.add_argument("--limit-train", type=int, default=0)
     parser.add_argument("--limit-val", type=int, default=0)
+    parser.add_argument(
+        "--train-splits",
+        nargs="+",
+        default=None,
+        help="override training split CSV paths, e.g. only one dataset",
+    )
+    parser.add_argument("--darken-gain", type=float, default=0.2)
     parser.add_argument("--num-workers", type=int, default=None)
     parser.add_argument(
         "--overfit",
@@ -117,7 +126,12 @@ def main() -> int:
     out_dir.mkdir(parents=True, exist_ok=True)
     checkpoint_dir.mkdir(parents=True, exist_ok=True)
 
-    train_rows = load_brightening_rows(ROOT, [ROOT / str(path) for path in data["train_splits"]])
+    train_split_paths = (
+        [Path(path) for path in args.train_splits]
+        if args.train_splits
+        else [Path(str(path)) for path in data["train_splits"]]
+    )
+    train_rows = load_brightening_rows(ROOT, [ROOT / path for path in train_split_paths])
     val_rows = load_brightening_rows(ROOT, [ROOT / str(path) for path in data["val_splits"]])
     if args.overfit:
         args.limit_train = args.limit_train or 8
@@ -136,18 +150,34 @@ def main() -> int:
     controlled_levels = tuple(str(level) for level in data["controlled_levels"])
     val_levels = tuple(str(level) for level in data["val_levels"])
     patch_size = int(defaults["patch_size"])
-    train_dataset = EndToEndDataset(
-        to_end_to_end_rows(train_rows),
-        input_mode=input_mode,
-        noise_config=noise_config,
-        levels=controlled_levels,
-        training=True,
-        seed=seed,
-        noise_seed=0,
-        patch_size=patch_size,
-        augment=not args.overfit,
-        fixed_crop=args.overfit,
-    )
+    train_dataset: torch.utils.data.Dataset
+    if input_mode in SYNTHETIC_MODES:
+        train_dataset = SyntheticControlDataset(
+            to_end_to_end_rows(train_rows),
+            mode=input_mode,
+            darken_gain=args.darken_gain,
+            noise_config=noise_config,
+            levels=controlled_levels,
+            training=True,
+            seed=seed,
+            noise_seed=0,
+            patch_size=patch_size,
+            augment=not args.overfit,
+            fixed_crop=args.overfit,
+        )
+    else:
+        train_dataset = EndToEndDataset(
+            to_end_to_end_rows(train_rows),
+            input_mode=input_mode,
+            noise_config=noise_config,
+            levels=controlled_levels,
+            training=True,
+            seed=seed,
+            noise_seed=0,
+            patch_size=patch_size,
+            augment=not args.overfit,
+            fixed_crop=args.overfit,
+        )
     train_loader = torch.utils.data.DataLoader(
         train_dataset,
         batch_size=int(defaults["batch_size"]),
@@ -169,18 +199,41 @@ def main() -> int:
             seed=seed,
         )
         val_samples.extend(dataset[index] for index in range(len(dataset)))
+    elif input_mode == "synthetic_brightening":
+        dataset = SyntheticControlDataset(
+            val_rows_converted,
+            mode=input_mode,
+            darken_gain=args.darken_gain,
+            training=False,
+            seed=seed,
+            noise_seed=0,
+        )
+        val_samples.extend(dataset[index] for index in range(len(dataset)))
     else:
         for level in val_levels:
-            dataset = EndToEndDataset(
-                val_rows_converted,
-                input_mode="controlled",
-                noise_config=noise_config,
-                levels=controlled_levels,
-                training=False,
-                level=level,
-                seed=seed,
-                noise_seed=0,
-            )
+            if input_mode == "controlled":
+                dataset = EndToEndDataset(
+                    val_rows_converted,
+                    input_mode="controlled",
+                    noise_config=noise_config,
+                    levels=controlled_levels,
+                    training=False,
+                    level=level,
+                    seed=seed,
+                    noise_seed=0,
+                )
+            else:
+                dataset = SyntheticControlDataset(
+                    val_rows_converted,
+                    mode=input_mode,
+                    darken_gain=args.darken_gain,
+                    noise_config=noise_config,
+                    levels=controlled_levels,
+                    training=False,
+                    level=level,
+                    seed=seed,
+                    noise_seed=0,
+                )
             val_samples.extend(dataset[index] for index in range(len(dataset)))
 
     model = build_model(model_config["model"]).to(device)
@@ -214,6 +267,8 @@ def main() -> int:
             "limit_val": args.limit_val,
             "num_workers": num_workers,
             "overfit": args.overfit,
+            "train_splits": [str(path) for path in train_split_paths],
+            "darken_gain": args.darken_gain,
         },
         "data": {**data, "input_mode": input_mode},
         "loss": {"name": loss_name, "lambda_lpips": lambda_lpips},
@@ -248,7 +303,7 @@ def main() -> int:
         ).hexdigest(),
         "noise_config_sha256": sha256_file(ROOT / str(data["noise_config"])),
         "controlled_levels": controlled_levels,
-        "val_levels": val_levels if input_mode == "controlled" else ["real"],
+        "val_levels": val_levels if input_mode in {"controlled", *SYNTHETIC_MODES} else ["real"],
         "split_hashes": split_manifest.get("files_sha256", {}),
         "n_train_images": len(train_rows),
         "n_val_images": len(val_rows),

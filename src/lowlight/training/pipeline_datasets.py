@@ -12,7 +12,12 @@ from torch.utils.data import Dataset
 
 from lowlight.training.brightening_datasets import BrighteningRow
 from lowlight.utils.io import load_rgb
-from lowlight.utils.noise import LEVEL_NAMES, NoiseConfig
+from lowlight.utils.noise import (
+    LEVEL_NAMES,
+    NoiseConfig,
+    linear_to_srgb,
+    srgb_to_linear,
+)
 
 
 def source_cache_path(cache_dir: Path, image_id: str) -> Path:
@@ -227,6 +232,133 @@ class EndToEndDataset(Dataset):
             source = np.ascontiguousarray(low)
 
         target = np.ascontiguousarray(target)
+        return {
+            "dataset": row.dataset,
+            "split": row.split,
+            "image_id": row.image_id,
+            "level": level,
+            "input": torch.from_numpy(source.astype(np.float32)).permute(2, 0, 1),
+            "target": torch.from_numpy(target.astype(np.float32)).permute(2, 0, 1),
+        }
+
+
+SYNTHETIC_MODES = ("synthetic_brightening", "synthetic_denoising")
+
+
+def darken_image(image: np.ndarray, *, gain: float = 0.2) -> np.ndarray:
+    """Controlled synthetic low-light transform: fixed linear-light gain."""
+    if gain <= 0.0:
+        raise ValueError("gain must be positive")
+    linear = srgb_to_linear(np.clip(image, 0.0, 1.0))
+    return np.clip(linear_to_srgb(np.clip(linear * gain, 0.0, 1.0)), 0.0, 1.0)
+
+
+class SyntheticControlDataset(Dataset):
+    """Synthetic control pairs built from ``G`` instead of real ``L``.
+
+    ``synthetic_brightening`` maps ``darken(G) -> G``.
+    ``synthetic_denoising`` maps ``darken(G) + n -> darken(G)``.
+    """
+
+    def __init__(
+        self,
+        rows: list[EndToEndRow],
+        *,
+        mode: str,
+        darken_gain: float = 0.2,
+        noise_config: NoiseConfig | None = None,
+        levels: tuple[str, ...] = ("low", "medium", "high"),
+        training: bool,
+        level: str | None = None,
+        seed: int = 0,
+        noise_seed: int = 0,
+        patch_size: int | None = None,
+        augment: bool = True,
+        fixed_crop: bool = False,
+    ) -> None:
+        if mode not in SYNTHETIC_MODES:
+            raise ValueError(f"unknown synthetic mode: {mode!r}")
+        if mode == "synthetic_denoising" and noise_config is None:
+            raise ValueError("synthetic denoising requires noise_config")
+        if level is not None and level not in LEVEL_NAMES:
+            raise ValueError(f"unknown noise level: {level!r}")
+        if training and patch_size is None:
+            raise ValueError("training requires patch_size")
+        if not training and mode == "synthetic_denoising" and level is None:
+            raise ValueError("synthetic denoising evaluation requires a fixed level")
+        self.rows = rows
+        self.mode = mode
+        self.darken_gain = float(darken_gain)
+        self.noise_config = noise_config
+        self.levels = tuple(levels)
+        self.training = training
+        self.level = level
+        self.seed = seed
+        self.noise_seed = noise_seed
+        self.patch_size = patch_size
+        self.augment = augment
+        self.fixed_crop = fixed_crop
+        self.epoch = 0
+
+    def set_epoch(self, epoch: int) -> None:
+        self.epoch = epoch
+
+    def __len__(self) -> int:
+        return len(self.rows)
+
+    def _rng(self, index: int) -> np.random.Generator:
+        entropy = self.seed * 1_000_003 + self.epoch * 10_007 + index
+        return np.random.default_rng(entropy)
+
+    def __getitem__(self, index: int) -> dict[str, object]:
+        row = self.rows[index]
+        target = load_rgb(row.gt_path)
+        source = darken_image(target, gain=self.darken_gain)
+        rng = self._rng(index)
+        if self.training:
+            size = int(self.patch_size or 0)
+            height, width = target.shape[:2]
+            if height < size or width < size:
+                raise ValueError(f"image too small for patch {size}: {row.image_id}")
+            if self.fixed_crop:
+                top = (height - size) // 2
+                left = (width - size) // 2
+            else:
+                top = int(rng.integers(0, height - size + 1))
+                left = int(rng.integers(0, width - size + 1))
+            target = target[top : top + size, left : left + size]
+            source = source[top : top + size, left : left + size]
+            if self.augment:
+                if rng.random() < 0.5:
+                    source = source[:, ::-1]
+                    target = target[:, ::-1]
+                if rng.random() < 0.5:
+                    source = source[::-1, :]
+                    target = target[::-1, :]
+                turns = int(rng.integers(0, 4))
+                source = np.rot90(source, turns)
+                target = np.rot90(target, turns)
+
+        if self.mode == "synthetic_denoising":
+            level = (
+                self.levels[int(rng.integers(0, len(self.levels)))]
+                if self.training
+                else str(self.level)
+            )
+            assert self.noise_config is not None
+            source = self.noise_config.add(
+                np.ascontiguousarray(source),
+                level,
+                image_id=row.image_id,
+                seed=self.noise_seed,
+            )
+            target = np.ascontiguousarray(target)
+            target = darken_image(target, gain=self.darken_gain)
+        else:
+            level = "synthetic"
+            target = np.ascontiguousarray(target)
+
+        source = np.ascontiguousarray(source)
         return {
             "dataset": row.dataset,
             "split": row.split,

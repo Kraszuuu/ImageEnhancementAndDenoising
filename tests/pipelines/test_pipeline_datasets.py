@@ -11,6 +11,8 @@ from lowlight.training.brightening_datasets import BrighteningRow
 from lowlight.training.pipeline_datasets import (
     EndToEndDataset,
     PipelineBrighteningDataset,
+    SyntheticControlDataset,
+    darken_image,
     source_cache_path,
     to_end_to_end_rows,
 )
@@ -98,3 +100,41 @@ def test_end_to_end_training_patch_shape(tmp_path: Path) -> None:
     sample = dataset[0]
     assert sample["input"].shape == (3, 16, 16)
     assert sample["target"].shape == (3, 16, 16)
+
+
+def test_darken_image_reduces_linear_light(tmp_path: Path) -> None:
+    image = np.full((8, 8, 3), 180 / 255, dtype=np.float64)
+    darkened = darken_image(image, gain=0.2)
+    assert darkened.mean() < image.mean()
+    assert darkened.min() >= 0.0
+    assert darkened.max() <= 1.0
+
+
+def test_synthetic_brightening_uses_darkened_target(tmp_path: Path) -> None:
+    row = _make_row(tmp_path, "a")
+    dataset = SyntheticControlDataset(
+        to_end_to_end_rows([row]), mode="synthetic_brightening", training=False
+    )
+    sample = dataset[0]
+    assert sample["level"] == "synthetic"
+    assert float(sample["input"].mean()) < float(sample["target"].mean())
+    assert float(sample["target"].mean()) == pytest.approx(180 / 255, abs=1e-3)
+
+
+def test_synthetic_denoising_uses_clean_dark_target(tmp_path: Path) -> None:
+    row = _make_row(tmp_path, "a")
+    noise_config = load_noise_config(ROOT / "configs" / "data" / "noise.yaml")
+    dataset = SyntheticControlDataset(
+        to_end_to_end_rows([row]),
+        mode="synthetic_denoising",
+        noise_config=noise_config,
+        training=False,
+        level="high",
+        noise_seed=0,
+    )
+    first = dataset[0]
+    second = dataset[0]
+    assert first["level"] == "high"
+    assert torch.equal(first["input"], second["input"])
+    assert not torch.equal(first["input"], first["target"])
+    assert float(first["target"].mean()) < 180 / 255

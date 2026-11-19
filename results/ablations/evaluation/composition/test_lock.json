@@ -1,0 +1,23 @@
+{
+  "used_at_utc": "2026-11-19T00:49:00+00:00",
+  "group": "composition",
+  "split_hashes": {
+    "lol_test.csv": "1cb294b3800aa095988afc6d590f05651ca738d8a8f9249572b5c5c345fad864",
+    "lol_train.csv": "14ea1e4bafa300e138b3b49361981d82a831773a99845b16c7c5eab25008cce3",
+    "lol_val.csv": "8130059f89e9784263723973773b6dfde6f5260f9b48f513b6da155136173e10",
+    "lolv2_test.csv": "6ba0fa5157c01d1cd3858bc7cde4f11608ab9016cb26df37e1715bb2930835c1",
+    "lolv2_train.csv": "f6c4142ca041ca17171641893f8cee68629a47b8b0cd6f40ae8c0005eed42af1",
+    "lolv2_val.csv": "2a9287e53b4c7e2ae0147f449dc19e17fe34972cd6119e37efc1dbfd914e92c9"
+  },
+  "checkpoints": {
+    "checkpoints\\ablations\\composition\\lol_only\\real\\seed0\\best.pt": "5793965b51862e6cb6a794787429548398baceeb6622c138b8ee88b5311cd89a",
+    "checkpoints\\ablations\\composition\\lol_only\\real\\seed1\\best.pt": "9e58e4f1dbfd2563c83510dade89f390ee6a1233cf3937a273e009016319933a",
+    "checkpoints\\ablations\\composition\\lol_only\\real\\seed2\\best.pt": "8d0fbfc6aacca133db1ffc1448b110882caa7fbd1f62a87681e23c35b11d0d6b",
+    "checkpoints\\ablations\\composition\\lolv2_only\\real\\seed0\\best.pt": "6b125244b8892875764e95544644b190acade34f30e16cd5ff4d55e4390b9004",
+    "checkpoints\\ablations\\composition\\lolv2_only\\real\\seed1\\best.pt": "d147eb652305268bddd46201c0b2958121ef212f20c94e791d3e7d08a700f805",
+    "checkpoints\\ablations\\composition\\lolv2_only\\real\\seed2\\best.pt": "7a0b96e5e06580f22fdde9e97194e38e3a80faf43833de74f37e455d011bb6bc"
+  },
+  "outputs": {
+    "per_image.csv": "ca2ff4d26feeb66f2f390b9660598631b02f89a62ba66ff8eecc50c9bef18af8"
+  }
+}

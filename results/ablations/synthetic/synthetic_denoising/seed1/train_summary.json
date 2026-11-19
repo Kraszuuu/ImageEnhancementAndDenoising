@@ -1,0 +1,10 @@
+{
+  "input_mode": "synthetic_denoising",
+  "tag": "stage07-synthetic_denoising-seed1",
+  "seed": 1,
+  "best_epoch": 29,
+  "best_score": 34.11963735265524,
+  "epochs_ran": 30,
+  "duration_seconds": 1841.7336373999715,
+  "checkpoint": "checkpoints\\ablations\\synthetic\\synthetic_denoising\\seed1\\best.pt"
+}

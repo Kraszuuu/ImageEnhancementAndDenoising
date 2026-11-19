@@ -1,0 +1,186 @@
+{
+  "run_id": "stage06-end-to-end-real-stage07-pilot-l1-seed0",
+  "created_at_utc": "2026-11-18T19:39:49+00:00",
+  "command": "scripts\\trainEndToEnd.py --input-mode real --seed 0 --loss-name l1 --tag stage07-pilot-l1-seed0 --out-dir results\\ablations\\pilot\\loss_l1\\real\\seed0 --checkpoint-dir checkpoints\\ablations\\pilot\\loss_l1\\real\\seed0",
+  "seed": 0,
+  "input_mode": "real",
+  "git": {
+    "commit": "6454252d91f19d135cdc02dc8f8194cefddcf596",
+    "dirty": true
+  },
+  "environment": {
+    "python": "3.14.0",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "scikit-image": "0.26.0",
+      "lpips": "0.1.4",
+      "pyiqa": "0.1.16",
+      "torch": "2.13.0+cu130",
+      "torchvision": "0.28.0+cu130"
+    },
+    "torch": "2.13.0+cu130",
+    "cuda": "13.0",
+    "cudnn": 92000,
+    "device": "cuda",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 3060",
+    "vram_total_mib": 12287.5
+  },
+  "deterministic": true,
+  "amp": true,
+  "model": {
+    "name": "compact_unet",
+    "config": {
+      "name": "compact_unet",
+      "in_channels": 3,
+      "out_channels": 3,
+      "base_channels": 32,
+      "depth": 4,
+      "groups": 8,
+      "activation": "silu",
+      "output_activation": "clamp",
+      "residual": false
+    },
+    "parameters": 7763107
+  },
+  "config": {
+    "config_path": "configs\\training\\end_to_end.yaml",
+    "config_sha256": "ba78a9821a40bba286c85b253dfddc7d8bd389f71001bf52a475e47afb8fb40c",
+    "input_mode": "real",
+    "overrides": {
+      "seed": 0,
+      "tag": "stage07-pilot-l1-seed0",
+      "epochs": 30,
+      "patience": 8,
+      "lr": 0.0002,
+      "loss_name": "l1",
+      "lambda_lpips": 0.05,
+      "limit_train": 0,
+      "limit_val": 0,
+      "num_workers": 4,
+      "overfit": false
+    },
+    "data": {
+      "train_splits": [
+        "data/splits/lol_train.csv",
+        "data/splits/lolv2_train.csv"
+      ],
+      "val_splits": [
+        "data/splits/lol_val.csv",
+        "data/splits/lolv2_val.csv"
+      ],
+      "val_max_images_per_dataset": 0,
+      "input_mode": "real",
+      "noise_config": "configs/data/noise.yaml",
+      "controlled_levels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "val_levels": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "loss": {
+      "name": "l1",
+      "lambda_lpips": 0.05
+    },
+    "training": {
+      "epochs": 30,
+      "batch_size": 4,
+      "num_workers": 4,
+      "lr": 0.0002,
+      "weight_decay": 0.0001,
+      "warmup_epochs": 2,
+      "scheduler": "cosine",
+      "eta_min_factor": 0.01,
+      "grad_clip": 1.0,
+      "grad_accum_steps": 1,
+      "amp": true,
+      "patience": 8,
+      "min_delta": 0.0001,
+      "monitor": "val_psnr",
+      "seeds": [
+        0,
+        1,
+        2
+      ]
+    },
+    "model": {
+      "name": "compact_unet",
+      "in_channels": 3,
+      "out_channels": 3,
+      "base_channels": 32,
+      "depth": 4,
+      "groups": 8,
+      "activation": "silu",
+      "output_activation": "clamp",
+      "residual": false
+    },
+    "gpu_defaults": {
+      "device": "cuda",
+      "amp": true,
+      "patch_size": 256,
+      "batch_size": 4,
+      "num_workers": 4,
+      "grad_accum_steps": 1,
+      "deterministic": true,
+      "benchmark": {
+        "source": "results/environment/unet_benchmark.csv",
+        "base_channels": 32,
+        "depth": 4,
+        "repeats": 5,
+        "median_step_ms": 47.8,
+        "peak_vram_mib": 965.7,
+        "note": "chosen for Stage 03; measured on RTX 3060 12 GB"
+      }
+    }
+  },
+  "config_sha256": "e1ec13d412f3377b73426e0133479b400a1eb2b917e4dd977361b4b97b4fe1db",
+  "noise_config_sha256": "259cac050af69b6451aa56cea6f2287cef6e6ca67d953fe08a4324d0c0f1800a",
+  "controlled_levels": [
+    "low",
+    "medium",
+    "high"
+  ],
+  "val_levels": [
+    "real"
+  ],
+  "split_hashes": {
+    "lol_test.csv": "1cb294b3800aa095988afc6d590f05651ca738d8a8f9249572b5c5c345fad864",
+    "lol_train.csv": "14ea1e4bafa300e138b3b49361981d82a831773a99845b16c7c5eab25008cce3",
+    "lol_val.csv": "8130059f89e9784263723973773b6dfde6f5260f9b48f513b6da155136173e10",
+    "lolv2_test.csv": "6ba0fa5157c01d1cd3858bc7cde4f11608ab9016cb26df37e1715bb2930835c1",
+    "lolv2_train.csv": "f6c4142ca041ca17171641893f8cee68629a47b8b0cd6f40ae8c0005eed42af1",
+    "lolv2_val.csv": "2a9287e53b4c7e2ae0147f449dc19e17fe34972cd6119e37efc1dbfd914e92c9"
+  },
+  "n_train_images": 960,
+  "n_val_images": 214,
+  "n_val_samples": 214,
+  "finished_at_utc": "2026-11-18T19:55:58+00:00",
+  "duration_seconds": 968.261823799985,
+  "best": {
+    "epoch": 27,
+    "val_psnr": 21.608956074046198,
+    "val_ssim": 0.7717111610642103,
+    "validation": {
+      "psnr_lol": 21.926451540541375,
+      "ssim_lol": 0.8044500710635349,
+      "psnr_lolv2-real": 21.391459179675486,
+      "ssim_lolv2-real": 0.7492837187812085,
+      "val_psnr": 21.608956074046198,
+      "val_ssim": 0.7717111610642103
+    },
+    "train_loss": 0.07927508635135988
+  },
+  "best_epoch": 27,
+  "best_score": 21.608956074046198,
+  "epochs_ran": 30,
+  "checkpoint": "checkpoints\\ablations\\pilot\\loss_l1\\real\\seed0\\best.pt",
+  "history": "results\\ablations\\pilot\\loss_l1\\real\\seed0\\history.csv",
+  "peak_vram_mib": 1087.5
+}

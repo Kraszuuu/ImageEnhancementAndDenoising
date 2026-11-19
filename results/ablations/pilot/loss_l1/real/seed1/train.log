@@ -1,0 +1,152 @@
+﻿mode=real tag=stage07-pilot-l1-seed1 seed=1 device=cuda params=7763107 train=960 val_images=214 val_samples=214 loss=l1
+  epoch 1 step 50/240 loss=0.20486
+  epoch 1 step 100/240 loss=0.16377
+  epoch 1 step 150/240 loss=0.19697
+  epoch 1 step 200/240 loss=0.27151
+epoch 01 loss=0.20762 val_psnr=12.425 val_ssim=0.4268 best=12.425 stale=0
+  epoch 2 step 50/240 loss=0.12431
+  epoch 2 step 100/240 loss=0.11393
+  epoch 2 step 150/240 loss=0.13867
+  epoch 2 step 200/240 loss=0.10332
+epoch 02 loss=0.12217 val_psnr=19.702 val_ssim=0.6948 best=19.702 stale=0
+  epoch 3 step 50/240 loss=0.10657
+  epoch 3 step 100/240 loss=0.08513
+  epoch 3 step 150/240 loss=0.12459
+  epoch 3 step 200/240 loss=0.05979
+epoch 03 loss=0.10344 val_psnr=20.373 val_ssim=0.7236 best=20.373 stale=0
+  epoch 4 step 50/240 loss=0.12113
+  epoch 4 step 100/240 loss=0.07154
+  epoch 4 step 150/240 loss=0.06297
+  epoch 4 step 200/240 loss=0.07063
+epoch 04 loss=0.10042 val_psnr=20.511 val_ssim=0.7387 best=20.511 stale=0
+  epoch 5 step 50/240 loss=0.10940
+  epoch 5 step 100/240 loss=0.08805
+  epoch 5 step 150/240 loss=0.09149
+  epoch 5 step 200/240 loss=0.07043
+epoch 05 loss=0.09780 val_psnr=20.617 val_ssim=0.7370 best=20.617 stale=0
+  epoch 6 step 50/240 loss=0.07563
+  epoch 6 step 100/240 loss=0.08657
+  epoch 6 step 150/240 loss=0.07829
+  epoch 6 step 200/240 loss=0.07071
+epoch 06 loss=0.09785 val_psnr=20.031 val_ssim=0.7526 best=20.617 stale=1
+  epoch 7 step 50/240 loss=0.10238
+  epoch 7 step 100/240 loss=0.11218
+  epoch 7 step 150/240 loss=0.08379
+  epoch 7 step 200/240 loss=0.08974
+epoch 07 loss=0.09509 val_psnr=20.622 val_ssim=0.7519 best=20.622 stale=0
+  epoch 8 step 50/240 loss=0.07497
+  epoch 8 step 100/240 loss=0.07790
+  epoch 8 step 150/240 loss=0.13677
+  epoch 8 step 200/240 loss=0.09420
+epoch 08 loss=0.09431 val_psnr=20.867 val_ssim=0.7588 best=20.867 stale=0
+  epoch 9 step 50/240 loss=0.05297
+  epoch 9 step 100/240 loss=0.12820
+  epoch 9 step 150/240 loss=0.12355
+  epoch 9 step 200/240 loss=0.08537
+epoch 09 loss=0.09372 val_psnr=20.799 val_ssim=0.7617 best=20.867 stale=1
+  epoch 10 step 50/240 loss=0.10365
+  epoch 10 step 100/240 loss=0.08606
+  epoch 10 step 150/240 loss=0.09168
+  epoch 10 step 200/240 loss=0.07394
+epoch 10 loss=0.09262 val_psnr=20.907 val_ssim=0.7611 best=20.907 stale=0
+  epoch 11 step 50/240 loss=0.12651
+  epoch 11 step 100/240 loss=0.09775
+  epoch 11 step 150/240 loss=0.08466
+  epoch 11 step 200/240 loss=0.11356
+epoch 11 loss=0.09209 val_psnr=20.954 val_ssim=0.7663 best=20.954 stale=0
+  epoch 12 step 50/240 loss=0.06834
+  epoch 12 step 100/240 loss=0.09530
+  epoch 12 step 150/240 loss=0.10236
+  epoch 12 step 200/240 loss=0.08917
+epoch 12 loss=0.08908 val_psnr=21.028 val_ssim=0.7632 best=21.028 stale=0
+  epoch 13 step 50/240 loss=0.06725
+  epoch 13 step 100/240 loss=0.08953
+  epoch 13 step 150/240 loss=0.06074
+  epoch 13 step 200/240 loss=0.12981
+epoch 13 loss=0.09093 val_psnr=21.218 val_ssim=0.7637 best=21.218 stale=0
+  epoch 14 step 50/240 loss=0.10556
+  epoch 14 step 100/240 loss=0.07272
+  epoch 14 step 150/240 loss=0.11175
+  epoch 14 step 200/240 loss=0.10071
+epoch 14 loss=0.08917 val_psnr=21.048 val_ssim=0.7675 best=21.218 stale=1
+  epoch 15 step 50/240 loss=0.10627
+  epoch 15 step 100/240 loss=0.12283
+  epoch 15 step 150/240 loss=0.12305
+  epoch 15 step 200/240 loss=0.11154
+epoch 15 loss=0.08677 val_psnr=21.277 val_ssim=0.7671 best=21.277 stale=0
+  epoch 16 step 50/240 loss=0.13845
+  epoch 16 step 100/240 loss=0.08840
+  epoch 16 step 150/240 loss=0.10507
+  epoch 16 step 200/240 loss=0.05320
+epoch 16 loss=0.08720 val_psnr=21.148 val_ssim=0.7646 best=21.277 stale=1
+  epoch 17 step 50/240 loss=0.09724
+  epoch 17 step 100/240 loss=0.07610
+  epoch 17 step 150/240 loss=0.09890
+  epoch 17 step 200/240 loss=0.07555
+epoch 17 loss=0.08683 val_psnr=21.222 val_ssim=0.7708 best=21.277 stale=2
+  epoch 18 step 50/240 loss=0.14629
+  epoch 18 step 100/240 loss=0.11209
+  epoch 18 step 150/240 loss=0.04502
+  epoch 18 step 200/240 loss=0.06906
+epoch 18 loss=0.08569 val_psnr=21.251 val_ssim=0.7683 best=21.277 stale=3
+  epoch 19 step 50/240 loss=0.06613
+  epoch 19 step 100/240 loss=0.08402
+  epoch 19 step 150/240 loss=0.09806
+  epoch 19 step 200/240 loss=0.07141
+epoch 19 loss=0.08423 val_psnr=21.332 val_ssim=0.7692 best=21.332 stale=0
+  epoch 20 step 50/240 loss=0.07638
+  epoch 20 step 100/240 loss=0.06106
+  epoch 20 step 150/240 loss=0.08257
+  epoch 20 step 200/240 loss=0.07629
+epoch 20 loss=0.08233 val_psnr=21.411 val_ssim=0.7711 best=21.411 stale=0
+  epoch 21 step 50/240 loss=0.05292
+  epoch 21 step 100/240 loss=0.09388
+  epoch 21 step 150/240 loss=0.06849
+  epoch 21 step 200/240 loss=0.08357
+epoch 21 loss=0.08443 val_psnr=21.516 val_ssim=0.7699 best=21.516 stale=0
+  epoch 22 step 50/240 loss=0.06629
+  epoch 22 step 100/240 loss=0.05706
+  epoch 22 step 150/240 loss=0.07522
+  epoch 22 step 200/240 loss=0.06640
+epoch 22 loss=0.08316 val_psnr=21.472 val_ssim=0.7673 best=21.516 stale=1
+  epoch 23 step 50/240 loss=0.08288
+  epoch 23 step 100/240 loss=0.11216
+  epoch 23 step 150/240 loss=0.07356
+  epoch 23 step 200/240 loss=0.08079
+epoch 23 loss=0.08218 val_psnr=21.608 val_ssim=0.7730 best=21.608 stale=0
+  epoch 24 step 50/240 loss=0.10707
+  epoch 24 step 100/240 loss=0.08488
+  epoch 24 step 150/240 loss=0.05764
+  epoch 24 step 200/240 loss=0.09175
+epoch 24 loss=0.08079 val_psnr=21.387 val_ssim=0.7709 best=21.608 stale=1
+  epoch 25 step 50/240 loss=0.06858
+  epoch 25 step 100/240 loss=0.11016
+  epoch 25 step 150/240 loss=0.07792
+  epoch 25 step 200/240 loss=0.08700
+epoch 25 loss=0.07995 val_psnr=21.595 val_ssim=0.7729 best=21.608 stale=2
+  epoch 26 step 50/240 loss=0.07588
+  epoch 26 step 100/240 loss=0.07498
+  epoch 26 step 150/240 loss=0.06924
+  epoch 26 step 200/240 loss=0.05657
+epoch 26 loss=0.08187 val_psnr=21.622 val_ssim=0.7706 best=21.622 stale=0
+  epoch 27 step 50/240 loss=0.07317
+  epoch 27 step 100/240 loss=0.08297
+  epoch 27 step 150/240 loss=0.08776
+  epoch 27 step 200/240 loss=0.06407
+epoch 27 loss=0.07821 val_psnr=21.631 val_ssim=0.7712 best=21.631 stale=0
+  epoch 28 step 50/240 loss=0.07267
+  epoch 28 step 100/240 loss=0.11165
+  epoch 28 step 150/240 loss=0.08458
+  epoch 28 step 200/240 loss=0.08664
+epoch 28 loss=0.07850 val_psnr=21.641 val_ssim=0.7712 best=21.641 stale=0
+  epoch 29 step 50/240 loss=0.07423
+  epoch 29 step 100/240 loss=0.09199
+  epoch 29 step 150/240 loss=0.04351
+  epoch 29 step 200/240 loss=0.06320
+epoch 29 loss=0.07783 val_psnr=21.645 val_ssim=0.7714 best=21.645 stale=0
+  epoch 30 step 50/240 loss=0.07095
+  epoch 30 step 100/240 loss=0.08774
+  epoch 30 step 150/240 loss=0.08681
+  epoch 30 step 200/240 loss=0.09671
+epoch 30 loss=0.07944 val_psnr=21.630 val_ssim=0.7715 best=21.645 stale=1
+best_epoch=29 best_val_psnr=21.645 duration=966.3s checkpoint=D:\Studia\Sem9\ImageEnhancementAndDenoising\checkpoints\ablations\pilot\loss_l1\real\seed1\best.pt

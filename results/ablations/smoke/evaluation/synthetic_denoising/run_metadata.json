@@ -1,0 +1,36 @@
+{
+  "run_id": "stage07-ablation-evaluation",
+  "created_at_utc": "2026-11-19T00:46:17+00:00",
+  "command": "scripts\\evaluateAblations.py --groups loss_l1 composition synthetic_brightening synthetic_denoising --seeds 0 --splits lol_val.csv --limit 2 --out-root results\\ablations\\smoke\\evaluation --batch-size 2",
+  "python": "3.14.0",
+  "device": "cuda",
+  "torch": "2.13.0+cu130",
+  "test_used": false,
+  "group": "synthetic_denoising",
+  "splits": [
+    "lol_val.csv"
+  ],
+  "limit": 2,
+  "n_images": 2,
+  "n_rows": 6,
+  "seeds": [
+    0
+  ],
+  "levels": [
+    "low",
+    "medium",
+    "high"
+  ],
+  "darken_gain": 0.2,
+  "checkpoints": {
+    "checkpoints\\ablations\\synthetic\\synthetic_denoising\\seed0\\best.pt": "9093b83d0e03255cb24febd2c497379f0b127c117bd976b384da00285c16b145"
+  },
+  "split_hashes": {
+    "lol_test.csv": "1cb294b3800aa095988afc6d590f05651ca738d8a8f9249572b5c5c345fad864",
+    "lol_train.csv": "14ea1e4bafa300e138b3b49361981d82a831773a99845b16c7c5eab25008cce3",
+    "lol_val.csv": "8130059f89e9784263723973773b6dfde6f5260f9b48f513b6da155136173e10",
+    "lolv2_test.csv": "6ba0fa5157c01d1cd3858bc7cde4f11608ab9016cb26df37e1715bb2930835c1",
+    "lolv2_train.csv": "f6c4142ca041ca17171641893f8cee68629a47b8b0cd6f40ae8c0005eed42af1",
+    "lolv2_val.csv": "2a9287e53b4c7e2ae0147f449dc19e17fe34972cd6119e37efc1dbfd914e92c9"
+  }
+}

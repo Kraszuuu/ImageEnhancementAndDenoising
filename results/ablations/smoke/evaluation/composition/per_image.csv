@@ -1,0 +1,5 @@
+run_id,group,arm,dataset,split,seed,noise_level,image_id,psnr,ssim,lpips,niqe,inference_ms,width,height
+stage07-ablation-evaluation,composition,lol_only,lol,val,0,real,data/raw/lol/extracted/lol_dataset/our485/low/112.png,18.736262,0.872632,0.126705,4.375752,20.904800,600,400
+stage07-ablation-evaluation,composition,lol_only,lol,val,0,real,data/raw/lol/extracted/lol_dataset/our485/low/113.png,17.445970,0.730383,0.372344,3.930640,21.934400,600,400
+stage07-ablation-evaluation,composition,lolv2_only,lol,val,0,real,data/raw/lol/extracted/lol_dataset/our485/low/112.png,18.810044,0.885402,0.117460,4.662807,20.537300,600,400
+stage07-ablation-evaluation,composition,lolv2_only,lol,val,0,real,data/raw/lol/extracted/lol_dataset/our485/low/113.png,18.135617,0.811379,0.277645,4.547119,22.058500,600,400

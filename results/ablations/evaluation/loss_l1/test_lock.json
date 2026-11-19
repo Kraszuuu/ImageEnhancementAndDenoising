@@ -1,0 +1,20 @@
+{
+  "used_at_utc": "2026-11-19T00:47:23+00:00",
+  "group": "loss_l1",
+  "split_hashes": {
+    "lol_test.csv": "1cb294b3800aa095988afc6d590f05651ca738d8a8f9249572b5c5c345fad864",
+    "lol_train.csv": "14ea1e4bafa300e138b3b49361981d82a831773a99845b16c7c5eab25008cce3",
+    "lol_val.csv": "8130059f89e9784263723973773b6dfde6f5260f9b48f513b6da155136173e10",
+    "lolv2_test.csv": "6ba0fa5157c01d1cd3858bc7cde4f11608ab9016cb26df37e1715bb2930835c1",
+    "lolv2_train.csv": "f6c4142ca041ca17171641893f8cee68629a47b8b0cd6f40ae8c0005eed42af1",
+    "lolv2_val.csv": "2a9287e53b4c7e2ae0147f449dc19e17fe34972cd6119e37efc1dbfd914e92c9"
+  },
+  "checkpoints": {
+    "checkpoints\\ablations\\pilot\\loss_l1\\real\\seed0\\best.pt": "0248303c4f7e76eaabff680dcbcc28d7d5b7b928bfc84d7946571278be08049e",
+    "checkpoints\\ablations\\pilot\\loss_l1\\real\\seed1\\best.pt": "27e16c4a38bfc0f676706d4d198942737c5297931b0c50d56abba107763e9535",
+    "checkpoints\\ablations\\pilot\\loss_l1\\real\\seed2\\best.pt": "5e7b015d27f845a1b7768bc6e201311591bba0c5795cbd27b8c5c8dabef85e84"
+  },
+  "outputs": {
+    "per_image.csv": "7623ea16c399a6a05e245dd6093d8017e60a5771afaae49d8c360c0995cd675c"
+  }
+}

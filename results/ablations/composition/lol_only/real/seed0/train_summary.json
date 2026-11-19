@@ -1,0 +1,10 @@
+{
+  "input_mode": "real",
+  "tag": "stage07-composition-lol_only-seed0",
+  "seed": 0,
+  "best_epoch": 30,
+  "best_score": 20.860915451406317,
+  "epochs_ran": 30,
+  "duration_seconds": 603.4692404000089,
+  "checkpoint": "checkpoints\\ablations\\composition\\lol_only\\real\\seed0\\best.pt"
+}

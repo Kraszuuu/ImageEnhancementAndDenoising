@@ -1,0 +1,10 @@
+{
+  "input_mode": "synthetic_brightening",
+  "tag": "smoke-syn-b",
+  "seed": 0,
+  "best_epoch": 3,
+  "best_score": 13.59548830986023,
+  "epochs_ran": 3,
+  "duration_seconds": 9.993627400021069,
+  "checkpoint": "results\\ablations\\smoke\\synthetic_brightening-checkpoints\\best.pt"
+}

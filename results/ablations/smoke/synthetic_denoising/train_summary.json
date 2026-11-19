@@ -1,0 +1,10 @@
+{
+  "input_mode": "synthetic_denoising",
+  "tag": "smoke-syn-d",
+  "seed": 0,
+  "best_epoch": 3,
+  "best_score": 15.285309433937073,
+  "epochs_ran": 3,
+  "duration_seconds": 12.87611500005005,
+  "checkpoint": "results\\ablations\\smoke\\synthetic_denoising-checkpoints\\best.pt"
+}

@@ -1,0 +1,10 @@
+{
+  "input_mode": "real",
+  "tag": "stage07-composition-lolv2_only-seed1",
+  "seed": 1,
+  "best_epoch": 27,
+  "best_score": 21.49266514377059,
+  "epochs_ran": 30,
+  "duration_seconds": 680.4851837999886,
+  "checkpoint": "checkpoints\\ablations\\composition\\lolv2_only\\real\\seed1\\best.pt"
+}

@@ -1,0 +1,220 @@
+version: 1
+created_at_utc: "2026-11-18T00:00:00Z"
+description: >
+  Stage 07 pre-registration. Every training ablation must be listed here before
+  it is launched. Existing Stage 02-06 artifacts are reused only for the
+  analyses marked completed_from_existing. No test-set result may be used to
+  choose a seed, checkpoint or hyperparameter.
+
+bootstrap:
+  resamples: 1000
+  ci: 0.95
+  seed: 0
+
+sources:
+  - name: stage02_classical_denoising
+    path: results/classical_denoising/per_image.csv
+    task: denoising
+    variant: classical
+  - name: stage03_cnn_denoising
+    path: results/denoising_cnn/evaluation/per_image.csv
+    task: denoising
+    variant: cnn
+  - name: stage03_d_fixed_reference
+    path: results/denoising_cnn/evaluation_d_fixed/per_image.csv
+    task: denoising_reference
+    variant: classical
+  - name: stage04_classical_brightening
+    path: results/classical_brightening/per_image.csv
+    task: brightening
+    variant: classical
+  - name: stage05_cnn_brightening
+    path: results/brightening_cnn/evaluation/per_image.csv
+    task: brightening
+    variant: cnn
+  - name: stage06_pipelines
+    path: results/pipelines/evaluation/per_image.csv
+    task: pipeline
+    variant: combined
+    method_column: pipeline
+  - name: stage07_loss_l1
+    path: results/ablations/evaluation/loss_l1/per_image.csv
+    task: loss
+    variant: l1
+    method_column: arm
+    default_noise_level: real
+  - name: stage07_composition
+    path: results/ablations/evaluation/composition/per_image.csv
+    task: composition
+    variant: e2e
+    method_column: arm
+    default_noise_level: real
+  - name: stage07_synthetic_brightening
+    path: results/ablations/evaluation/synthetic_brightening/per_image.csv
+    task: synthetic_control
+    variant: e2e
+    method_column: arm
+    default_noise_level: synthetic
+  - name: stage07_synthetic_denoising
+    path: results/ablations/evaluation/synthetic_denoising/per_image.csv
+    task: synthetic_control
+    variant: e2e
+    method_column: arm
+
+summaries:
+  - name: denoising_noise
+    task: denoising
+    group_by: [variant, method, dataset, noise_level]
+  - name: denoising_reference
+    task: denoising_reference
+    group_by: [method, dataset, noise_level]
+  - name: brightening_tracks
+    task: brightening
+    group_by: [variant, method, track, dataset]
+  - name: pipeline_levels
+    task: pipeline
+    group_by: [method, dataset, noise_level]
+  - name: loss_test
+    task: loss
+    group_by: [method, dataset, noise_level]
+  - name: composition_levels
+    task: composition
+    group_by: [method, dataset]
+  - name: synthetic_control
+    task: synthetic_control
+    group_by: [method, dataset, noise_level]
+
+comparison_datasets: [lolv2-real, lol, all]
+
+comparisons:
+  - name: denoise_bm3d_vs_cnn_high
+    task: denoising
+    noise_level: high
+    method_a: bm3d
+    variant_a: classical
+    method_b: cnn_unet
+    variant_b: cnn
+  - name: denoise_bm3d_vs_cnn_medium
+    task: denoising
+    noise_level: medium
+    method_a: bm3d
+    variant_a: classical
+    method_b: cnn_unet
+    variant_b: cnn
+  - name: brighten_gamma_vs_cnn_raw
+    task: brightening
+    track: raw
+    method_a: gamma
+    variant_a: classical
+    method_b: cnn_unet
+    variant_b: cnn
+  - name: brighten_gamma_vs_cnn_d_fixed
+    task: brightening
+    track: d_fixed
+    method_a: gamma
+    variant_a: classical
+    method_b: cnn_unet
+    variant_b: cnn
+  - name: pipeline_order_real
+    task: pipeline
+    noise_level: real
+    method_a: classical_classical
+    method_b: brighten_then_denoise
+  - name: pipeline_order_high
+    task: pipeline
+    noise_level: high
+    method_a: classical_classical
+    method_b: brighten_then_denoise
+  - name: pipeline_e2e_vs_cnn_cnn_real
+    task: pipeline
+    noise_level: real
+    method_a: cnn_cnn
+    method_b: end_to_end_real
+  - name: pipeline_e2e_vs_cnn_cnn_high
+    task: pipeline
+    noise_level: high
+    method_a: cnn_cnn
+    method_b: end_to_end_controlled
+  - name: pipeline_e2e_vs_classical_cnn_high
+    task: pipeline
+    noise_level: high
+    method_a: classical_cnn
+    method_b: end_to_end_controlled
+  - name: loss_l1_vs_perceptual_real
+    task: loss
+    task_a: loss
+    task_b: pipeline
+    noise_level: real
+    method_a: l1_real
+    method_b: end_to_end_real
+  - name: composition_lol_only_vs_mixed
+    task: composition
+    task_a: composition
+    task_b: pipeline
+    noise_level: real
+    method_a: lol_only
+    method_b: end_to_end_real
+  - name: composition_lolv2_only_vs_mixed
+    task: composition
+    task_a: composition
+    task_b: pipeline
+    noise_level: real
+    method_a: lolv2_only
+    method_b: end_to_end_real
+  - name: cross_lol_only_vs_lolv2_only
+    task: composition
+    noise_level: real
+    method_a: lol_only
+    method_b: lolv2_only
+
+ablations:
+  - id: noise_level
+    status: completed_from_existing
+    sources: [stage02_classical_denoising, stage03_cnn_denoising, stage06_pipelines]
+    comparison: controlled synthetic noise levels on fixed images
+    primary_metric: psnr
+    note: Descriptive factor analysis; no new training.
+  - id: pipeline_order
+    status: completed_from_existing
+    sources: [stage06_pipelines]
+    comparison: brighten_then_denoise vs classical_classical at real/low/medium/high
+    primary_metric: psnr
+    note: Same frozen components and seeds; test consumed once.
+  - id: dataset_shift
+    status: completed_from_existing
+    sources: [stage02_classical_denoising, stage03_cnn_denoising, stage04_classical_brightening, stage05_cnn_brightening, stage06_pipelines]
+    comparison: LOL vs LOL-v2-real within each frozen method
+    primary_metric: psnr
+    note: Descriptive only; datasets differ in content and capture conditions.
+  - id: loss_function
+    status: completed_test_used
+    training_runs: 3
+    seeds: [0, 1, 2]
+    arms: [l1, l1_plus_lpips_0.05]
+    primary_metric: psnr
+    reason: L1 seeds 0-2 tested once alongside Stage 06 perceptual seeds; test lock at results/ablations/evaluation/loss_l1/test_lock.json.
+  - id: dataset_composition
+    status: completed_test_used
+    training_runs: 6
+    seeds: [0, 1, 2]
+    arms: [lol_only, lolv2_only, mixed]
+    loss: l1_perceptual_0.05
+    primary_metric: psnr
+    reason: Train two new single-dataset arms; the mixed arm reuses Stage 06 E2E real seeds 0-2.
+  - id: synthetic_control
+    status: completed_test_used
+    training_runs: 6
+    seeds: [0, 1, 2]
+    arms: [synthetic_brightening, synthetic_denoising]
+    darken_transform: linear_gain_0.2
+    darken_gain: 0.2
+    loss: l1_perceptual_0.05
+    primary_metric: psnr
+    reason: Darken(G)->G was stable; darken(G)+n seed 2 converged poorly (val PSNR 17.52 vs 33.13/34.12). All seeds retained; instability reported, not cherry-picked.
+  - id: cross_dataset
+    status: completed_test_used_reused
+    training_runs: 0
+    seeds: [0, 1, 2]
+    arms: [train_lol_test_lolv2, train_lolv2_test_lol]
+    primary_metric: psnr
+    reason: Reuse dataset_composition lol_only and lolv2_only checkpoints; only test evaluation is new.
