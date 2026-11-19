@@ -1,6 +1,6 @@
 {
   "script": "scripts/reproduceAll.py",
-  "started_at_utc": "2026-11-19T07:59:54+00:00",
+  "started_at_utc": "2026-11-19T10:24:32+00:00",
   "status": "completed",
   "stage": "analysis",
   "stages": [
@@ -21,8 +21,8 @@
   },
   "platform": "Windows-11-10.0.26200-SP0",
   "git": {
-    "commit": "fd6727b9ab811fbac14926aa4e4dc2eea11439a6",
-    "dirty": true
+    "commit": "2016b30ff2fad8a816c35683fc9f57678f52cba7",
+    "dirty": false
   },
   "packages": {
     "numpy": "2.5.4",
@@ -195,7 +195,7 @@
       "returncode": 0
     }
   ],
-  "finished_at_utc": "2026-11-19T08:01:12+00:00",
-  "duration_seconds": 76.049,
+  "finished_at_utc": "2026-11-19T10:25:50+00:00",
+  "duration_seconds": 76.555,
   "exit_code": 0
 }
