@@ -15,4 +15,3 @@ outputs/
 *.pt
 *.ckpt
 .DS_Store
-README.md

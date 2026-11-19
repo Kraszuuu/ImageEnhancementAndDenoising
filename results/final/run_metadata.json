@@ -1,0 +1,201 @@
+{
+  "script": "scripts/reproduceAll.py",
+  "started_at_utc": "2026-11-19T07:59:54+00:00",
+  "status": "completed",
+  "stage": "analysis",
+  "stages": [
+    "analysis"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "force": false,
+  "allow_download": false,
+  "skip_tests": true,
+  "python": {
+    "executable": "D:\\Studia\\Sem9\\ImageEnhancementAndDenoising\\.venv\\Scripts\\python.exe",
+    "version": "3.14.0",
+    "implementation": "CPython"
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git": {
+    "commit": "fd6727b9ab811fbac14926aa4e4dc2eea11439a6",
+    "dirty": true
+  },
+  "packages": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-image": "0.26.0",
+    "opencv-python-headless": "5.0.0.93",
+    "Pillow": "13.0.0",
+    "matplotlib": "3.11.2",
+    "pandas": "3.1.1",
+    "torch": "2.13.0+cu130",
+    "torchvision": "0.28.0+cu130",
+    "lpips": "0.1.4",
+    "bm3d": "4.0.3",
+    "bm4d": "4.2.5",
+    "pyiqa": "0.1.16",
+    "streamlit": "1.67.0",
+    "pytest": "9.2.0",
+    "ruff": "0.17.5"
+  },
+  "cuda": {
+    "available": true,
+    "driver_version": "616.56",
+    "torch": "2.13.0+cu130",
+    "cuda_version": "13.0",
+    "device_count": 1,
+    "device_name": "NVIDIA GeForce RTX 3060"
+  },
+  "requirements_lock_sha256": "647c9634d92eb5d5f9cbaee5fb862a943440b7aff268c08cf1cb18f078c4a8c7",
+  "config_and_split_sha256": {
+    "configs/ablations/ablations.yaml": "95c46ef434c1d3c2431d40bffe15d991f1149509362cfb3480557bb04e3ea99e",
+    "configs/classical/brightening_frozen.yaml": "428628c7cba2d2ac330d2f1f3f8741cf229a6acd9cc6993426ae418a0615eac5",
+    "configs/classical/brightening_grid.yaml": "9ec2c6d32148a3da157c7ecea87ce86cf4852a6a91c98721202abd683cd7410b",
+    "configs/classical/denoising_frozen.yaml": "2596b76958e1bd095841419b6610213d10b8a9284650a6fc426b32802165ef7b",
+    "configs/classical/denoising_grid.yaml": "ed1ea255d006f1b8d96ff80c7e3edcefc9a712c681b71e274cf147ce3d43a834",
+    "configs/data/noise.yaml": "259cac050af69b6451aa56cea6f2287cef6e6ca67d953fe08a4324d0c0f1800a",
+    "configs/evaluation/metrics.yaml": "be94a48b8053a08b75e5c2b17176a833cd4f075f7e93b1e0f67e5e6d6ac3e763",
+    "configs/models/unet_brightening.yaml": "9bfc223ec6938acd7e13ef21db543cafcb5bccbfceffdc34ea67c68bac2d2698",
+    "configs/models/unet_denoising.yaml": "b5a358f5041c6dbc5db4b0733b9f83d44127b24bad71e137e49b29e3e325f80a",
+    "configs/pipelines/brighten_then_denoise.yaml": "e3471a076b63ee1f38cd08dfca69da140ac6d1ce8d24dba284f00ae7af342d42",
+    "configs/pipelines/classical_classical.yaml": "fa0f7c31dfe682d1cbb41778e4117644328ac3322d59a7653069109b654d88f5",
+    "configs/pipelines/classical_cnn.yaml": "1b1a620b6f17cfa778ea39c7292dd27f8ea40edcef81b9d3115e947b42275d71",
+    "configs/pipelines/cnn_classical.yaml": "e8d893d41ba274433819ba8ba01d641a93b8c4833dab1f554f9e2186af6a04b8",
+    "configs/pipelines/cnn_cnn.yaml": "4ac18a345edb68f5a1158a02b84d99b9dd12f4c8a5e7afb5c4cee450f6688abc",
+    "configs/pipelines/d_fixed.yaml": "84ef8ee86717dbaec97576bd279d8032a33aaac2d9265b7c270e7fb8e84db5eb",
+    "configs/pipelines/end_to_end.yaml": "916acd00e2e9aef0d78a4512c4705e5d9842ed1fa7ba9718134f01665fb38a0e",
+    "configs/training/brightening.yaml": "c8d0a228c84ba9b787c66de8977bac40eb276aa35aefd3b5f138d58482a48c7e",
+    "configs/training/denoising.yaml": "a59d623694fb37044ecc10b336ac8958e12b8489f86044c9b8286b3d045bc8e2",
+    "configs/training/end_to_end.yaml": "ba78a9821a40bba286c85b253dfddc7d8bd389f71001bf52a475e47afb8fb40c",
+    "configs/training/gpu_defaults.yaml": "43694768c4c3cf0840e291b14e3394378939ab09c0a22e802dccc669ae61173b",
+    "configs/training/pipeline_brightening.yaml": "ea8373115bad4d8ed1386a2f666be04a62efee7137203671bbbfcd3c78c295c6",
+    "data/splits/lol_test.csv": "1cb294b3800aa095988afc6d590f05651ca738d8a8f9249572b5c5c345fad864",
+    "data/splits/lol_train.csv": "14ea1e4bafa300e138b3b49361981d82a831773a99845b16c7c5eab25008cce3",
+    "data/splits/lol_val.csv": "8130059f89e9784263723973773b6dfde6f5260f9b48f513b6da155136173e10",
+    "data/splits/lolv2_test.csv": "6ba0fa5157c01d1cd3858bc7cde4f11608ab9016cb26df37e1715bb2930835c1",
+    "data/splits/lolv2_train.csv": "f6c4142ca041ca17171641893f8cee68629a47b8b0cd6f40ae8c0005eed42af1",
+    "data/splits/lolv2_val.csv": "2a9287e53b4c7e2ae0147f449dc19e17fe34972cd6119e37efc1dbfd914e92c9",
+    "data/splits/scene_grouping.json": "e407973a2ff1a9f98c459e2f8c01361f98d8f5de25f8d4fd771eb5ecd477281c",
+    "data/splits/split_manifest.json": "db81b2943316ca775ee56810e700f45edf997533ed50cecd24926286344aec3a",
+    "data/manifests/combined.csv": "dd167dc55176c37e398a9a43f359a0a4503677e3f6ba7fa2f28e725955089cfe",
+    "data/manifests/lol.csv": "aeeeb6db83a1f32631d8585802efe3834c8ce6f457c4efdc0f730332df2bb962",
+    "data/manifests/lolv2_real.csv": "15422280f79c6f8b343b5a0b2f3b1301cfa9c6fd1b95bcbb28bd3c6b073feda6",
+    "data/manifests/dataset_versions.json": "70d192c4e6f30ace6ea3867c712309f1664b64b4713fecfed6d1dc1a98cba845"
+  },
+  "reproduction_tolerance": {
+    "psnr_db": 0.1,
+    "ssim": 0.001
+  },
+  "notes": [
+    "Locked test outputs are not rerun by reproduceAll.py.",
+    "Raw data and checkpoints are intentionally ignored by git.",
+    "Bitwise-identical retraining is not guaranteed."
+  ],
+  "steps": [
+    {
+      "name": "Stage 07 L1 loss seed 0",
+      "status": "skipped",
+      "reason": "output exists"
+    },
+    {
+      "name": "Stage 07 L1 loss seed 1",
+      "status": "skipped",
+      "reason": "output exists"
+    },
+    {
+      "name": "Stage 07 L1 loss seed 2",
+      "status": "skipped",
+      "reason": "output exists"
+    },
+    {
+      "name": "Stage 07 composition lol_only seed 0",
+      "status": "skipped",
+      "reason": "output exists"
+    },
+    {
+      "name": "Stage 07 composition lol_only seed 1",
+      "status": "skipped",
+      "reason": "output exists"
+    },
+    {
+      "name": "Stage 07 composition lol_only seed 2",
+      "status": "skipped",
+      "reason": "output exists"
+    },
+    {
+      "name": "Stage 07 composition lolv2_only seed 0",
+      "status": "skipped",
+      "reason": "output exists"
+    },
+    {
+      "name": "Stage 07 composition lolv2_only seed 1",
+      "status": "skipped",
+      "reason": "output exists"
+    },
+    {
+      "name": "Stage 07 composition lolv2_only seed 2",
+      "status": "skipped",
+      "reason": "output exists"
+    },
+    {
+      "name": "Stage 07 synthetic synthetic_brightening seed 0",
+      "status": "skipped",
+      "reason": "output exists"
+    },
+    {
+      "name": "Stage 07 synthetic synthetic_brightening seed 1",
+      "status": "skipped",
+      "reason": "output exists"
+    },
+    {
+      "name": "Stage 07 synthetic synthetic_brightening seed 2",
+      "status": "skipped",
+      "reason": "output exists"
+    },
+    {
+      "name": "Stage 07 synthetic synthetic_denoising seed 0",
+      "status": "skipped",
+      "reason": "output exists"
+    },
+    {
+      "name": "Stage 07 synthetic synthetic_denoising seed 1",
+      "status": "skipped",
+      "reason": "output exists"
+    },
+    {
+      "name": "Stage 07 synthetic synthetic_denoising seed 2",
+      "status": "skipped",
+      "reason": "output exists"
+    },
+    {
+      "name": "evaluate Stage 07 ablations",
+      "status": "skipped",
+      "reason": "locked test output exists"
+    },
+    {
+      "name": "aggregate unified results",
+      "status": "completed",
+      "command": "D:\\Studia\\Sem9\\ImageEnhancementAndDenoising\\.venv\\Scripts\\python.exe D:\\Studia\\Sem9\\ImageEnhancementAndDenoising\\scripts\\analyzeResults.py",
+      "returncode": 0
+    },
+    {
+      "name": "make analysis figures",
+      "status": "completed",
+      "command": "D:\\Studia\\Sem9\\ImageEnhancementAndDenoising\\.venv\\Scripts\\python.exe D:\\Studia\\Sem9\\ImageEnhancementAndDenoising\\scripts\\makeFigures.py",
+      "returncode": 0
+    },
+    {
+      "name": "make failure panels",
+      "status": "completed",
+      "command": "D:\\Studia\\Sem9\\ImageEnhancementAndDenoising\\.venv\\Scripts\\python.exe D:\\Studia\\Sem9\\ImageEnhancementAndDenoising\\scripts\\makeFailurePanels.py",
+      "returncode": 0
+    }
+  ],
+  "finished_at_utc": "2026-11-19T08:01:12+00:00",
+  "duration_seconds": 76.049,
+  "exit_code": 0
+}

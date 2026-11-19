@@ -1,0 +1,7 @@
+loss,source,seed,best_epoch,val_psnr,val_ssim,duration_s,checkpoint
+l1,stage07_pilot,0,27,21.608956074046198,0.7717111610642103,968.261823799985,checkpoints\ablations\pilot\loss_l1\real\seed0\best.pt
+l1,stage07_pilot,1,29,21.644948647401044,0.7714271979911305,966.2974460000405,checkpoints\ablations\pilot\loss_l1\real\seed1\best.pt
+l1,stage07_pilot,2,27,21.56340012149276,0.7629919996328443,962.9015547999879,checkpoints\ablations\pilot\loss_l1\real\seed2\best.pt
+l1_perceptual_0.05,stage06,0,29,21.93500664969471,0.7950888887465557,1497.782587900001,checkpoints\end_to_end\real\seed0\best.pt
+l1_perceptual_0.05,stage06,1,29,21.881549607927553,0.7913111831261733,1500.7939162000257,checkpoints\end_to_end\real\seed1\best.pt
+l1_perceptual_0.05,stage06,2,28,21.799285518788846,0.7964672747059404,1517.2451086000074,checkpoints\end_to_end\real\seed2\best.pt

@@ -1,0 +1,8 @@
+id,status,training_runs,seeds,primary_metric,reason
+noise_level,completed_from_existing,,,psnr,
+pipeline_order,completed_from_existing,,,psnr,
+dataset_shift,completed_from_existing,,,psnr,
+loss_function,completed_test_used,3,"0,1,2",psnr,L1 seeds 0-2 tested once alongside Stage 06 perceptual seeds; test lock at results/ablations/evaluation/loss_l1/test_lock.json.
+dataset_composition,completed_test_used,6,"0,1,2",psnr,Train two new single-dataset arms; the mixed arm reuses Stage 06 E2E real seeds 0-2.
+synthetic_control,completed_test_used,6,"0,1,2",psnr,"Darken(G)->G was stable; darken(G)+n seed 2 converged poorly (val PSNR 17.52 vs 33.13/34.12). All seeds retained; instability reported, not cherry-picked."
+cross_dataset,completed_test_used_reused,0,"0,1,2",psnr,Reuse dataset_composition lol_only and lolv2_only checkpoints; only test evaluation is new.
